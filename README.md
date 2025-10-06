@@ -1,2 +1,2 @@
-# Sarah Rashid README
-## PP434 Project
+# PP434 Project
+## Sarah Rashid
