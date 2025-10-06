@@ -38,7 +38,7 @@
                 As a first example, we're using a basic chart from our repo.
             </p>
         </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location1"></figure> 
     </section>
 
 
@@ -54,8 +54,7 @@
         <div class="chart-description">
             <h2>Section 2: Another basic chart</h2>
             <p> 
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                Here is another chart from the repo.
             </p>
         </div>
         <figure id="Location2"></figure> 
@@ -68,6 +67,24 @@
         
     </script>
 
+    <section>
+        <div class="chart-description">
+            <h2>Section 3: A chart from the web</h2>
+            <p> 
+                Here is a chart that is not stored locally. This is chart that displays gun deaths and income. Using various US states, it shows medium income on the x-axis and the firearm deaths per 100,000 on the y-axis.
+            </p>
+        </div>
+        <figure id="Location3"></figure> 
+    </section>
+
+
+    
+    <script>
+        let figure_3_spec = "https://github.com/RDeconomist/RDeconomist.github.io/blob/main/charts/library/chartScatter3.json"; 
+
+        vegaEmbed('#Location3', figure_3_spec) 
+
+    </script>
 
 </body>
     
