@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "title": {
+    "text": "Public Sector Employment in the UK", 
+  },
+
+  "data": {"url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/public_sector_employment.csv"},
+
+
+  "mark": {
+   "type": "bar",
+   "color": "darkblue",
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Date", 
+      "type": "temporal",
+      "axis": {
+        "title": "",
+        "grid": false
+      }
+    },  
+    
+    "y": {
+      "field": "Value", 
+      "type": "quantitative",
+      "axis": {
+        "title": "",
+        "grid": false
+      }
+      }
+  }
+}
