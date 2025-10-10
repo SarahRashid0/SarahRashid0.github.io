@@ -4,7 +4,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/public_sector_employment.csv"
   },
-  "mark": {"type": "bar", "color": "darkblue"},
+  "mark": {"type": "line", "color": "darkblue"},
   "encoding": {
     "x": {
       "field": "Date",
