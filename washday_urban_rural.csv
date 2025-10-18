@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Grouped bar chart comparing rural and urban access to safely managed drinking water (2012–2024).",
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/washdata_urban_rural.csv"
+  },
+  
+  "mark": {
+    "type": "bar",
+    "size": 20 
+  },
+  
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Coverage",
+      "type": "quantitative",
+      "title": "Safely Managed Water (%)"
+    },
+    "color": {
+      "field": "Residence Type",
+      "type": "nominal",
+      "title": "Residence Type",
+      "scale": {"scheme": "set2"}
+    },
+    "xOffset": {
+      "field": "Residence Type"  
+      
+    },
+    "tooltip": [
+      {"field": "Year"},
+      {"field": "Residence Type"},
+      {"field": "Coverage", "format": ".1f"}
+    ]
+  },
+  
+  "title": "Urban vs Rural Access to Safely Managed Drinking Water (2012–2024)"
+}
+
+
