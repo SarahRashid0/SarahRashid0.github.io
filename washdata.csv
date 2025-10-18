@@ -1,9 +1,9 @@
-Year,Service Type,Service Level,Coverage,Type,Region,Residence Type,Population
-2012,Drinking water,Basic service,21.00003433227539,world,World,total,1512254993.7666678
-2012,Drinking water,Safely managed service,65.91863117520028,world,World,total,4746934104.948134
-2016,Drinking water,Basic service,20.25900840759277,world,World,total,1531288198.9407248
-2016,Drinking water,Safely managed service,68.28709202576822,world,World,total,5161517091.816198
-2020,Drinking water,Basic service,19.52927780151367,world,World,total,1540274391.5471885
-2020,Drinking water,Safely managed service,70.53926157639384,world,World,total,5563432468.370479
-2024,Drinking water,Basic service,17.73317909240723,world,World,total,1447377214.375244
-2024,Drinking water,Safely managed service,73.7351779387329,world,World,total,6018245002.224182
+Year,Service Level,Coverage
+2012,Basic service,21.00003433
+2012,Safely managed service,65.91863118
+2016,Basic service,20.25900841
+2016,Safely managed service,68.28709203
+2020,Basic service,19.5292778
+2020,Safely managed service,70.53926158
+2024,Basic service,17.73317909
+2024,Safely managed service,73.73517794
