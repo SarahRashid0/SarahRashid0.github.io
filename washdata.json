@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "data": {"url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/washdata.csv"},
+  
+  "mark": {
+    "type": "bar",
+    "size": 15
+  },
+  
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": ""},
+    "y": {"field": "Coverage", "type": "quantitative", "title": "Safely Managed Water (%)"}
+  },
+
+  "title": "Global Access to Safely Managed Drinking Water (2012–2024)"
+
+}
