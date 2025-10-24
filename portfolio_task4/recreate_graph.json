@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Replication of Reuters 'Gun deaths in Florida' chart with correct visual orientation.",
+  "data": {
+    "values": [
+      {"Year": 1990, "Number of murders": 873, "1000-murders": 127},
+      {"Year": 1991, "Number of murders": 810, "1000-murders": 190},
+      {"Year": 1992, "Number of murders": 790, "1000-murders": 210},
+      {"Year": 1993, "Number of murders": 805, "1000-murders": 195},
+      {"Year": 1994, "Number of murders": 730, "1000-murders": 270},
+      {"Year": 1995, "Number of murders": 680, "1000-murders": 320},
+      {"Year": 1996, "Number of murders": 650, "1000-murders": 350},
+      {"Year": 1997, "Number of murders": 630, "1000-murders": 370},
+      {"Year": 1998, "Number of murders": 590, "1000-murders": 410},
+      {"Year": 1999, "Number of murders": 470, "1000-murders": 530},
+      {"Year": 2000, "Number of murders": 490, "1000-murders": 510},
+      {"Year": 2001, "Number of murders": 500, "1000-murders": 500},
+      {"Year": 2002, "Number of murders": 560, "1000-murders": 440},
+      {"Year": 2003, "Number of murders": 580, "1000-murders": 420},
+      {"Year": 2004, "Number of murders": 570, "1000-murders": 430},
+      {"Year": 2005, "Number of murders": 530, "1000-murders": 470},
+      {"Year": 2006, "Number of murders": 730, "1000-murders": 270},
+      {"Year": 2007, "Number of murders": 820, "1000-murders": 180},
+      {"Year": 2008, "Number of murders": 780, "1000-murders": 220},
+      {"Year": 2009, "Number of murders": 680, "1000-murders": 320},
+      {"Year": 2010, "Number of murders": 650, "1000-murders": 350},
+      {"Year": 2011, "Number of murders": 680, "1000-murders": 320},
+      {"Year": 2012, "Number of murders": 721, "1000-murders": 279}
+    ]
+  },
+  "width": 300,
+  "height": 300,
+  "layer": [
+    {
+      "mark": {"type": "area", "color": "darkred", "opacity": 0.8},
+      "encoding": {
+        "x": {
+          "field": "Year", 
+          "type": "quantitative", 
+          "axis": {
+            "format": "d", 
+            "tickCount": 3, 
+            "labelAngle": 0, 
+            "title": ""}
+        },
+        
+        "y": {
+          "field": "Number of murders", 
+          "type": "quantitative",
+          "scale": {"reverse": true, "domain": [0, 1000]},
+          "axis": { 
+            "tickCount": 4, 
+            "labelAngle": 0, 
+            "title": ""}
+          }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "black",
+        "strokeWidth": 2,
+        "point": {"filled": true, "fill": "black", "size": 30},
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Number of murders", "type": "quantitative"}
+      }
+    },
+
+  ],
+  "title": {
+  "text": "Gun deaths in Florida",
+  "subtitle": "Number of murders committed with firearms",
+  "anchor": "start",
+  "fontSize": 18,
+  "subtitleFontSize": 12 }
+
+}
