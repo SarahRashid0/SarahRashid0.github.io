@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {"text": "Public Sector Employment in the UK"},
   "data": {
-    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/public_sector_employment.csv"
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task2/public_sector_employment.csv"
   },
   
   "mark": {

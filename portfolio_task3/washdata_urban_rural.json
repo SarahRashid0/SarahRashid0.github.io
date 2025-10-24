@@ -3,7 +3,7 @@
   "description": "Grouped bar chart comparing rural and urban access to safely managed drinking water (2012–2024).",
   
   "data": {
-    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/washdata_urban_rural.csv"
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task3/washdata_urban_rural.csv"
   },
   
   "mark": {
