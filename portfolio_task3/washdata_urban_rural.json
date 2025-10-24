@@ -15,7 +15,6 @@
     "x": {
       "field": "Year",
       "type": "ordinal",
-      "axis": {"labelAngle": 0},
       "title": "Year"
     },
     "y": {
