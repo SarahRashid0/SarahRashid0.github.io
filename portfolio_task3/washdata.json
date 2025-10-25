@@ -7,7 +7,7 @@
   "height": 300,
 
   "mark": {
-    "type": "bar",
+    "type": "line",
     "size": 15
   },
   
