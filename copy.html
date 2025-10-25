@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html> 
+
+<head>    
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>My Portfolio</title> 
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+        
+    </style>
+</head>
+
+<body> 
+    <h1 class="big" style="margin-bottom: 0px;"> 
+        Sarah Rashid
+    </h1>
+    <p style="margin-top: 0px; color: darkblue">
+        <a href="https://www.linkedin.com/in/sarah-r-005a70204/">LinkedIn</a> | <a
+            href="https://github.com/SarahRashid0/SarahRashid0.github.io.git">GitHub</a>
+    </p>
+    
+    <h3 class="small"> 
+        This page contains all the porfolio tasks that must be completed for the PP434 Project.
+    </h3>
+
+    <h2>
+    <h2 class="big"> 
+        Portfolio Task 1
+    </h2>    
+   
+    <section>
+        <div class="chart-description">
+            <h2>Section 1: A basic chart</h2>
+            <p> 
+                This page has been organised into various sections, with each section containing a chart, title and a description.
+                As a first example, this basic chart provided as an example.
+            </p>
+        </div>
+        <figure id="Location1"></figure> 
+    </section>
+
+
+    
+    <script>
+        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; 
+
+        vegaEmbed('#Location1', figure_1_spec) 
+
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 2: Another basic chart</h2>
+            <p> 
+                One of the portfolio tasks is to add a chart from the repository to the live website. See below the added chart found in the repo.
+            </p>
+        </div>
+        <figure id="Location2"></figure> 
+    </section>
+
+    <script>
+        let figure_2_spec = "portfolio_task1/wk1_chart2.json"; 
+        
+        vegaEmbed('#Location2', figure_2_spec) 
+        
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 3: A chart from the web</h2>
+            <p> 
+                Another portfolio task is to add a chart from the web. Here is a chart that is not stored locally. This is chart that displays gun deaths and income. Using various US states, it shows medium income on the x-axis and the firearm deaths per 100,000 on the y-axis.
+            </p>
+        </div>
+        <figure id="Location3"></figure> 
+    </section>
+
+
+    
+    <script>
+        let figure_3_spec = "https://rdeconomist.github.io/charts/library/chartScatter3.json"; 
+
+        vegaEmbed('#Location3', figure_3_spec) 
+
+    </script>
+
+    </p>
+    <h2>
+    <h2 class="big"> 
+        Portfolio Task 2
+    </h2> 
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 1: Adding in a personal chart</h2>
+            <p> 
+                Portfolio Task 2 is to add our own charts. The following chart shows public sector employment in the UK. 
+            </p>
+        </div>
+        <figure id="Location4"></figure> 
+    </section>
+
+    <script>
+        let figure_4_spec = "portfolio_task2/public_sector_employment.json"; 
+        
+        vegaEmbed('#Location4', figure_4_spec) 
+        
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 2: Adding in another personal chart</h2>
+            <p> 
+                The second chart shows internal displacement in Bangladesh. 
+            </p>
+        </div>
+        <figure id="Location5"></figure> 
+    </section>
+
+    <script>
+        let figure_5_spec = "portfolio_task2/displacement_bangladesh.json";
+        
+        vegaEmbed('#Location5', figure_5_spec) 
+        
+    </script>
+
+    </p>
+    <h2>
+    <h2 class="big"> 
+        Portfolio Task 3
+    </h2> 
+
+    <section>
+        <div class="chart-description">
+            <h2>Use visualisation in policy commentary</h2>
+            <p> 
+                Visualising the “aggregation problem” in global policy data
+            </p>
+            <p> 
+                Should global progress on <a href="https://sdgs.un.org/goals/goal6">SDG 6</a> be judged by overall averages, or by improvements among the most disadvantaged groups?
+            </p>
+            <p> 
+                The first chart shows that global access to safely managed drinking water has improved only marginally, suggesting progress toward SDG 6.1 may be stagnating:
+            </p>
+        </div>
+        <figure id="Location6"></figure> 
+    </section>
+
+    <script>
+        let figure_6_spec = "portfolio_task3/washdata.json"; 
+        
+        vegaEmbed('#Location6', figure_6_spec) 
+        
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <p> 
+               Yet the second chart reveals faster improvement in rural areas, illustrating how disaggregated data exposes hidden progress and the need for targeted policy investment.
+            </p>
+        </div>
+        <figure id="Location7"></figure> 
+    </section>
+
+    <script>
+        let figure_7_spec = "portfolio_task3/washdata_urban_rural.json";
+        
+        vegaEmbed('#Location7', figure_7_spec) 
+        
+    </script>
+        
+
+</body>
+    
+</html>
