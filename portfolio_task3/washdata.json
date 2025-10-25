@@ -3,6 +3,9 @@
 
   "data": {"url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task3/washdata.csv"},
   
+  "width": 300,
+  "height": 300,
+
   "mark": {
     "type": "bar",
     "size": 15
