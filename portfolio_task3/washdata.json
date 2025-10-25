@@ -8,8 +8,9 @@
 
   "mark": {
     "type": "line",
-    "size": 15
-  },
+    "size": 3,
+    "color": "steelblue",
+    "point": true},
   
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": ""},
