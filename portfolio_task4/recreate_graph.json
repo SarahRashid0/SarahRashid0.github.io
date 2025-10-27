@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Replication of Reuters 'Gun deaths in Florida' chart with correct visual orientation.",
+
   "data": {
     "values": [
       {"Year": 1990, "Number of murders": 873, "1000-murders": 127},
@@ -49,7 +49,7 @@
           "type": "quantitative",
           "scale": {"reverse": true, "domain": [0, 1000]},
           "axis": { 
-            "tickCount": 4, 
+            "tickCount": 4,
             "labelAngle": 0, 
             "title": ""}
           }
