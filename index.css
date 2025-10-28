@@ -68,7 +68,7 @@ img {
 
 /* Collapsible button styling */
 .collapsible {
-    background-color: #005fa3;
+    background-color: grey;
     color: white;
     cursor: pointer;
     padding: 12px;
@@ -76,7 +76,7 @@ img {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 6px;
 }
 
