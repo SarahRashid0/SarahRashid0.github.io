@@ -60,14 +60,13 @@
         "type": "line",
         "color": "black",
         "strokeWidth": 2,
-        "point": {"filled": true, "fill": "black", "size": 30},
+        "point": {"filled": true, "fill": "black", "size": 30}
       },
       "encoding": {
         "x": {"field": "Year", "type": "quantitative"},
         "y": {"field": "Number of murders", "type": "quantitative"}
       }
-    },
-
+    }
   ],
   "title": {
   "text": "Gun deaths in Florida",
