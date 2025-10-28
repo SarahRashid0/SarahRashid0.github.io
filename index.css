@@ -76,13 +76,13 @@ img {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 24px;
+    font-size: 40px;
     border-radius: 6px;
 }
 
 .active,
 .collapsible:hover {
-    background-color: #007bce;
+    background-color: grey;
 }
 
 /* Collapsible content box */
