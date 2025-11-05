@@ -1,15 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "", // This is injected via code, added from the csv that we load above.
-        "subtitle": ["",""], // Added from csv
+        "text": "", 
+        "subtitle": ["",""], 
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
         "anchor": "start",
         "color": "black"},
-    "view": {"stroke": "transparent"}, // Make box around chart clear
+    "view": {"stroke": "transparent"}, 
     "data":{
-        "url": "", // Added from loop
+        "url": "", 
         "format":{
             "type": "json",
             "property": "data"}},
@@ -23,7 +23,7 @@
     "width": 200,
     "mark": {"type": "line", "color": "#58b3c7", "interpolate": "basis"},
     "encoding": {
-        "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false,}},
+        "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
         "y":{"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}}
     }
 }
