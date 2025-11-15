@@ -1,0 +1,51 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map showing Welsh Local Authority District boundaries using 2025 administrative boundaries.",
+  "title": "Welsh Local Authorities and Happiness Scores (April 2022 to March 2023)",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
+    
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+
+  "transform": [
+    {
+      "lookup": "properties.LAD25CD",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task7/wales_happiness.csv"
+          },
+      "key": "AreaCodes",
+      "fields": ["HappinessScores"]
+      }
+    }
+  ],
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+
+  "projection": {"type": "mercator"},
+
+  "encoding": {
+    "color": {
+      "field": "HappinessScores",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "properties.LAD25NM",
+        "title": "Local Authority"
+      },
+      {
+        "field": "HappinessScores",
+        "title": "Happiness Scores"
+      }
+    ]
+    }
+}
