@@ -2,11 +2,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Map showing Welsh Local Authority District boundaries using 2025 administrative boundaries.",
-  "title": "Welsh Local Authorities and Happiness Scores (April 2022 to March 2023)",
+  "title": "Scottish Local Authorities and Happiness Scores (2023)",
   "width": 400,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
     
     "format": {"type": "topojson", "feature": "object_name"}
   },
@@ -16,10 +16,10 @@
       "lookup": "properties.LAD25CD",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task7/wales_happiness.csv"
+          "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task7/scotland_happiness.csv"
           },
-      "key": "AreaCodes",
-      "fields": ["HappinessScores"]
+      "key": "Area Codes",
+      "fields": ["2023"]
       }
     }
   ],
@@ -34,8 +34,9 @@
 
   "encoding": {
     "color": {
-      "field": "HappinessScores",
-      "type": "quantitative"
+      "field": "2023",
+      "type": "quantitative",
+      "title": "Happiness Scores"
     },
     "tooltip": [
       {
@@ -43,7 +44,7 @@
         "title": "Local Authority"
       },
       {
-        "field": "HappinessScores",
+        "field": "2023",
         "title": "Happiness Scores"
       }
     ]
