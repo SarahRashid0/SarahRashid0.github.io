@@ -1,0 +1,310 @@
+FID,sh_date_uploaded,hbname,hbcode,sitecode,sitename,postcode,address,tenure,type,uprn,x,y,fid
+pub_hosp.1,31/07/2024,NHS Ayrshire and Arran,S08000015,A013G,Crosshouse AMU (Maternity),KA2 0BD,"Kilmarnock Road, Crosshouse, Kilmarnock",PFI/NPD,Maternity Hospital,127068020,239915,638553,1
+pub_hosp.2,31/07/2024,NHS Ayrshire and Arran,S08000015,A026B,Lochranza,KA27 8HQ,"Newton Road, Isle of Arran, Lochranza",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126081161,193794,650306,2
+pub_hosp.3,31/07/2024,NHS Ayrshire and Arran,S08000015,A029B,Lamlash Surgery,KA27 8NS,"Murray Crescent, Isle of Arran, Lamlash",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126058602,202546,630726,3
+pub_hosp.4,31/07/2024,NHS Ayrshire and Arran,S08000015,A101H,Arran War Memorial,KA27 8LF,"Margnaheglish Road, Lamlash",Owned,Community Hospital,126059003,203533,632121,4
+pub_hosp.5,31/07/2024,NHS Ayrshire and Arran,S08000015,A103H,Ayrshire Central Hospital,KA12 8TJ,"Ayrshire Central Hospital, Kilwinning Road, Irvine",Owned,Mental Health Hospital,126061033,231642,641193,5
+pub_hosp.6,31/07/2024,NHS Ayrshire and Arran,S08000015,A109C,Galston clinic,KA4 8HN,"7 Henrietta Street, Galston",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127033939,250225,636637,6
+pub_hosp.7,31/07/2024,NHS Ayrshire and Arran,S08000015,A110B,Garrison House,KA28 0DE,"Garrison House, College Street, Millport",Leased,Clinics (Inc. Day Hospitals & Resource Centres),126057462,216425,655029,7
+pub_hosp.8,31/07/2024,NHS Ayrshire and Arran,S08000015,A110C,Hurlford Clinic,KA1 5BT,"Union Street, Hurlford",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127027406,245379,636753,8
+pub_hosp.9,31/07/2024,NHS Ayrshire and Arran,S08000015,A110H,Lady Margaret Hospital,KA28 0HF,"College Street, Millport",Owned,Community Hospital,126059527,216713,655863,9
+pub_hosp.10,31/07/2024,NHS Ayrshire and Arran,S08000015,A111H,Crosshouse Hospital,KA2 0BD,"59A Kilmarnock Road, Crosshouse, Kilmarnock",Owned,Acute Hospital,127074523,240302,638478,10
+pub_hosp.11,31/07/2024,NHS Ayrshire and Arran,S08000015,A116C,Central Clinic,KA1 2BD,"16 Old Irvine Road, Kilmarnock",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127011528,242388,637844,11
+pub_hosp.12,31/07/2024,NHS Ayrshire and Arran,S08000015,A118C,Treeswoodhead Clinic,KA1 4NX,"Treeswoodhead road, Kilmarnock",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127048066,243184,635541,12
+pub_hosp.13,31/07/2024,NHS Ayrshire and Arran,S08000015,A123C,Newmilns Clinic,KA16 9HQ,"79 Loudon Road, Newmilns",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127034937,252911,637186,13
+pub_hosp.14,31/07/2024,NHS Ayrshire and Arran,S08000015,A166C,Irvine Clinic,KA12 0HW,"3 Ballot Road, Irvine",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126064067,232430,638973,14
+pub_hosp.15,31/07/2024,NHS Ayrshire and Arran,S08000015,A201H,Ailsa Hospital,KA6 6AB,"Dalmellington Road, Ayr",Owned,Mental Health Hospital,141040973,236032,618646,15
+pub_hosp.16,31/07/2024,NHS Ayrshire and Arran,S08000015,A203B,Symington Clinic,KA1 5RS,"Lawhill Road, Symington",Owned,Clinics (Inc. Day Hospitals & Resource Centres),141045015,238458,631617,16
+pub_hosp.17,31/07/2024,NHS Ayrshire and Arran,S08000015,A207C,Catrine Clinic,KA5 6RU,"Institute Avenue, Catrine",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127034385,252847,625698,17
+pub_hosp.18,31/07/2024,NHS Ayrshire and Arran,S08000015,A208H,Biggart Hospital,KA9 2HQ,"1 Biggart Road, Prestwick",Owned,Older People Hospital,141061419,235532,625171,18
+pub_hosp.19,31/07/2024,NHS Ayrshire and Arran,S08000015,A210C,Dalmellington Area Centre,KA6 7QL,"33 Main Street, Dalmellington",Leased,Clinics (Inc. Day Hospitals & Resource Centres),127073620,247817,605878,19
+pub_hosp.20,31/07/2024,NHS Ayrshire and Arran,S08000015,A210H,Ayr Hospital,KA7 3UB,"Dalmellington Road, Ayr",Owned,Acute Hospital,141040974,235861,618224,20
+pub_hosp.21,31/07/2024,NHS Ayrshire and Arran,S08000015,A211H,Arrol Park,KA7 4DW,"10 Doonfoot Road, Ayr",Owned,Mental Health Hospital,141064057,233016,620249,21
+pub_hosp.22,31/07/2024,NHS Ayrshire and Arran,S08000015,A212B,Brooksby Medical & Resource Centre,KA30 8LH,"31 Brisbane Road, Largs",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126074823,220375,659797,22
+pub_hosp.23,31/07/2024,NHS Ayrshire and Arran,S08000015,A214H,Three Towns Resource Centre,KA21 5RF,"Nelson Road, Stevenston",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126062799,225677,641933,23
+pub_hosp.24,31/07/2024,NHS Ayrshire and Arran,S08000015,A215H,East Ayrshire Community Hospital,KA18 1EF,"Ayr Road, Cumnock",Owned,Community Hospital,127039038,256250,619807,24
+pub_hosp.25,31/07/2024,NHS Ayrshire and Arran,S08000015,A216H,Girvan Community Hospital,KA26 9HF,"Vicarton Street, Girvan",Owned,Community Hospital,141062584,219127,598598,25
+pub_hosp.26,31/07/2024,NHS Ayrshire and Arran,S08000015,A218C,Muirkirk Clinic,KA18 3RQ,"Glasgow Road, Muirkirk",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127046380,269596,627354,26
+pub_hosp.27,31/07/2024,NHS Ayrshire and Arran,S08000015,A219C,Netherthird Clinic,KA18 3DZ,"22 Blackfaulds Road, Cumnock",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127041083,257835,618796,27
+pub_hosp.28,31/07/2024,NHS Ayrshire and Arran,S08000015,A225C,Troon Clinic,KA10 6LY,"41 Barassie Road, Troon",Owned,Clinics (Inc. Day Hospitals & Resource Centres),141008762,232361,631087,28
+pub_hosp.29,31/07/2024,NHS Ayrshire and Arran,S08000015,A239C,Dalrymple Clinic,KA6 6DN,"6 Portland Road, Dalrymple",Owned,Clinics (Inc. Day Hospitals & Resource Centres),127000545,236524,614369,29
+pub_hosp.30,31/07/2024,NHS Ayrshire and Arran,S08000015,A262C,Kiln Walk,KA12 0AT,"11 Kiln Walk, Irvine",Owned,Clinics (Inc. Day Hospitals & Resource Centres),126036181,232493,638844,30
+pub_hosp.31,31/07/2024,NHS Ayrshire and Arran,S08000015,A271C,North West Kilmarnock Resource Centre,KA3 1NQ,"Western Road, Kilmarnock",Leased,Clinics (Inc. Day Hospitals & Resource Centres),127076070,242651,639329,31
+pub_hosp.221,31/07/2024,NHS Grampian,S08000020,N337H,Chalmers Hospital,AB45 1HY,"Clunie Street, Banff",Owned,Community Hospital,151085356,368809,864468,221
+pub_hosp.32,31/07/2024,NHS Ayrshire and Arran,S08000015,A279C,Crosshouse Resource Centre,KA2 0LE,"Annandale Gardens, Crosshouse",Leased,Clinics (Inc. Day Hospitals & Resource Centres),127065767,239620,638194,32
+pub_hosp.33,31/07/2024,NHS Borders,S08000016,B103H,Knoll Hospital Site (+HC),TD11 3EL,"Station Road, Duns",Owned and occupied by NHS Borders,Hospital and Health Centre,116030676,378680,653305,33
+pub_hosp.34,31/07/2024,NHS Borders,S08000016,B105H,Hawick Community Hospital,TD9 7AH,"Victoria Road, Hawick",Owned and occupied by NHS Borders,Community Hospital,116041211,349809,614689,34
+pub_hosp.35,31/07/2024,NHS Borders,S08000016,B114H,Kelso Hospital,TD5 7SP,"Inch Road, Kelso",Owned and occupied by NHS Borders,Hospital,116014860,372656,634442,35
+pub_hosp.36,31/07/2024,NHS Borders,S08000016,B118H,Hay Lodge Hospital,EH45 8JG,"Neidpath Road, Peebles",Owned and occupied by NHS Borders,Community Hospital,116065601,324700,640482,36
+pub_hosp.37,31/07/2024,NHS Borders,S08000016,B120H,Borders General Hospital Site,TD6 9BS,"Huntlyburn, Melrose",Owned and occupied by NHS Borders,"Acute Hospital, Education Centre & Residences",116051140,353342,633789,37
+pub_hosp.38,31/07/2024,NHS Dumfries and Galloway,S08000017,Y035B,Drummore Clinic,DG9 9QQ,"The Clinic, Drummore",Owned,Clinics (including Day Hospitals and Resource Centres),137088088,213537,536471,38
+pub_hosp.39,31/07/2024,NHS Dumfries and Galloway,S08000017,Y101C,Annan Clinic,DG12 5AG,"Charles Street, Annan",Owned,Clinics (including Day Hospitals and Resource Centres),137028966,319673,566719,39
+pub_hosp.40,31/07/2024,NHS Dumfries and Galloway,S08000017,Y101H,Castle Douglas Hospital,DG7 1EF,"Academy Street, Castle Douglas",Owned,Community Hospital,137042064,276781,562189,40
+pub_hosp.41,31/07/2024,NHS Dumfries and Galloway,S08000017,Y102C,Lochside Clinic,DG2 0ED,"Shirley Road, Lochside, Dumfries",Owned,Clinics (including Day Hospitals and Resource Centres),137051045,295534,578116,41
+pub_hosp.42,31/07/2024,NHS Dumfries and Galloway,S08000017,Y103C,Kelloholm Clinic,DG4 6RX,"Nith Buildings, Greystone Ave, Kelloholm",Owned,Clinics (including Day Hospitals and Resource Centres),137052857,273633,611587,42
+pub_hosp.43,31/07/2024,NHS Dumfries and Galloway,S08000017,Y106H,Kirkcudbright Hospital,DG6 4BE,"Townhead Street, St Marys Place, Kirkcudbright",Owned,Community Hospital,137005922,268392,550781,43
+pub_hosp.44,31/07/2024,NHS Dumfries and Galloway,S08000017,Y107H,Thomas Hope Hospital,DG13 0JX,"Market Place, Langholm",Owned,Community Hospital,137069526,336386,584490,44
+pub_hosp.45,31/07/2024,NHS Dumfries and Galloway,S08000017,Y108H,Lochmaben Hospital,DG11 1RQ,"Dumfries Road, Lochmaben",Owned,Community Hospital,137065470,307433,582450,45
+pub_hosp.46,31/07/2024,NHS Dumfries and Galloway,S08000017,Y109H,Moffat Hospital,DG10 9JY,"Selkirk Road, Mofffat",Owned,Community Hospital,137045338,309357,605079,46
+pub_hosp.47,31/07/2024,NHS Dumfries and Galloway,S08000017,Y110H,Newton Stewart Hospital,DG8 6LZ,"Main Road, Newton Stewart",Owned,Community Hospital,137082951,240517,564668,47
+pub_hosp.48,31/07/2024,NHS Dumfries and Galloway,S08000017,Y114H,Thornhill Hospital,DG3 5AA,"Hospital Brae, Thornhill",Owned,Community Hospital,137075286,287762,594922,48
+pub_hosp.49,31/07/2024,NHS Dumfries and Galloway,S08000017,Y114S,Mountainhall,DG1 4AL,"Bankend Road, Dumfries",Owned,Clinics (Inc Day Hospitals & Resource Centres),137052555,298052,574933,49
+pub_hosp.50,31/07/2024,NHS Dumfries and Galloway,S08000017,Y120H,Annan Hospital,DG12 6NQ,"Stapleton Road, Annan",Owned,Community Hospital,137018417,320309,566669,50
+pub_hosp.51,31/07/2024,NHS Dumfries and Galloway,S08000017,Y130H,Innistaigh,DG9 7EH,"Dalrymple Street, Stranraer",Owned,Mental Health Hospital,137052730,206302,560178,51
+pub_hosp.52,31/07/2024,NHS Dumfries and Galloway,S08000017,Y134H,Treastaigh,DG12 6NQ,"Stapleton Road, Annan",Owned,Mental Health Hospital,137052614,320313,566640,52
+pub_hosp.53,31/07/2024,NHS Dumfries and Galloway,S08000017,Y136H,Acorn House,DG1 4SR,"Kingholm Road, Dumfries",Owned,Community Hospital,137035920,297563,574328,53
+pub_hosp.54,31/07/2024,NHS Dumfries and Galloway,S08000017,Y143H,Darataigh,DG9 7EH,"Dalrymple Street, Stranraer",Owned,Clinics (including Day Hospitals and Resource Centres),137059712,206351,560170,54
+pub_hosp.55,31/07/2024,NHS Dumfries and Galloway,S08000017,Y144H,Galloway Community Hospital,DG9 7DQ,"Dalrymple Street, Stranraer",Owned,Acute Hospital,137015601,206341,560236,55
+pub_hosp.56,31/07/2024,NHS Dumfries and Galloway,S08000017,Y145H,Midpark Hospital,DG1 4TL,"Midpark House, Bankend Road, Dumfries",Owned,Mental Health Hospital,137103725,298584,574134,56
+pub_hosp.57,31/07/2024,NHS Dumfries and Galloway,S08000017,Y146H,Dumfries and Galloway Royal Infirmary,DG2 8RX,"Cargenbridge, Dumfries",Owned,Acute Hospital,137109478,294131,575080,57
+pub_hosp.58,31/07/2024,NHS Dumfries and Galloway,S08000017,Y165C,Whithorn Clinic,DG8 8PS,"3 St John Street, Whithorn",Owned,Clinics (including Day Hospitals and Resource Centres),137012746,244612,540690,58
+pub_hosp.59,31/07/2024,NHS Highland,S08000022,C101H,Argyll & Bute Hospital,PA31 8LD,"Duncuan Residencies, Aros, Argyll & Bute Hospital, Lochgilphead",Owned,Community Hospital,125046387,187170,688509,59
+pub_hosp.60,31/07/2024,NHS Highland,S08000022,C106H,Cowal Community Hospital,PA23 7RL,"360 Argyll Street, Argyll Street, Dunoon",Owned,Community Hospital,125027794,217324,677908,60
+pub_hosp.61,31/07/2024,NHS Highland,S08000022,C108H,Islay Hospital,PA34 7JD,"Gortonvogie Road, Bowmore, Isle of Islay, Argyll",Owned,Community Hospital,125042593,131615,659676,61
+pub_hosp.62,31/07/2024,NHS Highland,S08000022,C110H,Mid Argyll Hospital,PA31 8JZ,"Mid Argyll Community Hospital & Integrated Care, Blarbuie Road, Lochgilphead, Argyll",PFI/NPD,Community Hospital,125071936,186879,688339,62
+pub_hosp.63,31/07/2024,NHS Highland,S08000022,C113H,Victoria Hospital Rothesay,PA20 9JJ,"High Street, Rothesay, Bute, Bute",Owned,Community Hospital,125045746,208723,663909,63
+pub_hosp.64,31/07/2024,NHS Highland,S08000022,C114H,Victoria Hospital Annexe,PA20 9JH,"Upper Flat Accomodation, Townhead, Rothesay, Isle of Bute",Owned,Community Hospital,125056174,208772,663527,64
+pub_hosp.65,31/07/2024,NHS Highland,S08000022,C121H,Lorn & Islands District General Hospital,PA34 4HH,"Lorn & Islands District General Hospital, Glengallan Road, Oban",Owned,Community Hospital,125031281,185665,728549,65
+pub_hosp.66,31/07/2024,NHS Highland,S08000022,C122H,Community Equipment Store Campbeltown,PA28 6LE,"Ralston Road, Campbeltown",Owned,Community Hospital,125030510,172003,619995,66
+pub_hosp.67,31/07/2024,NHS Highland,S08000022,H003B,Culloden Health Centre,IV2 7LL,"Keppoch Road, Culloden, Inverness",Owned,Clinics (including Day Hospitals and Resource Centres),130188156,271660,846058,67
+pub_hosp.68,31/07/2024,NHS Highland,S08000022,H015A,Kilchoan Nurses Base,PH36 4LJ,"Doctors Surgery, Kilchoan Community Centre, Pier Road, Kilchoan Acharacle",Leased,Clinics (including Day Hospitals and Resource Centres),130149758,149084,763592,68
+pub_hosp.69,31/07/2024,NHS Highland,S08000022,H025A,Staffin Nurse's Base,IV51 9JX,"Staffin, Staffin",Owned,Clinics (including Day Hospitals and Resource Centres),130173036,149306,866953,69
+pub_hosp.70,31/07/2024,NHS Highland,S08000022,H055A,Harm Reduction - 57 Church Street,IV1 1DR,"Harm Reduction Offices, 1st Floor, 57 Church Street, Inverness",Leased,Clinics (including Day Hospitals and Resource Centres),130092106,266555,845342,70
+pub_hosp.71,31/07/2024,NHS Highland,S08000022,H101H,Dunbar Hospital Thurso,KW14 7XE,"Ormlie Road, Thurso",Owned,Community Hospital,130078179,310620,967186,71
+pub_hosp.72,31/07/2024,NHS Highland,S08000022,H103H,Caithness General Hospital,KW1 5NS,"Bankhead Road, Wick",Owned,Community Hospital,130089516,336130,950859,72
+pub_hosp.73,31/07/2024,NHS Highland,S08000022,H104H,Town & County Hospital Wick,KW1 5NQ,"Hospital Road, Wick",Owned,Older People Hospital,130084225,335965,949904,73
+pub_hosp.74,31/07/2024,NHS Highland,S08000022,H106H,Lawson Memorial Hospital,KW10 6SS,"Station Road, Golspie",Owned,Community Hospital,130099793,282528,899920,74
+pub_hosp.75,31/07/2024,NHS Highland,S08000022,H201H,Royal Northern Infirmary,IV3 5SF,"Ness Walk, Inverness",Owned,Community Hospital,130104196,266262,844463,75
+pub_hosp.76,31/07/2024,NHS Highland,S08000022,H202H,Raigmore Hospital,IV2 3UJ,"Old Perth Road, Inverness",Owned,Acute Hospital,130036792,268618,844740,76
+pub_hosp.77,31/07/2024,NHS Highland,S08000022,H208H,Town & County Hospital Nairn,IV12 5EE,"Cawdor Road, Nairn",PFI/NPD,Community Hospital,130109687,288120,855775,77
+pub_hosp.78,31/07/2024,NHS Highland,S08000022,H210H,Ian Charles Hospital,PH26 3HR,"Castle Road East, Grantown on Spey",Owned,Community Hospital,130075567,303534,828518,78
+pub_hosp.79,31/07/2024,NHS Highland,S08000022,H212H,Belford Hospital,PH33 6BS,"Belford Road, Fort William",Owned,Multi Service Hospital,130024001,210613,774069,79
+pub_hosp.80,31/07/2024,NHS Highland,S08000022,H214C,Abban Street Chiropody Clinic,IV3 8HH,"24 Abban Street, Inverness",Owned,Clinics (including Day Hospitals and Resource Centres),130051051,265991,845690,80
+pub_hosp.81,31/07/2024,NHS Highland,S08000022,H215H,Portree Hospital,IV51 9BZ,"Fancy Hill, Portree",Owned,Community Hospital,130063404,148283,843314,81
+pub_hosp.82,31/07/2024,NHS Highland,S08000022,H217H,Ross Memorial Hospital,IV15 9QT,"Ferry Road, Dingwall",Owned,Community Hospital,130087488,255614,858620,82
+pub_hosp.83,31/07/2024,NHS Highland,S08000022,H219H,Invergordon County Community Hospital,IV18 0JR,"Saltburn Road, Invergordon",PFI/NPD,Community Hospital,130069957,271838,869426,83
+pub_hosp.84,31/07/2024,NHS Highland,S08000022,H223H,New Craigs,IV3 8NP,"Leachkin Road, Inverness",PFI/NPD,Mental Health Hospital,130103747,263973,844332,84
+pub_hosp.85,31/07/2024,NHS Highland,S08000022,H224H,Argyll Community Hospital and Integrated Care Centre,PA31 8JZ,"Mid Argyll Community Hospital & Integrated Care, Blarbuie Road, Lochgilphead, Argyll",PFI/NPD,Community Hospital,125071936,186879,688339,85
+pub_hosp.86,31/07/2024,NHS Highland,S08000022,H226H,Migdale Hospital 2011,IV24 3ER,"Cherry Grove, Bonar Bridge",Owned,Community Hospital,130139956,261212,891510,86
+pub_hosp.87,31/07/2024,NHS Highland,S08000022,H228H,Badenoch & Strathspey Community Hospital,PH22 1PB,"Cairngorm Technology Park, Aviemore",Owned,Community Hospital,130178672,289985.59,813433.56,87
+pub_hosp.88,31/07/2024,NHS Highland,S08000022,H228B,Dunbeath Health Clinic,KW6 6EZ,"Achorn Road, Dunbeath",Owned,Clinics (including Day Hospitals and Resource Centres),130126191,315609,929558,88
+pub_hosp.89,31/07/2024,NHS Highland,S08000022,H229H,Broadford Hospital,IV49 9AA,"High Road, Broadford",Owned,Community Hospital,130184898,164133,823960,89
+pub_hosp.90,31/07/2024,NHS Highland,S08000022,H257C,Bruce Gardens Day Centre,IV3 5EN,"23 Bruce Gardens, Inverness",Leased,Clinics (including Day Hospitals and Resource Centres),130048462,266034,844773,90
+pub_hosp.91,31/07/2024,NHS Highland,S08000022,H265C,MacKenzie Centre,IV2 4YH,"23A Culduthel Road, Inverness",Leased,Clinics (including Day Hospitals and Resource Centres),130087897,266941,844186,91
+pub_hosp.92,31/07/2024,NHS Highland,S08000022,H275C,Dundonnell Community Clinic,IV23 2QY,"Old Quarry, Badcaul, Dundonnell",Owned,Clinics (including Day Hospitals and Resource Centres),130149272,201971,891674,92
+pub_hosp.93,31/07/2024,NHS Highland,S08000022,H290C,Corbett Centre,IV3 8AD,"Coronation Park, Inverness",Leased,Clinics (including Day Hospitals and Resource Centres),130112175,265829,846480,93
+pub_hosp.94,31/07/2024,NHS Highland,S08000022,H297C,Raasay Clinic,IV40 8NG,"School Park, Isle of Raasay",Owned,Clinics (including Day Hospitals and Resource Centres),130111294,155148,835950,94
+pub_hosp.95,31/07/2024,NHS Highland,S08000022,H300C,Helensburgh Victoria,G84 7BU,"Victoria Integrated Care Centre, 93 East King street, Helensburgh",Owned,Community Hospital,125024289,230780,682140,95
+pub_hosp.96,31/07/2024,NHS Highland,S08000022,H303C,The Glen Centre,PH22 1RX,"17 Kinveachy Gardens, Aviemore",Leased,Clinics (including Day Hospitals and Resource Centres),130110306,289621,813291,96
+pub_hosp.97,31/07/2024,NHS Highland,S08000022,H342C,Unit 67 (Eastgate Shopping Centre),IV2 3PP,"Unit 67, Eastgate Shopping Centre, Inverness",Leased,Clinics (including Day Hospitals and Resource Centres),130191400,266947,845457,97
+pub_hosp.98,31/07/2024,NHS Orkney,S08000025,R103H,The Balfour,KW15 1NZ,"Foreland Road, Kirkwall",Owned,Acute Hospital,134020600,344591,1010010,98
+pub_hosp.99,31/07/2024,NHS Shetland,S08000026,Z002B,Fetlar Nurses House - Surgery,ZE2 9DJ,"Fetlar, Shetland",Owned,Clinics (including Day Hospitals and Resource Centres),30100004168,462439,1190630,99
+pub_hosp.100,31/07/2024,NHS Shetland,S08000026,Z004B,Foula Nurses House - Surgery,ZE2 9PN,Foula,Owned,Clinics (including Day Hospitals and Resource Centres),<Null>,397234,1138780,100
+pub_hosp.101,31/07/2024,NHS Shetland,S08000026,Z011B,Skerries Nurses House - Surgery,ZE2 9AS,Skerries,Owned,Clinics (including Day Hospitals and Resource Centres),30100004801,468125,1171620,101
+pub_hosp.102,31/07/2024,NHS Shetland,S08000026,Z102H,Gilbert Bain Hospital,ZE1 0TB,"South Road, Lerwick, Shetland",Owned,Acute Hospital,30100008216,446981,1141030,102
+pub_hosp.103,31/07/2024,NHS Shetland,S08000026,ZZ26007,Fair Isle Surgery,ZE2 9JU,Fair Isle,Leased,Clinics (including Day Hospitals and Resource Centres),<Null>,420840,1071229,103
+pub_hosp.104,31/07/2024,NHS Shetland,S08000026,ZZ26009,Scalloway Health Centre - New,ZE1 0TN,"New Road, Scalloway, Shetland",Leased,Clinics (including Day Hospitals and Resource Centres),3.01E+11,440557,1139790,104
+pub_hosp.105,31/07/2024,NHS Western Isles,S08000028,W022B,Nurses Clinic and Nurses Flat  (Berneray),HS6 5BD,"Church Road, Berneray, North Uist",Owned,Clinics (including Day Hospitals and Resource Centres),139016979,92083,881730,105
+pub_hosp.106,31/07/2024,NHS Western Isles,S08000028,W107H,Western Isles Hospital,HS1 2AF,"Macaulay Road, Isle of Lewis, Stornoway",Owned,Acute Hospital,139013807,142692,934195,106
+pub_hosp.107,31/07/2024,NHS Western Isles,S08000028,W108H,Uist and Barra Hospital,HS7 5LA,"Balivanich, Isle of Benbecula",Owned,Community Hospital,139013969,77251,855300,107
+pub_hosp.108,31/07/2024,NHS Tayside,S08000030,T101H,Ninewells Hospital,DD1 9SY,"Ninewells Avenue, Dundee",Owned,Acute Hospital,9059088062,335933,730694,108
+pub_hosp.109,31/07/2024,NHS Tayside,S08000030,T102C,Ardler Clinic,DD2 3TP,"Turnberry Avenue, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059076019,337583,733333,109
+pub_hosp.110,31/07/2024,NHS Tayside,S08000030,T104H,Kings Cross Hospital,DD3 8EA,"Clepington Road, Dundee",Owned,Community Hospital,9059102191,339391,732165,110
+pub_hosp.111,31/07/2024,NHS Tayside,S08000030,T107H,Royal Victoria Hospital,DD2 1SP,"Jedburgh Road, Dundee",Owned,Multi Service Hospital,9059043460,337629,730504,111
+pub_hosp.112,31/07/2024,NHS Tayside,S08000030,T113H,Dundee Dental Hospital,DD1 4HR,"2 Park Place, Dundee",Owned,Specialist Hospital,9059085550,339742,730011,112
+pub_hosp.113,31/07/2024,NHS Tayside,S08000030,T115H,Strathmartine Hospital,DD3 0PQ,"Baldovan Road, Strathmartine, Dundee",Owned,Mental Health Hospital,117121795,338323,735165,113
+pub_hosp.114,31/07/2024,NHS Tayside,S08000030,T116H,Armitstead Child Development Centre,DD3 8EA,"Kings Cross Hospital, Clepington Road, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059100880,339256.07,732007.6,114
+pub_hosp.115,31/07/2024,NHS Tayside,S08000030,T120H,Hawkhill Day Hospital,DD1 5LA,"Peddie Street, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059063534,338960,729885,115
+pub_hosp.116,31/07/2024,NHS Tayside,S08000030,T122H,Dudhope House (Young Persons Unit),DD3 6HH,"15 Dudhope Terrace, Dundee",Owned,Specialist Hospital,9059038317,339113,730877,116
+pub_hosp.117,31/07/2024,NHS Tayside,S08000030,T123H,Royal Victoria Day Hospital,DD2 1SP,"Royal Victoria Hospital, Jedburgh Road, Dundee",Owned,Community Hospital,9059043460,337629,730504,117
+pub_hosp.118,31/07/2024,NHS Tayside,S08000030,T128C,Constitution House,DD1 1LB,"55 Constitution Road, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059033636,339964.33,730625.74,118
+pub_hosp.119,31/07/2024,NHS Tayside,S08000030,T202H,Perth Royal Infirmary,PH1 1NX,"Taymount Terrace, Perth",Owned,Multi Service Hospital,124037688,310411,723623,119
+pub_hosp.120,31/07/2024,NHS Tayside,S08000030,T205H,St Margarets Hospital,PH3 1JH,"Western Road, Auchterarder",Owned,Community Hospital,124032142,293688,712587,120
+pub_hosp.121,31/07/2024,NHS Tayside,S08000030,T209H,Blairgowrie Cottage Hospital,PH10 6EE,"Perth Road, Blairgowrie",Owned,Community Hospital,124002483,317409,744585.83,121
+pub_hosp.122,31/07/2024,NHS Tayside,S08000030,T215H,Murray Royal Hospital,PH2 7BH,"Muirhall Road, Perth",PFI/NPD,Mental Health Hospital,124051002,312939.65,724017.75,122
+pub_hosp.123,31/07/2024,NHS Tayside,S08000030,T304H,Arbroath Infirmary,DD11 2AT,"Rosemount Road, Arbroath",Owned,Multi Service Hospital,117097391,363406,740444,123
+pub_hosp.124,31/07/2024,NHS Tayside,S08000030,T312H,Stracathro Hospital,DD9 7QA,"Stracathro Hospital, Brechin",Owned,Multi Service Hospital,117097919,362591,764986,124
+pub_hosp.125,31/07/2024,NHS Tayside,S08000030,T313H,Whitehills Hospital,DD8 3DY,By Forfar,PFI/NPD,Community Hospital,117098302,346619,751376,125
+pub_hosp.126,31/07/2024,NHS Tayside,S08000030,T314H,Gowanlea,DD11 5DX,"Seaton Road, Arbroath",Leased,Clinics (Inc. Day Hospitals and Resource Centres),117067568,364826,741428,126
+pub_hosp.127,31/07/2024,NHS Tayside,S08000030,T316H,Crieff Community Hospital,PH7 3HR,"King Street, Crieff",Owned,Community Hospital,124033837,286317.24,721263.23,127
+pub_hosp.128,31/07/2024,NHS Tayside,S08000030,T317H,Carseview Centre,DD2 1NH,"4 Tom McDonald Avenue, Ninewells, Dundee",PFI/NPD,Mental Health Hospital,9059060918,335664,730633,128
+pub_hosp.129,31/07/2024,NHS Tayside,S08000030,T319H,Whitehills Health and Community Care Centre,DD8 3DY,"Station Road, Forfar",PFI/NPD,Community Hospital,117098302,346619,751376,129
+pub_hosp.130,31/07/2024,NHS Tayside,S08000030,T320H,Pitlochry Community Hospital,PH16 5FG,"Ferry Road, Pitlochry, Perthshire",Leased,Community Hospital,124080764,293727,757986,130
+pub_hosp.131,31/07/2024,NHS Tayside,S08000030,T321H,Broxden Dental Centre,PH1 1TJ,"Tweed Place, Perth",Owned,Specialist Hospital,124083245,308335.46,723095.85,131
+pub_hosp.132,31/07/2024,NHS Tayside,S08000030,T322H,Kingsway Care Centre,DD2 3PT,"7 Kings Cross Road, Dundee",Leased,Older People Hospital,9059086926,338477.08,732101.69,132
+pub_hosp.133,31/07/2024,NHS Tayside,S08000030,T324H,Dudhope Young Peoples Inpatient Unit,DD3 6HH,"17 Dudhope Terrace, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059103968,339164.47,730903.26,133
+pub_hosp.134,31/07/2024,NHS Tayside,S08000030,T325H,CAMHS 17a Dudhope,DD3 6HH,"17a Dudhope Terrace, Dundee",Owned,Specialist Hospital,9059038469,339019,730861,134
+pub_hosp.135,31/07/2024,NHS Tayside,S08000030,T333C,Wedderburn House,DD1 5NS,"1 Edward Street, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059084428,339082,730417,135
+pub_hosp.136,31/07/2024,NHS Tayside,S08000030,T339C,The Corner Young Peoples Health and Information Service,DD1 3DP,"13 Shore Terrace, Dundee",Leased,Clinics (Inc. Day Hospitals and Resource Centres),9059076645,340482,730204,136
+pub_hosp.137,31/07/2024,NHS Tayside,S08000030,T353C,Alloway Centre,DD4 8UA,"1 Alloway Place, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059077475,341729,732399,137
+pub_hosp.138,31/07/2024,NHS Tayside,S08000030,T361C,Dundonald Centre,DD3 7PY,"Unit 9a Manhattan Works, Dundonald Street, Dundee",Leased,Clinics (Inc. Day Hospitals and Resource Centres),9059094479,340904,731559,138
+pub_hosp.139,31/07/2024,NHS Tayside,S08000030,T364C,Child and Family Centre,DD3 6HH,"19 Dudhope Terrace, Dundee",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9059038469,339019,730861,139
+pub_hosp.140,31/07/2024,NHS Tayside,S08000030,T367C,Bridge of Earn Clinic,PH2 9EA,"1 Station Road, Bridge of Earn",Owned,Clinics (Inc. Day Hospitals and Resource Centres),124034862,313063.39,718327.51,140
+pub_hosp.141,31/07/2024,NHS Tayside,S08000030,T380C,Jubilee Court Letham,DD8 2QW,"Jubilee Court, Health and Wellbeing Centre, Dundee Rd, Letham",Leased,Clinics (Inc. Day Hospitals and Resource Centres),117053274,352737,748550,141
+pub_hosp.142,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C203C,Hartfield Clinic,G82 2DB,"Latta Street, Dumbarton",Owned,Clinics (Inc. Day Hospitals and Resource Centres),129048738,240279,675701,142
+pub_hosp.143,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C204H,Dumbarton Joint Hospital,G82 5JA,"Cardross Road, Dumbarton",Owned,Older People Hospital,129043781,238067,675883,143
+pub_hosp.144,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C206H,Vale of Leven Hospital,G83 0UA,"North Main Street, Alexandria",Owned,Acute Hospital,129023226,238443,680799,144
+pub_hosp.145,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C313H,Inverclyde Royal Hospital,PA16 0XN,"Larkfield Road, Greenock",Owned,Acute Hospital,119000391,224658,675892,145
+pub_hosp.146,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C316C,Larkfield Child and Family Unit,PA16 0XN,"Inverlcyde Royal Hospital, Larkfield Road, Greenock",Owned,Clinics (Inc. Day Hospitals and Resource Centres),119000302,224829,675910,146
+pub_hosp.147,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C403H,Dykebar Hospital,PA2 7DE,"Grahamston Road, Paisley",Owned,Mental Health Hospital,123053298,249902,661516,147
+pub_hosp.148,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C404C,Old Johnstone Clinic,PA5 8EE,"Ludovic Square, Johnstone",Owned,Clinics (Inc. Day Hospitals and Resource Centres),123023599,242622,663038,148
+pub_hosp.149,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C407C,Foxbar Clinic,PA2 9QR,"Morar Drive, Paisley",Owned,Clinics (Inc. Day Hospitals and Resource Centres),123063206,246048,662276,149
+pub_hosp.150,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C408C,Tannahill Centre/Ferguslie Clinic,PA3 1NR,"76 Blackstoun Road, Paisley",Leased,Clinics (Inc. Day Hospitals and Resource Centres),123039214,246459,664559,150
+pub_hosp.151,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C410C,New Sneddon Street Clinic,PA3 2AD,"8 New Sneddon Street, Paisley",Owned,Clinics (Inc. Day Hospitals and Resource Centres),123065012,248374,664313,151
+pub_hosp.152,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C418H,Royal Alexandra Hospital,PA2 9PN,"Corsebar Road, Paisley",Owned,Acute Hospital,123044731,247424,662909,152
+pub_hosp.153,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C420H,Blytheswood House,PA4 8NT,"4 Fulbar Lane, Renfrew",Owned,Mental Health Hospital,123079509,250674,667899,153
+pub_hosp.154,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G005A,Western Infirmary radionuceide,G11 6NT,"Dumbarton Road, Glasgow",Owned,Acute Hospital,9.067E+11,256585,666565,154
+pub_hosp.155,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G045A,Cowlairs (TSSU),G22 5DT,"Block 3 Cowlairs Industrial Estate, Springburn, Glasgow",Leased,Acute Hospital,9.067E+11,259981,667997,155
+pub_hosp.156,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G067A,TSSU (Inverclyde),PA16 7NN,"1 Wren Road, Greenock",Owned,Acute Hospital,119001744,225508,675740,156
+pub_hosp.157,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G102C,The Restart Project,G40 2QR,"159 Broad Street, Glasgow",Leased,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,260987,664222,157
+pub_hosp.158,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G106H,Glasgow Dental Hospital,G2 3JZ,"378 Sauchiehall Street, Glasgow",Owned,Specialist Hospital,9.067E+11,258322,665974,158
+pub_hosp.159,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G107H,Glasgow Royal Infirmary,G4 0SF,"84 Castle Street, Glasgow",Owned,Acute Hospital,9.067E+11,260185,665688,159
+pub_hosp.160,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G109H,Lightburn Hospital,G32 6ND,"966 Carntyne Road, Glasgow",Owned,Older People Hospital,9.067E+11,264560,665171,160
+pub_hosp.161,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G112H,Parkview Resource Centre,G32 7AX,"152 Wellshot Road, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,263869,663896,161
+pub_hosp.162,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G113H,Auchinlea Resource Centre,G34 9HQ,"11 Auchinlea Road, Easterhouse, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,267065,666016,162
+pub_hosp.163,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G205C,Callander Street Clinic (Woodside),G20 7JZ,"3 Callander Street, Woodside, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,258379,667017,163
+pub_hosp.164,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G207H,Stobhill Hospital,G21 3UW,"133 Balornock Road, Glasgow",Owned,Mental Health Hospital,9.067E+11,261277,668868,164
+pub_hosp.165,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G214H,Springpark Resource Centre,G22 5EU,"101 Denmark Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,259222,667871,165
+pub_hosp.166,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G302H,Leverndale Hospital,G53 7TU,"510 Crookston Road, Glasgow",Owned,Mental Health Hospital,9.067E+11,251890,662768,166
+pub_hosp.167,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G303C,Clarkston Court,G76 7AT,"56 Busby Road, Clarkston, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),131038989,257371,657420,167
+pub_hosp.168,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G401C,Elderpark Clinic,G51 3XR,"20 Arklet Road, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,254539,665455,168
+pub_hosp.169,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G405H,Queen Elizabeth University Hospital,G51 4TF,"1345 Govan Road, Glasgow",Owned,Acute Hospital,9.067E+11,253769,665746,169
+pub_hosp.170,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G408H,Florence Street Resource Centre,G5 0YX,"26 Florence Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,259377,664280,170
+pub_hosp.171,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G412C,Pollokshaws Clinic,G43 1RR,"35 Wellgreen, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,256264,661601,171
+pub_hosp.172,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G435C,Cathcart Centre,PA15 1XG,"128 Cathcart Street, Greenock",Owned,Clinics (Inc. Day Hospitals and Resource Centres),119000796,228055,676107,172
+pub_hosp.173,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G505H,Gartnavel Royal Hospital,G12 0XH,"1055 Great Western Road, Glasgow",Owned,Mental Health Hospital,9.067E+11,255029,668035,173
+pub_hosp.174,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G506C,Netherton LD Assessment Centre,G13 1AL,"19 Blackwood Street, Glasgow",Third Party Ownership,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,254311,669264,174
+pub_hosp.175,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G512C,Plean Street Clinic,G14 0YJ,"18 - 20 Plean Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,252192,668105,175
+pub_hosp.176,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G513H,Queen Elizabeth University Hospital - Children's Hospital,G51 4TF,"1345 Govan Road, Glasgow",Owned,Childrens Hospital,9.067E+11,253769,665746,176
+pub_hosp.177,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G515C,Sandy Road Clinic,G11 6HU,"Queens Quay Main Avenue, Clydebank",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,255238,666576,177
+pub_hosp.178,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G516H,Gartnavel General Hospital,G12 0YN,"1053 Great Western Road, Glasgow",Owned,Acute Hospital,9.067E+11,255434,667982,178
+pub_hosp.179,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G517C,William St Clinic,G3 8UR,"120-130 William Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,257937,665601,179
+pub_hosp.180,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G518C,Milngavie Clinic,G62 7AA,"North Campbell Avenue, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),132041851,254954,674342,180
+pub_hosp.181,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G54H,Stobhill ACH,G21 3UW,"133 Balornock Road, Glasgow",PFI/NPD,Acute Hospital,9.067E+11,261277,668868,181
+pub_hosp.182,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G550C,Rossdale Resource Centre,G53 6AB,"12 Haughburn Road, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,253027,661518,182
+pub_hosp.183,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G553C,Sandyford Initiative,G3 7NB,"2-6 Sandyford Place, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,257449,665943,183
+pub_hosp.184,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G559C,Glenkirk Resource Centre,G15 6PX,"129 Drumchapel Road, Drumchapel, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.06701E+11,252656,670592,184
+pub_hosp.185,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G55H,Langlands Building,G51 4TF,"1345 Govan Road, Glasgow",PFI/NPD,Older People Hospital,9.06701E+11,253503,665388,185
+pub_hosp.186,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G560C,Stewart Resource Centre,G45 9US,"17 Ardencraig Road, Glasgow",Leased,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,260379,659031,186
+pub_hosp.187,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G565C,Partick Community Centre for Health,G11 6HU,"547 Dumbarton Road, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,255238,666576,187
+pub_hosp.188,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G581C,Goldenhill Resource Centre,G81 4XJ,"199 Dumbarton Road, Clydebank",Owned,Clinics (Inc. Day Hospitals and Resource Centres),129026454,249103,670551,188
+pub_hosp.189,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G582C,Eastbank Resource Centre,G32 9AA,"22 Acadamy Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,264675,664078,189
+pub_hosp.190,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G58H,Gartnavel Royal (HUB),G12 0XH,"The Hub Gartnavel Royal Hospital, 1055 Great Western Road, Glasgow",PFI/NPD,Mental Health Hospital,9.067E+11,255029,668035,190
+pub_hosp.191,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G598H,Arran Resource Centre,G40 2QP,"121 Orr Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,260720,664287,191
+pub_hosp.192,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G600H,Brand Street Resource Centre,G51 1DH,"Festival Business Park, 150 Brand Street, Glasgow",Third Party Ownership,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,256359,664655,192
+pub_hosp.193,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G603H,Arndale Resource Centre,G15 7TS,"80/90 Kinfauns Drive, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,251879,671111,193
+pub_hosp.194,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G607H,Woodlands Day Hospital (Waverly Park),G66 2HL,"15-17 Waterloo Close, Kirkintilloch, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),132053066,265958,674018,194
+pub_hosp.195,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G624C,Hardgate Clinic,G81 6AH,"2 Stewart Drive, Clydebank",Owned,Clinics (Inc. Day Hospitals and Resource Centres),129041668,249932,672580,195
+pub_hosp.196,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G678B,Fernbank St Clinic,G22 6BD,"194 Fernbank Street, Glasgow",Owned,Clinics (Inc. Day Hospitals and Resource Centres),9.067E+11,260365,668215,196
+pub_hosp.197,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G688B,Aranthrue Centre,PA4 8LH,"103 Paisley Road, Renfrew",Owned,Clinics (Inc. Day Hospitals and Resource Centres),123083429,250067,666723,197
+pub_hosp.198,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G73C,Charleston Centre,PA2 6LY,"5 South Campbell Street, Paisley",Leased,Clinics (Inc. Day Hospitals and Resource Centres),123105550,248344,662943,198
+pub_hosp.199,31/07/2024,NHS National Services Scotland,SB0808,X830A,Livingston Donor Centre,EH546HT,"Unit 118, The Centre, Almondvale South, Almondvale, Livingston",Leased,Clinics (Inc. Day Hospitals & Resource Centres),135013731,305584,666746,199
+pub_hosp.200,31/07/2024,NHS Grampian,S08000020,N015G,Timmermarket,AB24 5HT,"1 East North Street, Aberdeen",Owned,Clinics (Inc. Day Hospitals & Resource Centres),9051317362,394531.5,806485.3,200
+pub_hosp.201,31/07/2024,NHS Grampian,S08000020,N101C,Airyhall Clinic,AB15 7RF,"Springfield Road, Aberdeen",Owned,Clinics (Inc. Day Hospitals & Resource Centres),9051031062,391074,804571,201
+pub_hosp.202,31/07/2024,NHS Grampian,S08000020,N101H,Aberdeen Royal Infirmary,AB25 2ZB,"Foresterhill, Aberdeen",Owned,Acute Hospital,9051035526,391863,807131,202
+pub_hosp.203,31/07/2024,NHS Grampian,S08000020,N102H,Woodend Hospital,AB15 6JG,"Eday Road, Aberdeen",Owned,Acute Hospital,9051009663,389609,806408,203
+pub_hosp.204,31/07/2024,NHS Grampian,S08000020,N103H,City Hospital,AB24 5AU,"Urquhart Road, Aberdeen",Owned,Community Hospital,9051143730,394750,807033,204
+pub_hosp.205,31/07/2024,NHS Grampian,S08000020,N105E,Raeden Centre,AB15 5PD,"Midstocket Road, Aberdeed",Owned,Clinics (Inc. Day Hospitals & Resource Centres),9051032931,391530,806627,205
+pub_hosp.206,31/07/2024,NHS Grampian,S08000020,N121H,Royal Aberdeen Childrens Hospital,AB25 2ZB,"Foresterhill, Aberdeen",Owned,Childrens Hospital,9051049219,391892,807007,206
+pub_hosp.207,31/07/2024,NHS Grampian,S08000020,N142C,Tillydrone Clinic,AB24 2UD,"Pennan Road, Aberdeen",Owned,Clinics (Inc. Day Hospitals & Resource Centres),9051074945,393260,809018,207
+pub_hosp.208,31/07/2024,NHS Grampian,S08000020,N151H,Aboyne Hospital,AB34 5HQ,"Bellwood Road, Aboyne",Owned,Community Hospital,151130588,353595,798627,208
+pub_hosp.209,31/07/2024,NHS Grampian,S08000020,N161H,Aberdeen Maternity Hospital,AB25 2ZN,"Cornhill Road, Aberdeen",Owned,Maternity Hospital,9051049218,392131,807160,209
+pub_hosp.210,31/07/2024,NHS Grampian,S08000020,N181H,Glen O Dee Hospital,AB31 5SA,"Corsee Road, Banchory",Owned,Community Hospital,151502629,368503,796769,210
+pub_hosp.211,31/07/2024,NHS Grampian,S08000020,N183H,Roxburghe Hospice,AB25 3AE,"Ashgrove Road, Aberdeen",Owned,Specialist Hospital,9051123767,392521,807309.8,211
+pub_hosp.212,31/07/2024,NHS Grampian,S08000020,N198H,Royal Cornhill Hospital,AB25 2ZH,"Cornhill Road, Aberdeen",Owned,Mental Health Hospital,9051049220,393027,807023,212
+pub_hosp.213,31/07/2024,NHS Grampian,S08000020,N305C,Kemnay Clinic,AB51 5NG,"56 Fife Park, Kemnay",Owned,Clinics (Inc. Day Hospitals & Resource Centres),151089262,373570.7,816344,213
+pub_hosp.214,31/07/2024,NHS Grampian,S08000020,N306C,Macduff Clinic,AB44 1PR,"100 Duff Street, Macduff",Owned,Clinics (Inc. Day Hospitals & Resource Centres),151704082,370892,864042,214
+pub_hosp.215,31/07/2024,NHS Grampian,S08000020,N331H,Inverurie Hospital,AB51 3UL,"Upperboat Road, Inverurie",Owned,Community Hospital,151085954,377208,820743,215
+pub_hosp.216,31/07/2024,NHS Grampian,S08000020,N332H,Insch Hospital,AB52 6JJ,"Rannes Street, Insch",Owned,Community Hospital,151087968,363140,827938,216
+pub_hosp.217,31/07/2024,NHS Grampian,S08000020,N333H,Peterhead Community Hospital,AB42 2XB,"Links Terrace, Peterhead",Owned,Community Hospital,151085410,412467,845814,217
+pub_hosp.218,31/07/2024,NHS Grampian,S08000020,N334H,Fraserburgh Hospital,AB43 9NF,"Lochpots Road, Fraserburgh",Owned,Community Hospital,151085897,398931,866421,218
+pub_hosp.219,31/07/2024,NHS Grampian,S08000020,N335H,Jubilee Hospital,AB54 8EX,"Bleachfield Street, Huntly",Owned,Community Hospital,151085958,352653,839477,219
+pub_hosp.220,31/07/2024,NHS Grampian,S08000020,N336H,Turriff Cottage Hospital,AB53 4DQ,"Balmellie Road, Turriff",Owned,Community Hospital,151086882,373113,849758,220
+pub_hosp.222,31/07/2024,NHS Grampian,S08000020,N352H,Ugie Hospital,AB42 1LZ,"Ugie Road, Peterhead",Owned,Community Hospital,151502092,412415,847239,222
+pub_hosp.223,31/07/2024,NHS Grampian,S08000020,N411H,Dr Grays Hospital,IV30 1SN,"Plucarden Road, Elgin",Owned,Acute Hospital,133057682,320745,862527,223
+pub_hosp.224,31/07/2024,NHS Grampian,S08000020,N431H,Seafield Hospital,AB56 1AJ,"Barhill Road, Buckie",Owned,Community Hospital,133001456,341531,864642,224
+pub_hosp.225,31/07/2024,NHS Grampian,S08000020,N432H,Stephen Hospital,AB55 4BH,Dufftown,Owned,Community Hospital,133002498,332618,840048,225
+pub_hosp.226,31/07/2024,NHS Grampian,S08000020,N433H,Turner Hospital,AB55 5DG,"Turner Street, Keith",Owned,Community Hospital,133002182,342899,850607,226
+pub_hosp.227,31/07/2024,NHS Grampian,S08000020,N434H,Leanchoil Hospital,IV36 2RE,"91 St. Leonards Street, Forres",Owned,Community Hospital,133011391,304967,858237,227
+pub_hosp.228,31/07/2024,NHS Grampian,S08000020,N451H,Fleming Hospital,AB38 9PR,"Queens Road, Aberlour",Owned,Community Hospital,133002297,326720,842713,228
+pub_hosp.229,31/07/2024,NHS Grampian,S08000020,N453H,Spynie Hospital,IV30 2PW,"Duffus Road, Elgin",Owned,Community Hospital,133059290,320722,863959,229
+pub_hosp.230,31/07/2024,NHS Grampian,S08000020,N494H,Kincardine Community Hospital,AB39 2NJ,"Kirkton Road, Stonehaven",Owned,Community Hospital,151085972,386066,786454,230
+pub_hosp.231,31/07/2024,NHS Grampian,S08000020,N499H,Elmwood Home,AB25 3AE,"Ashgrove Road, Aberdeen",Owned,Mental Health Hospital,9051123770,392476,807415,231
+pub_hosp.232,31/07/2024,NHS Grampian,S08000020,N543C,Bridge of Don Clinic,AB22 8LD,"Cairnfold Road, Aberdeen",Owned,Clinics (Inc. Day Hospitals & Resource Centres),9051128495,393987,810028,232
+pub_hosp.233,31/07/2024,NHS Grampian,S08000020,N544C,Banchory Clinic,AB31 5XS,"Bellfield Park, Banchory",Owned,Clinics (Inc. Day Hospitals & Resource Centres),151085134,369735,795640,233
+pub_hosp.234,31/07/2024,NHS Grampian,S08000020,N643C,Dental Complex,AB25 2ZB,"Foresterhill , Aberdeen",Owned,Specialist Hospital,9051131711,391863,807131,234
+pub_hosp.235,31/07/2024,NHS Grampian,S08000020,N500H,Aberdeen Health Village,AB24 5HY,"50 Fredrick Street, Aberdeen",HUB,Clinics (Inc. Day Hospitals & Resource Centres),9051141287,394492.2,806589.4,235
+pub_hosp.236,31/07/2024,NHS Forth Valley,S08000019,V102H,Falkirk Community Hospital,FK1 5QE,"Westburn Ave, Falkirk",<Null>,<Null>,136017891,288174,679767,236
+pub_hosp.237,31/07/2024,NHS Forth Valley,S08000019,V106H,Bellsdyke Hospital,FK5 4HF,"122 Bellsdyke Rd, Stenhousemuir, Larbert",<Null>,<Null>,136079429,286796,684017,237
+pub_hosp.238,31/07/2024,NHS Forth Valley,S08000019,V217H,Forth Valley Royal Hospital,<Null>,"Stirling Road, Larbert",<Null>,<Null>,136079198,284921,682898,238
+pub_hosp.239,31/07/2024,NHS Forth Valley,S08000019,ZZ19023,Land part of former Royal Scottish National Hospital,<Null>,Larbert,<Null>,<Null>,136078878,285448,682404,239
+pub_hosp.240,31/07/2024,NHS Forth Valley,S08000019,V214H,Lochview Hospital,FK5 4WR,"Stirling Rd, Larbert",<Null>,<Null>,136078878,285448,682404,240
+pub_hosp.241,31/07/2024,NHS Forth Valley,S08000019,ZZ19027,Stirling Community Hospital (Stirling Health & Care Village),FK8 2AU,"Livilands, Stirling",<Null>,<Null>,122017667,279699,692138,241
+pub_hosp.242,31/07/2024,NHS Forth Valley,S08000019,ZZ19038,Bungalows 1-8 Larbert,FK5 4SD,Bungalows 1-8 Larbert,<Null>,<Null>,136072025,285588,682367,242
+pub_hosp.243,31/07/2024,NHS Forth Valley,S08000019,ZZ19039,"Red Lodge, Lochview",FK5 4SD,"Red Lodge, Lochview",<Null>,<Null>,136078878,285448,682404,243
+pub_hosp.244,31/07/2024,NHS Highland,S08000022,C112H,Campbeltown Hospital & Health Centre,PA28 6LE,"Ralston Road, Campbeltown",Owned,<Null>,125030510,172003,619995,244
+pub_hosp.245,31/07/2024,NHS Western Isles,S08000028,W106H,St. Brendans Cot Hospital,HS9 5XE,"Castlebay, Isle of Barra, Castlebay",Owned/Leased,<Null>,139013773,65926,797989,245
+pub_hosp.246,31/07/2024,NHS Fife,S08000029,F701H,Cameron Hospital,KY8 5RR,"Cameron Bridge, Windygates",Owned,<Null>,<Null>,334453.4,699881.1,246
+pub_hosp.247,31/07/2024,NHS Fife,S08000029,F704H,Victoria Hospital,KY2 5AH,"Hayfield Road, Kirkcaldy",Owned,<Null>,<Null>,328106.4,692991.6,247
+pub_hosp.248,31/07/2024,NHS Fife,S08000029,F708H,Adamson Hospital,KY15 4JG,"Bank Street, Cupar",Owned,<Null>,<Null>,337142.8,715132.2,248
+pub_hosp.249,31/07/2024,NHS Fife,S08000029,F709B,Cupar Health Centre,KY15 4JN,"The Health Centre, Bank Street, Cupar",NHS owned or leased,<Null>,<Null>,337100.7,715087.7,249
+pub_hosp.250,31/07/2024,NHS Fife,S08000029,F709H,St Andrews Community Hospital,KY16 8AR,"Largo Road, St Andrews",Owned,<Null>,<Null>,350296.1,715318,250
+pub_hosp.251,31/07/2024,NHS Fife,S08000029,F710H,Randolph Wemyss Memorial Hospital,KY8 1HU,"Wellesley Road, Buckhaven",Owned,<Null>,<Null>,336325.7,698754,251
+pub_hosp.252,31/07/2024,NHS Fife,S08000029,F710H_x,Methilhaven Surgery,KY8 1HU,"Wellesley Unit, RWMH, Wellesley Road, Buckhaven",NHS owned or leased,<Null>,<Null>,336329.8,698748.1,252
+pub_hosp.253,31/07/2024,NHS Fife,S08000029,F711H,Whytemans Brae Hospital,KY1 2ND,"Whyteman�s Brae, Kirkcaldy",Owned,<Null>,<Null>,327976,693416.1,253
+pub_hosp.254,31/07/2024,NHS Fife,S08000029,F712H,Stratheden Hospital,KY15 5RR,"Springfield By Cupar, By Cupar",Owned,<Null>,<Null>,334840.4,712915.6,254
+pub_hosp.255,31/07/2024,NHS Fife,S08000029,F714H,Weston Day Hospital,KY15 4AN,"West Port, Cupar",Owned,<Null>,<Null>,337025.3,714475.8,255
+pub_hosp.256,31/07/2024,NHS Fife,S08000029,F716H,Glenrothes Hospital,KY7 5QT,"1 Lodge Rise, Glenrothes",Owned,<Null>,<Null>,326738.4,702018,256
+pub_hosp.257,31/07/2024,NHS Fife,S08000029,F805H,Queen Margaret Hospital,KY12 0SU,"Whitefield Road, Dunfermline",Owned,<Null>,<Null>,311239.6,688628.4,257
+pub_hosp.258,31/07/2024,NHS Fife,S08000029,F810H,Lynebank Hospital,KY11 4UW,"Halbeath Road, Dunfermline",Owned,<Null>,<Null>,312112.4,688145.6,258
+pub_hosp.259,31/07/2024,NHS Fife,S08000029,F840C,Willow Drive Clinic,KY1 2NA,"Whyteman's Brae, Kirkcaldy",Owned,<Null>,<Null>,327966.3,693536.4,259
+pub_hosp.260,31/07/2024,NHS Fife,S08000029,F842C,Cupar Dental Access Centre,KY15 4LG,"Bank Street, Cupar",Owned,<Null>,<Null>,337171.2,715045.4,260
+pub_hosp.261,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,C419H,Larkfield Unit,PA16 0XN,"Inverclyde Royal Hospital, Larkfield Road, Greenock",<Null>,<Null>,119000391,224658,675892,261
+pub_hosp.262,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G306H,New Victoria Hospital,G42 9LF,"55 Grange Road, Glasgow",<Null>,<Null>,9.067E+11,258320,661782,262
+pub_hosp.263,31/07/2024,NHS Greater Glasgow and Clyde,S08000031,G612H,Rowanbank Clinic,G21 3UL,"Balornock Road, Glasgow",<Null>,<Null>,9.067E+11,261411,668643,263
+pub_hosp.264,31/07/2024,NHS Lanarkshire,S08000032,L103H,Coathill Hospital,ML5 4DN,"Hospital Street, Coatbridge",Owned,<Null>,118117591,273258,663570,264
+pub_hosp.265,31/07/2024,NHS Lanarkshire,S08000032,L104H,Victoria Memorial Day Hospital,G65 9AG,"19 Glasgow Road, Kilsyth",Owned,<Null>,118010623,270934,677913,265
+pub_hosp.266,31/07/2024,NHS Lanarkshire,S08000032,L105H,Wester Moffat Hospital,ML6 8LW,"Towers Road, Airdrie",Owned,<Null>,118007507,278644,665669,266
+pub_hosp.267,31/07/2024,NHS Lanarkshire,S08000032,L106H,University Hospital Monklands,ML6 0JS,"Monkscourt Avenue, Airdrie",Owned,<Null>,118128016,274962,665442,267
+pub_hosp.268,31/07/2024,NHS Lanarkshire,S08000032,L203H,Cleland Hospital,ML1 5NP,"Bellside Road, Motherwell",Owned,<Null>,118046163,280576,658297,268
+pub_hosp.269,31/07/2024,NHS Lanarkshire,S08000032,L206H,Kello Hospital,ML12 6AF,"Johns Loan, Biggar",Owned,<Null>,484134566,304351,637599,269
+pub_hosp.270,31/07/2024,NHS Lanarkshire,S08000032,L207H,Ladyhome Cottage Hospital,ML11 0RE,"Ayr Road, Douglas",Owned,<Null>,484107945,284094,630932,270
+pub_hosp.271,31/07/2024,NHS Lanarkshire,S08000032,L209H,Lockhart Hospital,ML11 7RX,"Whitelees Road, Lanark",Owned,<Null>,484120730,289409,643247,271
+pub_hosp.272,31/07/2024,NHS Lanarkshire,S08000032,L216H,Kirklands Hospital,G71 8BB,"Fallside Road, Bothwell",Owned,<Null>,484056657,270699,659552,272
+pub_hosp.273,31/07/2024,NHS Lanarkshire,S08000032,L302H,University Hospital Hairmyres,G75 8RG,"Eaglesham Road, East Kilbride",PFI however NHSL own the retained site,<Null>,484071346,260669,654066,273
+pub_hosp.274,31/07/2024,NHS Lanarkshire,S08000032,L304H,Stonehouse Hospital,ML9 3NT,"Strathaven Road, Stonehouse",Leased,<Null>,484148024,274902,646111,274
+pub_hosp.275,31/07/2024,NHS Lanarkshire,S08000032,L305H,Udston Hospital,ML3 9LA,"Farm Road, Hamilton",Owned,<Null>,484024356,269573,655744,275
+pub_hosp.276,31/07/2024,NHS Lanarkshire,S08000032,L308H,University Hospital Wishaw,ML2 0DP,"50 Netherton Street, Wishaw",Leased,<Null>,118087313,278294,655081,276
+pub_hosp.277,31/07/2024,NHS National Waiting Times Centre,SB0801,D102H,Golden Jubilee National Hospital,G81 4DY,"Agamemnon Street, Clydebank",<Null>,<Null>,129021230,248478,670809,277
+pub_hosp.278,31/07/2024,NHS National Waiting Times Centre,SB0801,D102H_1,Golden Jubilee Conference Hotel,G81 4SA,"Beardmore Street, Glasgow",<Null>,<Null>,129021420,248315,670768,278
+pub_hosp.279,31/07/2024,NHS National Waiting Times Centre,SB0801,D102H_2,Golden Jubilee Innovation Centre,G81 4HX,"NHS Golden Jubilee, Beardmore Street, Clydebank",<Null>,<Null>,129021230,248478,670809,279
+pub_hosp.280,31/07/2024,NHS National Waiting Times Centre,SB0801,D102H_3,Golden Jubilee Research Institute,G81 4HX,"NHS Golden Jubilee, Beardmore Street, Clydebank",<Null>,<Null>,129021230,248478,670809,280
+pub_hosp.281,31/07/2024,The State Hospitals Board for Scotland,SB0802,D101H,The State Hospital,ML11 8RP,"The State Hospital, 110 Lampits Road, Carstairs, Lanark",<Null>,<Null>,484128526,296304,645949,281
+pub_hosp.282,31/07/2024,NHS Lothian,S08000024,S033A,Woodburn Cottage,EH10 4SG,"56 Canaan Lane, Edinburgh",Owned,<Null>,906043092,324984.0001,671223.9875,282
+pub_hosp.283,31/07/2024,NHS Lothian,S08000024,S102H,Belhaven Hospital,EH42 1TR,"Beveridge Row, Dunbar",Owned,<Null>,138031130,366560.0281,678230.9575,283
+pub_hosp.284,31/07/2024,NHS Lothian,S08000024,S104B,North Berwick Health Centre,EH39 4PU,"54 St Baldred's Road, North Berwick, Lothain",Owned,<Null>,138050204,355358.994,684996.0343,284
+pub_hosp.285,31/07/2024,NHS Lothian,S08000024,S108H,Edington Cottage Hospital,EH39 4PU,"54 St Baldred's Road, North Berwick",Owned,<Null>,138050204,355358.994,684996.0343,285
+pub_hosp.286,31/07/2024,NHS Lothian,S08000024,S114H,Royal Victoria Hospital,EH4 2DN,"13 Craigleith Road, Edinburgh",Owned,<Null>,906464895,323192.5624,674646.8078,286
+pub_hosp.287,31/07/2024,NHS Lothian,S08000024,S116H,Western General Hospital,EH4 2XU,"Crewe Road South, Edinburgh",Owned,<Null>,906068839,323004.0078,674998.9558,287
+pub_hosp.288,31/07/2024,NHS Lothian,S08000024,S201H,Astley Ainslie Hospital,EH9 2HB,"133 Grange Loan, Edinburgh",Owned,<Null>,906458436,325312.0888,671236.6642,288
+pub_hosp.289,31/07/2024,NHS Lothian,S08000024,S009A,ATOS Building,EH10 4SG,"56 Cannan Lane, Edinburgh",Owned,<Null>,906043092,324984.0001,671223.9875,289
+pub_hosp.290,31/07/2024,NHS Lothian,S08000024,HS001,Woodburn House,EH10 4SG,"54 Cannan Lane, Edinburgh",Owned,<Null>,906388543,324983.9702,671153.9654,290
+pub_hosp.291,31/07/2024,NHS Lothian,S08000024,S209H,Liberton Hospital,EH16 6UB,"113 Lasswade Road, Edinburgh",Owned,<Null>,906462935,327952.0267,669029.0143,291
+pub_hosp.292,31/07/2024,NHS Lothian,S08000024,S217H,Royal Edinburgh Hospital,EH10 5HF,"Morningside Place, Edinburgh",Owned,<Null>,906246615,324124.9748,671126.0137,292
+pub_hosp.293,31/07/2024,NHS Lothian,S08000024,S232H,Cambridge Street Day Hospital,EH1 2DY,"5/7 Cambridge Street, Edinburgh",Owned,<Null>,906269242,324821.9794,673412.9906,293
+pub_hosp.294,31/07/2024,NHS Lothian,S08000024,S305B,Howden Health Centre,EH54 6TP,"Howden West, Livingston, Lothian",Owned,<Null>,135009664,304860.9719,667679.0082,294
+pub_hosp.295,31/07/2024,NHS Lothian,S08000024,S305H,St Michael's Hospital,EH49 6QS,"Edinburgh, Road, Linlithgow, west Lothian",Owned,<Null>,2.00004E+11,301040.9751,676912.9946,295
+pub_hosp.296,31/07/2024,NHS Lothian,S08000024,S306H,Tippethill Hospital,EH48 3BQ,"Armadale Road, Whitburn, West Lothain",PFI/NPD,<Null>,135013176,294511.9821,666131.0026,296
+pub_hosp.297,31/07/2024,NHS Lothian,S08000024,S308H,St John's Hospital,EH54 6PP,"Howden Road West, Livingston",Owned,<Null>,135003711,304843.0215,667576.9725,297
+pub_hosp.298,31/07/2024,NHS Lothian,S08000024,S318H,Midlothian Community Hospital,EH22 3ND,"70 Eskbank Road, Dalkeith",PFI/NPD,<Null>,120044541,331897.9865,665769.0045,298
+pub_hosp.299,31/07/2024,NHS Lothian,S08000024,S320H,East Lothain Community Hospital,EH41 3PF,"East Lothain Community Hospital, Alderson Road, Haddington, East Lothain",HUB,<Null>,138069779,350288.1002,674072.2404,299
+pub_hosp.300,31/07/2024,NHS Lothian,S08000024,S313H,Ellens Glen House,EH16 6FF,"72 Carnbee Avenue, Edinburgh",PFI/NPD,<Null>,906045309,328228.0295,669092.9915,300
+pub_hosp.301,31/07/2024,NHS Lothian,S08000024,S310H,Ferryfield House,EH5 2HF,"100 Pilton Drive, Edinburgh",PFI/NPD,<Null>,906197839,323336.014,675941.9766,301
+pub_hosp.302,31/07/2024,NHS Lothian,S08000024,S374C,Lauriston Building,EH3 9EN,"Lauriston Place, Edinburgh",Owned,<Null>,906143115,325349.028,673042.0302,302
+pub_hosp.303,31/07/2024,NHS Lothian,S08000024,S316H,Princess Alexandra Eye Pavilion,EH3 9HA,"45 Chalmers Street, Edinburgh",Owned,<Null>,906048392,325251.9747,672986.0457,303
+pub_hosp.304,31/07/2024,NHS Lothian,S08000024,S314H,Royal Infirmary of Edinburgh (PFI),EH16 4SA,"51 Little France Crescent, Edinburgh",PFI/NPD,<Null>,906381768,329109.0311,670435.9952,304
+pub_hosp.305,31/07/2024,NHS Lothian,S08000024,S319H,Royal Hospital for Children and Young People & Department for Clinical Neuroscience,EH16 4TJ,"Little France Cresent, Old Dalkeith, Road, Edinburgh",PFI/NPD,<Null>,906496551,328986.0216,670367.9966,305
+pub_hosp.306,31/07/2024,NHS Forth Valley,S08000019,V105H,Bo'ness Hospital,EH51 0DH,"102 Dean Rd, Bo'ness West Lothian",<Null>,<Null>,136063086,299452,681026,306
+pub_hosp.307,31/07/2024,NHS Lanarkshire,S08000032,L307H,Caird House & Beckford Lodge,ML3 0AZ,"Caird Street, Hamilton",Owned,<Null>,484166610,271420,656258,307
+pub_hosp.308,31/07/2024,NHS Lothian,S08000024,S315H,Findlay House,EH6 7LG,"5 Seafield Street, Edinburgh",PFI/NPD,<Null>,906477990,328659.9917,675606.0552,308
+pub_hosp.309,31/07/2024,NHS Forth Valley,S08000019,ZZ19014,Clackmannan Community Healthcare Centre and Ambulance Station (The Gatehouse at CCHC),FK10 3JQ,"Parkhead Rd, Sauchie, Alloa",<Null>,<Null>,35025957,289224,693873,309
