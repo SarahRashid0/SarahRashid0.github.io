@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Montserrat, sans-serif",
+    "view": {"stroke": "transparent"},
+    "range": {"category": {"scheme": "inferno"}},
+    "point": {"filled": true, "opacity": 0.95},
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Montserrat, sans-serif",
+      "labelOpacity": 0.7,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [2, 2],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXTemporal": {"grid": false},
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [1, 5],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "legend": {
+      "titleFont": "Montserrat, sans-serif",
+      "titleFontSize": 14,
+      "titleColor": "#1a1a1a",
+      "title": null,
+      "labelColor": "#1a1a1a",
+      "labelFontSize": 12
+    },
+    "title": {
+      "font": "Montserrat, sans-serif",
+      "fontSize": 16,
+      "color": "#1a1a1a",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#676A86"
+    }
+  },
+  "title": {
+    "text": "The Price of Making A Cake",
+    "subtitle": [
+      "Average price of cake components",
+      "Data from Richard Davies' UK prices database.",
+      ""
+    ],
+    "anchor": "start"
+  },
+  "height": 400,
+  "width": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task8/cake_avg.csv"
+  },
+  "mark": "area",
+  "params": [
+    {
+      "name": "hover",
+      "select": {"type": "point", "fields": ["item_name"], "on": "pointerover"},
+      "value": [{"item_name": "None"}]
+    }
+  ],
+  "encoding": {
+    "x": {
+      "type": "temporal",
+      "timeUnit": "yearmonth",
+      "field": "quote_date",
+      "axis": {"format": "%Y"}
+    },
+    "y": {"aggregate": "sum", "field": "price", "title": "Average price (GBP)"},
+    "color": {"field": "item_name"},
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.7},
+    "tooltip": [
+      {
+        "type": "temporal",
+        "field": "quote_date",
+        "timeUnit": "yearmonth",
+        "title": "Month"
+      },
+      {"type": "nominal", "field": "item_name", "title": "Item"},
+      {
+        "type": "quantitative",
+        "field": "price",
+        "title": "Average price (GBP)",
+        "format": ".2f"
+      }
+    ]
+  }
+}
