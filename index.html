@@ -267,6 +267,47 @@
 
 
 
+<!-- Collapsible button -->
+<button type="button" class="collapsible">Portfolio Task 7: Maps</button>
+
+<!-- Collapsible content container -->
+<div class="content">
+
+    <!-- Section 1 -->
+    <section>
+        <div class="chart-description">
+            <h2>Chlorpeth Map (Scotland)</h2>
+            <p> 
+                The following shows a chlorpeth map of happiness scores in Scotland by Local Authority Districts.
+            </p>
+        </div>
+        <figure id="Location11"></figure> 
+    </section>
+
+    <script>
+        let figure_10_spec = "portfolio_task7/scotland_happiness.json"; 
+        vegaEmbed('#Location11', figure_11_spec);
+    </script>
+
+    <!-- Section 2 -->
+    <section>
+        <div class="chart-description">
+             <h2>Coordinates Map (Wales)</h2>
+
+            <p> 
+                Here is a coordinates map of main GP Sites in Wales.
+            </p>
+        </div>
+        <figure id="Location12"></figure> 
+    </section>
+
+    <script>
+        let figure_10_spec = "portfolio_task7/coordinate_wales_gp.json"; 
+        vegaEmbed('#Location12', figure_12_spec);
+    </script>
+
+</div> <!-- end collapsible content -->
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
