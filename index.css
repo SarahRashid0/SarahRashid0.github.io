@@ -148,7 +148,7 @@ img {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 15px;
+    padding: 15Upx;
     margin-bottom: 12px;
 }
 .chart-block {
