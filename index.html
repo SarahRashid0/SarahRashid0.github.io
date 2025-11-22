@@ -293,67 +293,78 @@
     <!-- JS loop MUST be inside .content -->
     <script>
         const charts = [
-            { 
-                title: "WPU0221 – Meats", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" 
+        { 
+            title: "Meats", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" 
+        },
+        { 
+            title: "Salmon", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230103.json" 
+        },
+        { 
+            title: "Lobsters", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230503.json" 
+        },
+        { 
+            title: "Butter", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU023201.json" 
+        },
+        { 
+            title: "Coffee", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU025503011.json" 
+        },
+        { 
+            title: "Chocolate", 
+            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU026301.json" 
+        }
+    ];
+
+    charts.forEach((item, index) => {
+        const container = document.getElementById("charts-container");
+
+        // Wrapper div
+        const block = document.createElement("div");
+        block.className = "chart-block";
+        block.style.margin = "40px 0";
+
+        // Title
+        const title = document.createElement("h2");
+        title.textContent = item.title;
+        title.style.marginBottom = "10px";
+        title.style.fontSize = "1.4rem";
+        title.style.fontWeight = "600";
+
+        // Add title to block
+        block.appendChild(title);
+
+        // Chart container
+        const chartDiv = document.createElement("div");
+        chartDiv.id = `chart-${index}`;
+        block.appendChild(chartDiv);
+
+        // Add whole block to page
+        container.appendChild(block);
+
+        // Vega spec
+        const spec = {
+            $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+            data: { 
+                url: item.url,
+                format: { property: "observations" }
             },
-            { 
-                title: "WPU02230103 – Salmon", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230103.json" 
-            },
-            { 
-                title: "WPU02230503 – Lobsters", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230503.json" 
-            },
-            { 
-                title: "WPU023201 – Butter", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU023201.json" 
-            },
-            { 
-                title: "WPU025503011 – Coffee", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU025503011.json" 
-            },
-            { 
-                title: "WPU026301 – Chocolate", 
-                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU026301.json" 
+            transform: [
+                { calculate: "datum.value === '.' ? null : toNumber(datum.value)", as: "clean_value" }
+            ],
+            mark: "line",
+            encoding: {
+                x: { field: "date", type: "temporal" },
+                y: { field: "clean_value", type: "quantitative" }
             }
-        ];
+        };
 
-        charts.forEach((item, index) => {
-            const container = document.getElementById("charts-container");
-
-            const chartDiv = document.createElement("div");
-            chartDiv.id = `chart-${index}`;
-            chartDiv.style.marginBottom = "40px";
-
-            const title = document.createElement("h3");
-            title.textContent = item.title;
-            chartDiv.appendChild(title);
-
-            container.appendChild(chartDiv);
-
-            const spec = {
-                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                data: { 
-                    url: item.url,
-                    format: { property: "observations" }
-                },
-                transform: [
-                    {
-                        calculate: "datum.value === '.' ? null : toNumber(datum.value)",
-                        as: "clean_value"
-                    }
-                ],
-                mark: "line",
-                encoding: {
-                    x: { field: "date", type: "temporal" },
-                    y: { field: "clean_value", type: "quantitative" }
-                }
-            };
-
-            vegaEmbed(`#chart-${index}`, spec);
-        });
-    </script>
+        vegaEmbed(`#chart-${index}`, spec);
+    });
+</script>
 
 </div>
 <!-- end collapsible content -->
