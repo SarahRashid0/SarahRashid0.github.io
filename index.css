@@ -101,18 +101,19 @@ img {
 
 /* Collapsible button styling */
 .collapsible {
-  background-color: var(--primary);
-  color: #fff;
-  cursor: pointer;
-  padding: 14px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1.3em;
-  border-radius: 8px;
-  transition: background 0.15s;
-}
+    font-family: 'Baskerville', 'Baskerville Old Face', 'Georgia', serif;
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.3em;
+    border-radius: 8px;
+    transition: background 0.15s;
+    }
 .active, .collapsible:hover {
   background-color: var(--primary-600);
 }
