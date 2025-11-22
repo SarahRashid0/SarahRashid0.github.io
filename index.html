@@ -283,12 +283,73 @@
     <!-- Section 1 -->
     <section>
         <div class="chart-description">
-            <h2>Bulding a Dashboard</h2>
-            <p> 
-                The following shows [ENTER].
-            </p>
+            <h2>Building a Dashboard</h2>
+            <p>The following shows a dashboard built using loops and multiple food PPI datasets.</p>
         </div>
+
+        <!-- A container to hold the charts -->
+        <div id="charts-container"></div>
+
+    </section>
+
+    <!-- JS loop here, BEFORE the closing .content div -->
+    <script>
+        const charts = [
+            {
+                title: "WPU0221 – Processed Foods",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU0221.json"
+            },
+            {
+                title: "WPU02230103 – Milk",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU02230103.json"
+            },
+            {
+                title: "WPU02230503 – Eggs",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU02230503.json"
+            },
+            {
+                title: "WPU023201 – Meat",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU023201.json"
+            },
+            {
+                title: "WPU025503011 – Coffee",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU025503011.json"
+            },
+            {
+                title: "WPU026301 – Bread",
+                url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU026301.json"
+            }
+        ];
+
+        charts.forEach((item, index) => {
+            const container = document.getElementById("charts-container");
+
+            const chartDiv = document.createElement("div");
+            chartDiv.id = `chart-${index}`;
+            chartDiv.style.marginBottom = "40px";
+
+            const title = document.createElement("h3");
+            title.textContent = item.title;
+            chartDiv.appendChild(title);
+
+            container.appendChild(chartDiv);
+
+            const spec = {
+                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                data: { url: item.url },
+                mark: "line",
+                encoding: {
+                    x: { field: "date", type: "temporal", title: "Date" },
+                    y: { field: "value", type: "quantitative", title: "PPI Value" }
+                }
+            };
+
+            vegaEmbed(`#chart-${index}`, spec);
+        });
+    </script>
+
 </div>
+<!-- end collapsible content -->
         
 <!--------------------------------------------------------------------------------------------------------------------------->
 
