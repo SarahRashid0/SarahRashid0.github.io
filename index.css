@@ -27,7 +27,7 @@ html, body {
     line-height: 1.6;
     margin: 0 auto;
     max-width: 1200px;
-    padding: 32px 24px 48px;
+    padding: 24px 12px 36px;
 }
 
 /* Headings */
@@ -130,7 +130,7 @@ img {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     background-color: #f1f1f1;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-top: 4px;
 }
 
