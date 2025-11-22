@@ -5,6 +5,9 @@
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task2/public_sector_employment.csv"
   },
   
+  "height": 400,
+  "width":400,
+
   "mark": {
     "type": "line", 
     "color": "darkblue"
