@@ -1,239 +1,256 @@
-/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
-/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
 
-/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
-
-
-body { /* We can style any HTML element by using its name - here we're styling the body */
-  /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
-  background-color: #fff;
-  margin:0 auto;
-  max-width: 1000px;
-  padding-top: 60px;
+/* Base Root Variables */
+:root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #222;
+    --muted: #757575;
+    --primary: #35729f;
+    --primary-600: #244c6e;
+    --border: #e5e7eb;
+    --shadow: 0 2px 5px rgba(52,114,159,0.08), 0 8px 20px rgba(52,114,159,0.06);
+    --radius: 12px;
 }
 
+/* Import Baskerville and fallback sans for body/text */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Use custom font stack: Baskerville primary, with modern fallbacks */
+body, h1, h2, h3, h4, h5, h6, .big, .small {
+  font-family: 'Baskerville', 'Baskerville Old Face', 'Montserrat', Times, 'Times New Roman', serif;
+}
+
+/* Main page settings */
+html, body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 32px 24px 48px;
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
+  color: var(--text);
+  margin-top: 32px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
-/* We want the headings to be a little bigger than the paragraph text */
-.big { /* This is the class we created in the HTML file, you can use it to style any element */
-  font-size: 2.5em;
+h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
 }
-
 h2 {
-  font-size: 1.75em;
+    font-size: 1.75em;
+}
+h3 {
+    font-size: 1.35em;
 }
 
+.big {
+    font-size: 2.2em;
+    font-weight: 700;
+}
 .small {
-  font-size: 1.25em;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
-/* Paragraph */
+/* Paragraphs */
 p {
-  margin-bottom: 1em;
-  font-weight: 300;
+  margin-bottom: 1.15em;
+  font-weight: 400;
+  max-width: 750px;
+  color: var(--text);
 }
 
+/* Sections */
 section {
-  margin-bottom: 2.5em;  /* We want a little more space between sections */
+  margin-bottom: 3em;
+  padding: 24px 0;
+}
+
+/* Wrap and rubric notes */
+.wrap p#rubric {
+    color: var(--muted);
+    margin: 8px 0 0 0;
+    font-size: 1em;
 }
 
 /* Links */
-/* We want the links to be a little more visible  and a different color */
 a {
-  color: #065f46;
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--primary-600);
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-  
 /* Images */
 img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin: 12px 0;
 }
 
-
-/* Collapsible button styling */ 
-.collapsible { 
-  background-color: grey; 
-  color: white; 
-  cursor: pointer; 
-  padding: 12px; 
-  width: 100%; 
-  border: none; 
-  text-align: left; 
-  outline: none; 
-  font-size: 25px; 
-  border-radius: 6px; } 
-  
-.active, 
-.collapsible:hover { 
-  background-color: grey; } 
-
-/* Collapsible content box */ 
-.content { 
-  padding: 0 18px; 
-  max-height: 0; 
-  overflow: hidden; 
-  transition: max-height 0.3s ease-out; 
-  background-color: #f1f1f1; 
-  border-radius: 6px; 
-  margin-top: 5px; }
-
-
-/* Dashboard root variables */
-:root {
-    --bg: #f7f8fa;
-    --card-bg: #ffffff;
-    --text: #111111;
-    --muted: #6b7280;
-    --primary: #267a64;
-    --primary-600: #1f6956;
-    --border: #e5e7eb;
-    --shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.06);
-    --radius: 12px;
+/* Collapsible button styling */
+.collapsible {
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.3em;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.active, .collapsible:hover {
+  background-color: var(--primary-600);
 }
 
-html, body {
-    background: var(--bg);
-    color: var(--text);
-}
-
-body {
-    max-width: 1200px; /* wider for 3x2 grid */
-    margin: 0 auto;
-    padding: 24px 20px 48px;
-    line-height: 1.45;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.wrap p#rubric {
-    color: var(--muted);
-    margin: 6px 0 0 0;
+/* Collapsible content box */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-top: 6px;
 }
 
 /* Controls layout */
 .controls {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin: 16px 0 20px 0;
+    gap: 18px;
+    margin: 18px 0 28px 0;
 }
 
-.control-card {
+/* Card containers */
+.control-card, .chart-block {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
-
-.control-card p {
-    margin: 0 0 8px 0;
-    font-weight: 600;
-}
-
-/* Inputs */
-.countryInput {
-    margin-right: 8px;
-    margin-bottom: 8px;
-    height: 40px;
-    width: 100px;
-    padding: 0 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: #fff;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 120ms ease, box-shadow 120ms ease;
-}
-.countryInput:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(38,122,100,0.15);
-}
-
-select#seriesSelect {
-    height: 40px;
-    padding: 0 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: #fff;
-    font-size: 14px;
-    outline: none;
-}
-select#seriesSelect:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(38,122,100,0.15);
-}
-
-/* Buttons */
-.btn {
-    appearance: none;
-    border: 0;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#addCountryButton {
-    background: #eef6f3;
-    color: var(--primary);
-    border: 1px solid #d7efe7;
-}
-#addCountryButton:hover { filter: brightness(0.98); }
-
-#runButton {
-    background: var(--primary);
-    color: #fff;
-}
-#runButton:hover { background: var(--primary-600); }
-
-/* Charts grid container */
-#charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
-    gap: 30px;
-    margin-top: 20px;
-    justify-items: center; /* center the charts */
-}
-
-/* Individual chart card */
 .chart-block {
-    padding: 10px;
-    border-radius: 8px;
-    background: #fafafa;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 100%; /* stretch to grid cell */
-    max-width: 350px; /* optional max width per chart */
+    width: 100%;
+    max-width: 350px;
 }
-
 .chart-block h2 {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
+/* Chart grid responsive */
+#charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 36px;
+    margin-top: 28px;
+    justify-items: center;
+}
+
 #charts-container-wrapper {
     overflow-x: auto;
     width: 100%;
 }
+
+/* Inputs */
+input, select, textarea {
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 120ms ease;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(53,114,159,0.12);
+}
+
+/* Specific card input styles */
+.countryInput {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    height: 40px;
+    width: 100px;
+}
+
+select#seriesSelect {
+    height: 40px;
+    padding: 0 12px;
+}
+
+/* Buttons */
+.btn, #addCountryButton, #runButton {
+    appearance: none;
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s, border-radius 0.15s;
+}
+
+#addCountryButton {
+    background: #e3f3fa;
+    color: var(--primary);
+    border: 1px solid #d7e5ef;
+}
+#addCountryButton:hover {
+    filter: brightness(0.97);
+    border-radius: 12px;
+}
+
+#runButton {
+    background: var(--primary);
+    color: #fff;
+}
+#runButton:hover {
+    background: var(--primary-600);
+    border-radius: 12px;
+}
+
+/* Accessibility: focus styles for inputs and buttons */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c0c0c0;
+}
+
+/* Utility classes */
+.text-muted { color: var(--muted); }
+.mb-0 { margin-bottom: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+.p-0 { padding: 0 !important; }
