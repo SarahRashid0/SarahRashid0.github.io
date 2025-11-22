@@ -336,11 +336,14 @@
 
             const spec = {
                 $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                data: { url: item.url },
+                data: { 
+                    url: item.url,
+                    format: { property: "observations" }  // 👈 THIS FIXES THE EMPTY CHARTS
+                },
                 mark: "line",
                 encoding: {
-                    x: { field: "date", type: "temporal", title: "Date" },
-                    y: { field: "value", type: "quantitative", title: "PPI Value" }
+                 x: { field: "date", type: "temporal", title: "Date" },
+                 y: { field: "value", type: "quantitative", title: "PPI Value" }
                 }
             };
 
