@@ -3,7 +3,7 @@
   "config": {
     "font": "Montserrat, sans-serif",
     "view": {"stroke": "transparent"},
-    "range": {"category": {"scheme": "inferno"}},
+    "range": {"category": {"scheme": "brownbluegreen"}},
     "point": {"filled": true, "opacity": 0.95},
     "axis": {
       "labelColor": "#676A86",
@@ -56,7 +56,7 @@
     "text": "The Price of Making A Cake",
     "subtitle": [
       "Average price of cake components",
-      "Data from Richard Davies' UK prices database.",
+      "Source: ONS microdata via Davies (2021)",
       ""
     ],
     "anchor": "start"
