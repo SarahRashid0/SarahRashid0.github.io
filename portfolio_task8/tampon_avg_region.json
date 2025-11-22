@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tampon Price Variation by Region",
+    "subtitle": ["Mean prices by region (Source: ONS microdata via Davies (2021))"],
+    "anchor": "start"
+  },
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task8/avg_tampon_prices.csv"
+ },
+  "params": [
+    {
+      "name": "highlight",
+      "select": {
+        "type": "point",
+        "fields": ["Region"],
+        "on": "pointerover",
+        "clear": "pointerout"
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 1.2
+  },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": " "
+    },
+    "y": {
+      "field": "Mean",
+      "type": "quantitative",
+      "title": "Mean Tampon Price (GBP)"
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "title": "Region",
+      "scale": { "scheme": "tableau10" }
+    },
+    "opacity": {
+      "condition": {
+        "param": "highlight",
+        "value": 1
+      },
+      "value": 0.2
+    },
+    "tooltip": [
+      { "field": "Date", "type": "temporal", "title": "Date" },
+      { "field": "Region", "type": "nominal", "title": "Region" },
+      { "field": "Mean", "type": "quantitative", "title": "Mean Price", "format": ".2f" }
+    ]
+    
+  },
+  "config": {
+    "view": { "stroke": "transparent" },
+    "legend": {
+      "titleFont": "Montserrat, sans-serif",
+      "labelFont": "Montserrat, sans-serif",
+      "labelFontSize": 12
+    },
+    "axis": {
+      "labelFont": "Montserrat, sans-serif",
+      "labelColor": "#676A86",
+      "gridOpacity": 0.5
+    }
+  }
+}
