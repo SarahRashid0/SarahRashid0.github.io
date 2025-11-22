@@ -66,39 +66,32 @@ img {
 }
 
 
-/* Collapsible button styling */
-.collapsible {
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 20px;
-    border-radius: 6px;
-}
+/* Collapsible button styling */ 
+.collapsible { 
+  background-color: grey; 
+  color: white; 
+  cursor: pointer; 
+  padding: 12px; 
+  width: 100%; 
+  border: none; 
+  text-align: left; 
+  outline: none; 
+  font-size: 20px; 
+  border-radius: 6px; } 
+  
+.active, 
+.collapsible:hover { 
+  background-color: grey; } 
 
-.active,
-.collapsible:hover {
-    background-color: grey;
-}
-
-/* Collapsible content box */
-.content {
-    padding: 20px;
-    max-height: 0;             /* keep collapsible closed initially */
-    overflow-x: auto;          /* horizontal scroll if grid is too wide */
-    overflow-y: hidden;        /* hidden when collapsed */
-    width: 100%;
-    min-width: 800px;          /* optional to fit 3x2 grid */
-    box-sizing: border-box;
-    background-color: #f1f1f1;
-    border-radius: 6px;
-    margin-top: 5px;
-    transition: max-height 0.3s ease-out; /* smooth animation */
-}
+/* Collapsible content box */ 
+.content { 
+  padding: 0 18px; 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.3s ease-out; 
+  background-color: #f1f1f1; 
+  border-radius: 6px; 
+  margin-top: 5px; }
 
 
 /* Dashboard root variables */
