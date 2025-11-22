@@ -319,47 +319,33 @@
         }
     ];
 
-    charts.forEach((item, index) => {
-        const container = document.getElementById("charts-container");
+        charts.forEach((item, index) => {
+            const container = document.getElementById("charts-container");
 
-        // Wrapper div
-        const block = document.createElement("div");
-        block.className = "chart-block";
-        block.style.margin = "40px 0";
+            const block = document.createElement("div");
+            block.className = "chart-block";
 
-        // Title
-        const title = document.createElement("h2");
-        title.textContent = item.title;
-        title.style.marginBottom = "10px";
-        title.style.fontSize = "1.4rem";
-        title.style.fontWeight = "600";
+            const title = document.createElement("h2");
+            title.textContent = item.title;
+            block.appendChild(title);
 
-        // Add title to block
-        block.appendChild(title);
+            const chartDiv = document.createElement("div");
+            chartDiv.id = `chart-${index}`;
+            block.appendChild(chartDiv);
 
-        // Chart container
-        const chartDiv = document.createElement("div");
-        chartDiv.id = `chart-${index}`;
-        block.appendChild(chartDiv);
+            container.appendChild(block);
 
-        // Add whole block to page
-        container.appendChild(block);
-
-        // Vega spec
-        const spec = {
-            $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-            data: { 
-                url: item.url,
-                format: { property: "observations" }
-            },
-            transform: [
-                { calculate: "datum.value === '.' ? null : toNumber(datum.value)", as: "clean_value" }
-            ],
-            mark: "line",
-            encoding: {
-                x: { field: "date", type: "temporal" },
-                y: { field: "clean_value", type: "quantitative" }
-            }
+            const spec = {
+                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                data: { url: item.url, format: { property: "observations" }},
+                transform: [
+                    { calculate: "datum.value === '.' ? null : toNumber(datum.value)", as: "clean_value" }
+                ],
+                mark: "line",
+                encoding: {
+                    x: { field: "date", type: "temporal" },
+                    y: { field: "clean_value", type: "quantitative" }
+                }
         };
 
         vegaEmbed(`#chart-${index}`, spec);
