@@ -125,7 +125,7 @@ img {
 /* Collapsible content box */
 .content {
     font-family: 'Baskerville', 'Baskerville Old Face', 'Georgia', serif;
-    padding: 8 16px;
+    padding: 0 24px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
