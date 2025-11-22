@@ -330,16 +330,26 @@
                 // vega-lite spec
                 const spec = {
                     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                    data: {
-                        url: item.url,
-                        format: { property: "observations" }
-                    },
+                    data: { 
+                    url: item.url,
+                    format: { property: "observations" }
+        },
+
+                    transform: [
+                    {
+                        calculate: "datum.value === '.' ? null : toNumber(datum.value)",
+                        as: "clean_value"
+            }
+        ],
+
                     mark: "line",
+
                     encoding: {
                         x: { field: "date", type: "temporal", title: "Date" },
-                        y: { field: "value", type: "quantitative", title: "PPI Value" }
-                    }
-                };
+                        y: { field: "clean_value", type: "quantitative", title: "PPI Value" }
+        }
+  };
+
 
                 vegaEmbed(`#chart-${index}`, spec);
             });
