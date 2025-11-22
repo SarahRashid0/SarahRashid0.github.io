@@ -114,19 +114,21 @@ img {
     border-radius: 8px;
     transition: background 0.15s;
     }
+    
 .active, .collapsible:hover {
   background-color: var(--primary-600);
 }
 
 /* Collapsible content box */
 .content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  margin-top: 6px;
+    font-family: 'Baskerville', 'Baskerville Old Face', 'Georgia', serif;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-top: 6px;
 }
 
 /* Controls layout */
