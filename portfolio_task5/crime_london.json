@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Knife crime incidents in London (January 2025) using UK Police API",
+  "description": "Knife crime incidents in London using UK Police API",
 
   "data": { 
-    "url": "https://data.police.uk/api/crimes-street/all-crime?date=2025-01&lat=51.5074&lng=-0.1278",
+    "url": "https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278",
     "format": {"type": "json"}
   },
 
@@ -19,7 +19,7 @@
     "x": {
       "aggregate": "count",
       "type": "quantitative",
-      "title": "Number of Crimes (January 2025)"
+      "title": "Number of Crimes"
     },
     "color": {
       "field": "category",
