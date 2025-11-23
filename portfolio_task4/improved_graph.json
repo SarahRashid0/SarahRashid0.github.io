@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
   "data": {
     "values": [
       {"Year": 1990, "Number of murders": 873},
@@ -50,11 +49,7 @@
           "field": "Number of murders",
           "type": "quantitative",
           "axis": {"title": null}
-        },
-        "tooltip": [
-          {"field": "Year", "type": "quantitative"},
-          {"field": "Number of murders", "type": "quantitative"}
-        ]
+        }
       }
     },
     {
@@ -63,7 +58,46 @@
         "x": {"field": "Year", "type": "quantitative"},
         "y": {"field": "Number of murders", "type": "quantitative"}
       }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "hover", "empty": false}}
+      ],
+      "mark": {"type": "point", "size": 80, "filled": true, "color": "black"},
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Number of murders", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Number of murders", "type": "quantitative", "title": "Number of Murders", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Number of murders", "type": "quantitative", "title": "Number of Murders", "format": ","}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
     }
-
   ]
 }
