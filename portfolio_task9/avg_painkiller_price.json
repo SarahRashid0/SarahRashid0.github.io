@@ -107,7 +107,7 @@
     "tooltip": [
       {"field": "region_name", "type": "nominal", "title": "Region"},
       {"field": "year", "type": "quantitative", "title": "Year"},
-      {"field": "avg_price", "type": "quantitative", "format": "$.3f", "title": "Average Price"}
+      {"field": "avg_price", "type": "quantitative", "format": ".2f", "title": "Average Price £"}
     ]
   },
   "config": {
