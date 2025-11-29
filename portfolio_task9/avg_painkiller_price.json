@@ -1,0 +1,131 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK Paracetamol Prices: London, NI, Scotland, Wales",
+    "anchor": "start",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "subtitle": [
+      "Average prices over time",
+      "Source: ONS microdata via Davies (2021)"
+    ],
+    "subtitleFontSize": 13,
+    "subtitleColor": "#666"
+  },
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task9/avg_painkiller_price.csv"
+  },
+  "params": [
+    {
+      "name": "yearParam",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 1997,
+        "max": 2025,
+        "step": 1,
+        "name": "Filter to Year:"
+      }
+    },
+    {
+      "name": "regionSelect",
+      "select": {"type": "point", "fields": ["region_name"]},
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "year(datum.quote_date)",
+      "as": "year"
+    },
+    {
+      "calculate": "toNumber(datum.price)",
+      "as": "price_num"
+    },
+    {
+      "filter": "datum.region_name == 'London' || datum.region_name == 'Northern Ireland' || datum.region_name == 'Scotland' || datum.region_name == 'Wales'"
+    },
+    {
+      "filter": "datum.year <= yearParam"
+    },
+    {
+      "aggregate": [{"op": "mean", "field": "price_num", "as": "avg_price"}],
+      "groupby": ["year", "region_name"]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "point": {
+      "filled": true,
+      "size": 50
+    },
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {
+        "grid": true,
+        "format": "d",
+        "orient": "bottom",
+        "tickCount": 10
+      },
+      "scale": {"domain": [1997, 2025]}
+    },
+    "y": {
+      "field": "avg_price",
+      "type": "quantitative",
+      "title": "Average Price (£)",
+      "axis": {
+        "grid": true
+      },
+      "scale": {"zero": false}
+    },
+    "color": {
+      "field": "region_name",
+      "type": "nominal",
+      "scale": {
+        "domain": ["London", "Northern Ireland", "Scotland", "Wales"],
+        "range": ["#e74c3c", "#3498db", "#2ecc71", "#f39c12"]
+      },
+      "title": "Region",
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "titleOrient": "left"
+      }
+    },
+    "opacity": {
+      "condition": {"param": "regionSelect", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "region_name", "type": "nominal", "title": "Region"},
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {"field": "avg_price", "type": "quantitative", "format": "$.3f", "title": "Average Price"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "titleFontSize": 14,
+      "labelFontSize": 12,
+      "gridColor": "#E5E5E5",
+      "titleColor": "#1a1a1a",
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "titleFontSize": 13,
+      "labelFontSize": 12,
+      "symbolType": "stroke",
+      "symbolStrokeWidth": 3,
+      "symbolSize": 200,
+      "labelLimit": 150
+    }
+  }
+}
