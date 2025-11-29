@@ -7,12 +7,12 @@
     "fontWeight": "bold",
     "subtitle": [
       "Average prices over time",
-      "Source: ONS microdata via Davies"
+      "Source: NHS prescription data"
     ],
     "subtitleFontSize": 13,
     "subtitleColor": "#666"
   },
-  "width": 700,
+  "width": 500,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task9/avg_painkiller_price.csv"
@@ -27,6 +27,15 @@
         "max": 2025,
         "step": 1,
         "name": "Filter to Year:"
+      }
+    },
+    {
+      "name": "regionFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "London", "Northern Ireland", "Scotland", "Wales"],
+        "name": "Select Region:"
       }
     },
     {
@@ -51,16 +60,19 @@
       "filter": "datum.year <= yearParam"
     },
     {
+      "filter": "regionFilter == 'All' || datum.region_name == regionFilter"
+    },
+    {
       "aggregate": [{"op": "mean", "field": "price_num", "as": "avg_price"}],
       "groupby": ["year", "region_name"]
     }
   ],
   "mark": {
     "type": "line",
-    "strokeWidth": 2.5,
+    "strokeWidth": 2.0,
     "point": {
       "filled": true,
-      "size": 50
+      "size": 25
     },
     "cursor": "pointer"
   },
@@ -82,7 +94,8 @@
       "type": "quantitative",
       "title": "Average Price (£)",
       "axis": {
-        "grid": true
+        "grid": true,
+        "format": ".2f"
       },
       "scale": {"zero": false}
     },
@@ -107,7 +120,7 @@
     "tooltip": [
       {"field": "region_name", "type": "nominal", "title": "Region"},
       {"field": "year", "type": "quantitative", "title": "Year"},
-      {"field": "avg_price", "type": "quantitative", "format": ".2f", "title": "Average Price £"}
+      {"field": "avg_price", "type": "quantitative", "format": ".3f", "title": "Average Price"}
     ]
   },
   "config": {
