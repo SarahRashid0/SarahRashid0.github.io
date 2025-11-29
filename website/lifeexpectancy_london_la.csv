@@ -1,0 +1,67 @@
+﻿Area code,Borough,Sex,Life expectancy 2021 to 2023,IMD
+E09000002,Barking and Dagenham,Male,77.29,32.8
+E09000003,Barnet,Male,81.66,16.1
+E09000004,Bexley,Male,79.88,16.3
+E09000005,Brent,Male,79.45,25.6
+E09000006,Bromley,Male,81.53,14.2
+E09000007,Camden,Male,80.3,20.1
+E09000008,Croydon,Male,79.39,22.5
+E09000009,Ealing,Male,79.59,22.7
+E09000010,Enfield,Male,80.48,25.8
+E09000011,Greenwich,Male,78.88,24.5
+E09000012,Hackney,Male,77.38,32.5
+E09000013,Hammersmith and Fulham,Male,78.62,22.3
+E09000014,Haringey,Male,79.25,28.0
+E09000015,Harrow,Male,81.36,15.0
+E09000016,Havering,Male,79.85,16.8
+E09000017,Hillingdon,Male,79.43,18.2
+E09000018,Hounslow,Male,79.7,21.5
+E09000019,Islington,Male,78.18,27.5
+E09000020,Kensington and Chelsea,Male,81.54,21.5
+E09000021,Kingston upon Thames,Male,81.36,11.4
+E09000022,Lambeth,Male,78.85,25.4
+E09000023,Lewisham,Male,78.37,26.7
+E09000024,Merton,Male,80.34,14.6
+E09000025,Newham,Male,77.83,29.6
+E09000026,Redbridge,Male,80.07,17.2
+E09000027,Richmond upon Thames,Male,82.48,9.4
+E09000028,Southwark,Male,78.91,25.8
+E09000029,Sutton,Male,80.44,14.0
+E09000030,Tower Hamlets,Male,78.01,27.9
+E09000031,Waltham Forest,Male,79.12,25.2
+E09000032,Wandsworth,Male,80.34,16.6
+E09000033,Westminster,Male,81.34,20.3
+E12000007,London,Male,79.83,14.7
+E09000002,Barking and Dagenham,Female,81.04,32.8
+E09000003,Barnet,Female,85.51,16.1
+E09000004,Bexley,Female,83.24,16.3
+E09000005,Brent,Female,84.9,25.6
+E09000006,Bromley,Female,85.27,14.2
+E09000007,Camden,Female,85.07,20.1
+E09000008,Croydon,Female,84.04,22.5
+E09000009,Ealing,Female,84.65,22.7
+E09000010,Enfield,Female,84.74,25.8
+E09000011,Greenwich,Female,82.54,24.5
+E09000012,Hackney,Female,82.22,32.5
+E09000013,Hammersmith and Fulham,Female,84.11,22.3
+E09000014,Haringey,Female,84.54,28.0
+E09000015,Harrow,Female,85.28,15.0
+E09000016,Havering,Female,83.48,16.8
+E09000017,Hillingdon,Female,83.9,18.2
+E09000018,Hounslow,Female,83.98,21.5
+E09000019,Islington,Female,82.95,27.5
+E09000020,Kensington and Chelsea,Female,86.46,21.5
+E09000021,Kingston upon Thames,Female,85.03,11.4
+E09000022,Lambeth,Female,83.22,25.4
+E09000023,Lewisham,Female,82.92,26.7
+E09000024,Merton,Female,84.8,14.6
+E09000025,Newham,Female,82.38,29.6
+E09000026,Redbridge,Female,84.2,17.2
+E09000027,Richmond upon Thames,Female,86.27,9.4
+E09000028,Southwark,Female,83.55,25.8
+E09000029,Sutton,Female,84.02,14.0
+E09000030,Tower Hamlets,Female,81.91,27.9
+E09000031,Waltham Forest,Female,83.46,25.2
+E09000032,Wandsworth,Female,84.55,16.6
+E09000033,Westminster,Female,85.72,20.3
+E12000007,London,Female,84.13,14.7
