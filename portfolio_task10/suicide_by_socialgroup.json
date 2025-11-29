@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Suicide Rates Across Social Groups in the UK",
+    "subtitle": "Rate per 100,000 population (2011 Census data)",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "data": {
+    "values": [
+      {"Exposure": "Ethnicity", "Group": "Arab", "Population": 97134, "Suicides": 26},
+      {"Exposure": "Ethnicity", "Group": "Caribbean/African/Black", "Population": 961055, "Suicides": 455},
+      {"Exposure": "Ethnicity", "Group": "Chinese", "Population": 257520, "Suicides": 116},
+      {"Exposure": "Ethnicity", "Group": "Indian", "Population": 919616, "Suicides": 561},
+      {"Exposure": "Ethnicity", "Group": "Mixed/Multiple", "Population": 457277, "Suicides": 592},
+      {"Exposure": "Ethnicity", "Group": "Other Ethnic", "Population": 166824, "Suicides": 107},
+      {"Exposure": "Ethnicity", "Group": "Pakistani/Asian", "Population": 1258557, "Suicides": 470},
+      {"Exposure": "Ethnicity", "Group": "White", "Population": 31018933, "Suicides": 33601},
+      {"Exposure": "Partnership", "Group": "In Partnership", "Population": 18001454, "Suicides": 12466},
+      {"Exposure": "Partnership", "Group": "Partner Deceased", "Population": 1015074, "Suicides": 791},
+      {"Exposure": "Partnership", "Group": "Separated", "Population": 4434071, "Suicides": 6667},
+      {"Exposure": "Partnership", "Group": "Single", "Population": 11686317, "Suicides": 16004},
+      {"Exposure": "Religion", "Group": "Buddhist", "Population": 166336, "Suicides": 230},
+      {"Exposure": "Religion", "Group": "Christian", "Population": 21240630, "Suicides": 18811},
+      {"Exposure": "Religion", "Group": "Hindu", "Population": 531913, "Suicides": 260},
+      {"Exposure": "Religion", "Group": "Jewish", "Population": 149274, "Suicides": 125},
+      {"Exposure": "Religion", "Group": "Muslim", "Population": 1381452, "Suicides": 411},
+      {"Exposure": "Religion", "Group": "No Religion", "Population": 8962297, "Suicides": 12673},
+      {"Exposure": "Religion", "Group": "Not Stated", "Population": 2251635, "Suicides": 2812},
+      {"Exposure": "Religion", "Group": "Other", "Population": 183955, "Suicides": 332},
+      {"Exposure": "Religion", "Group": "Sikh", "Population": 269424, "Suicides": 274},
+      {"Exposure": "Disability", "Group": "Limited", "Population": 5818942, "Suicides": 10880},
+      {"Exposure": "Disability", "Group": "Not Limited", "Population": 29317974, "Suicides": 25048},
+      {"Exposure": "Age", "Group": "18-29", "Population": 7392373, "Suicides": 6627},
+      {"Exposure": "Age", "Group": "30-39", "Population": 6469695, "Suicides": 7152},
+      {"Exposure": "Age", "Group": "40-49", "Population": 7515790, "Suicides": 9914},
+      {"Exposure": "Age", "Group": "50-59", "Population": 6358710, "Suicides": 6874},
+      {"Exposure": "Age", "Group": "60-69", "Population": 5734463, "Suicides": 4248},
+      {"Exposure": "Age", "Group": "70-79", "Population": 1665885, "Suicides": 1113},
+      {"Exposure": "Region", "Group": "East of England", "Population": 3701430, "Suicides": 3609},
+      {"Exposure": "Region", "Group": "London", "Population": 4828097, "Suicides": 3824},
+      {"Exposure": "Region", "Group": "North East", "Population": 1676937, "Suicides": 1981},
+      {"Exposure": "Region", "Group": "North Midlands", "Population": 2912812, "Suicides": 2868},
+      {"Exposure": "Region", "Group": "North West", "Population": 4466715, "Suicides": 5043},
+      {"Exposure": "Region", "Group": "South East", "Population": 5437626, "Suicides": 5452},
+      {"Exposure": "Region", "Group": "South West", "Population": 3364081, "Suicides": 3705},
+      {"Exposure": "Region", "Group": "Wales", "Population": 1919728, "Suicides": 2204},
+      {"Exposure": "Region", "Group": "West Midlands", "Population": 3499287, "Suicides": 3577},
+      {"Exposure": "Region", "Group": "Yorkshire/Humber", "Population": 3330203, "Suicides": 3665},
+      {"Exposure": "Armed Forces", "Group": "Dependent", "Population": 61084, "Suicides": 28},
+      {"Exposure": "Armed Forces", "Group": "Member", "Population": 50352, "Suicides": 56},
+      {"Exposure": "Armed Forces", "Group": "Not Member", "Population": 35025480, "Suicides": 35844},
+      {"Exposure": "Socioeconomic", "Group": "Class 1.1", "Population": 1191885, "Suicides": 833},
+      {"Exposure": "Socioeconomic", "Group": "Class 1.2", "Population": 3720296, "Suicides": 2938},
+      {"Exposure": "Socioeconomic", "Group": "Class 2", "Population": 8169305, "Suicides": 7049},
+      {"Exposure": "Socioeconomic", "Group": "Class 3", "Population": 3635277, "Suicides": 3448},
+      {"Exposure": "Socioeconomic", "Group": "Class 4", "Population": 4558275, "Suicides": 4922},
+      {"Exposure": "Socioeconomic", "Group": "Class 5", "Population": 3108307, "Suicides": 3200},
+      {"Exposure": "Socioeconomic", "Group": "Class 6", "Population": 4452001, "Suicides": 5238},
+      {"Exposure": "Socioeconomic", "Group": "Class 7", "Population": 4235312, "Suicides": 5271},
+      {"Exposure": "Socioeconomic", "Group": "Class 8", "Population": 1103609, "Suicides": 1928},
+      {"Exposure": "Socioeconomic", "Group": "Students", "Population": 567382, "Suicides": 421},
+      {"Exposure": "Socioeconomic", "Group": "Not Classifiable", "Population": 395267, "Suicides": 680},
+      {"Exposure": "Sex", "Group": "Female", "Population": 18173538, "Suicides": 9393},
+      {"Exposure": "Sex", "Group": "Male", "Population": 16963378, "Suicides": 26535}
+    ]
+  },
+  "params": [
+    {
+      "name": "selectedExposure",
+      "value": "Ethnicity",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Ethnicity",
+          "Partnership",
+          "Religion",
+          "Disability",
+          "Age",
+          "Region",
+          "Armed Forces",
+          "Socioeconomic",
+          "Sex"
+        ],
+        "name": "Select Category: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "(datum.Suicides / datum.Population) * 100000",
+      "as": "Rate"
+    },
+    {
+      "filter": "datum.Exposure == selectedExposure"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "y": {
+      "field": "Exposure",
+      "type": "nominal",
+      "title": "Social Dimension",
+      "axis": {
+        "labelFontSize": 11,
+        "titleFontSize": 12
+      }
+    },
+    "x": {
+      "field": "Group",
+      "type": "nominal",
+      "title": "Group",
+      "axis": {
+        "labelAngle": -45,
+        "labelFontSize": 10,
+        "titleFontSize": 12
+      }
+    },
+    "color": {
+      "field": "Rate",
+      "type": "quantitative",
+      "title": "Suicide Rate per 100k",
+      "scale": {
+        "scheme": "reds"
+      },
+      "legend": {
+        "titleFontSize": 11,
+        "labelFontSize": 10
+      }
+    },
+    "tooltip": [
+      {"field": "Exposure", "type": "nominal", "title": "Category"},
+      {"field": "Group", "type": "nominal", "title": "Group"},
+      {"field": "Rate", "type": "quantitative", "title": "Rate per 100k", "format": ".2f"},
+      {"field": "Suicides", "type": "quantitative", "title": "Number of Suicides"},
+      {"field": "Population", "type": "quantitative", "title": "Population", "format": ","}
+    ]
+  },
+  "config": {
+    "view": {"strokeWidth": 0},
+    "axis": {"grid": false}
+  }
+}
