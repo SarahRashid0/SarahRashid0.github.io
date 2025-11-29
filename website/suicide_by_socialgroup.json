@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Suicide Rates Across Social Groups in the UK",
+    "text": "Suicide Rates Across Social Groups in England and Wales",
     "subtitle": "Rate per 100,000 population (2011 Census data)",
     "fontSize": 16,
     "anchor": "start"
