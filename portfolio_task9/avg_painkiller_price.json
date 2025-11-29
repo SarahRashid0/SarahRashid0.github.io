@@ -7,7 +7,7 @@
     "fontWeight": "bold",
     "subtitle": [
       "Average prices over time",
-      "Source: ONS microdata via Davies (2021)"
+      "Source: ONS microdata via Davies"
     ],
     "subtitleFontSize": 13,
     "subtitleColor": "#666"
