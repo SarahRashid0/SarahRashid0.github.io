@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Childhood Obesity Prevalence Across English Regions",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 700,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.ITL121NM == 'East' ? 'East of England' : trim(replace(replace(datum.properties.ITL121NM, ' (England)', ''), 'Yorkshire and The Humber', 'Yorkshire and the Humber'))",
+          "as": "region_name"
+        },
+        {
+          "lookup": "region_name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/weightsbyregion.csv"
+            },
+            "key": "Region",
+            "fields": ["Obesity_Number", "Healthy_Number"]
+          }
+        },
+        {
+          "calculate": "replace(replace(trim(datum.Obesity_Number), ',', ''), ' ', '')",
+          "as": "Obesity_Clean"
+        },
+        {
+          "calculate": "replace(replace(trim(datum.Healthy_Number), ',', ''), ' ', '')",
+          "as": "Healthy_Clean"
+        },
+        {
+          "filter": "datum.Obesity_Clean != null && datum.Obesity_Clean != '*'"
+        },
+        {
+          "calculate": "toNumber(datum.Obesity_Clean)",
+          "as": "Obesity_Num"
+        },
+        {
+          "calculate": "toNumber(datum.Healthy_Clean)",
+          "as": "Healthy_Num"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Obesity_Num",
+              "as": "Regional_Obesity"
+            },
+            {
+              "op": "sum",
+              "field": "Healthy_Num",
+              "as": "Regional_Healthy"
+            }
+          ],
+          "groupby": ["region_name"]
+        },
+        {
+          "calculate": "(datum.Regional_Obesity / (datum.Regional_Obesity + datum.Regional_Healthy)) * 100",
+          "as": "Obesity_Rate"
+        }
+      ],
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "field": "Obesity_Rate",
+          "type": "quantitative",
+          "title": "Obesity Rate (%)",
+          "scale": {
+            "scheme": "tealblues",
+            "domain": [17, 38]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "region_name",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "Obesity_Rate",
+            "type": "quantitative",
+            "title": "Obesity Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "Regional_Obesity",
+            "type": "quantitative",
+            "title": "Total Obesity",
+            "format": ","
+          },
+          {
+            "field": "Regional_Healthy",
+            "type": "quantitative",
+            "title": "Total Healthy",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ]
+}
