@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 500,
+  "title": {
+    "text": "Childhood Obesity Prevalence in London Boroughs",
+    "fontSize": 18
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/Anas1108/London_GeoJson_MapVisualization_using_D3/refs/heads/main/london_boroughs.json",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.code",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/london_obesity.csv"
+        },
+        "key": "Code",
+        "fields": ["Obese_Percentage"]
+      }
+    },
+    {
+      "calculate": "parseFloat(replace(datum.Obese_Percentage, '%', ''))",
+      "as": "obesity_rate"
+    }
+  ],
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "color": {
+      "field": "obesity_rate",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "tealblues",
+        "domain": [10, 30]
+      },
+      "legend": {
+        "title": "Obesity Rate (%)",
+        "orient": "right"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.name",
+        "type": "nominal",
+        "title": "Borough"
+      },
+      {
+        "field": "obesity_rate",
+        "type": "quantitative",
+        "title": "Obesity Rate (%)",
+        "format": ".1f"
+      }
+    ]
+  }
+}
