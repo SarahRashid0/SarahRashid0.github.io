@@ -1,0 +1,272 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Weight Issues Comparison: English Local Authorities by Region",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "params": [
+    {
+      "name": "region_left",
+      "value": "London",
+      "bind": {
+        "input": "select",
+        "options": [
+          "East Midlands",
+          "East of England",
+          "London",
+          "North East",
+          "North West",
+          "South East",
+          "South West",
+          "West Midlands",
+          "Yorkshire and the Humber"
+        ],
+        "name": "Left Region: "
+      }
+    },
+    {
+      "name": "region_right",
+      "value": "North East",
+      "bind": {
+        "input": "select",
+        "options": [
+          "East Midlands",
+          "East of England",
+          "London",
+          "North East",
+          "North West",
+          "South East",
+          "South West",
+          "West Midlands",
+          "Yorkshire and the Humber"
+        ],
+        "name": "Right Region: "
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/england_weights.csv"
+  },
+  "hconcat": [
+    {
+      "title": {
+        "text": {"expr": "region_left"},
+        "fontSize": 14
+      },
+      "width": 400,
+      "height": 250,
+      "data": {
+        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/england_weights.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.LA != null && datum.LA != ''"
+        },
+        {
+          "filter": "datum.Region == region_left"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Underweight_Prevalence))",
+          "as": "Underweight_Rate"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Overweight_Prevalence))",
+          "as": "Overweight_Rate"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Obesity_Prevalence))",
+          "as": "Obesity_Rate"
+        },
+        {
+          "filter": "datum.Obesity_Rate != null"
+        },
+        {
+          "fold": [
+            "Underweight_Rate",
+            "Overweight_Rate",
+            "Obesity_Rate"
+          ],
+          "as": ["Category", "Percentage"]
+        },
+        {
+          "calculate": "replace(datum.Category, '_Rate', '')",
+          "as": "Weight_Category"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "LA",
+          "type": "nominal",
+          "title": "Local Authority",
+          "axis": {
+            "labels": false,
+            "ticks": false,
+            "title": "Local Authorities (Hover for more details)"
+          }
+        },
+        "y": {
+          "field": "Weight_Category",
+          "type": "nominal",
+          "title": "Weight Category",
+          "sort": ["Underweight", "Overweight", "Obesity"],
+          "axis": {
+            "labelFontSize": 11
+          }
+        },
+        "color": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Prevalence (%)",
+          "scale": {
+            "scheme": "blues",
+            "domain": [0, 35]
+          },
+          "legend": {
+            "titleFontSize": 11,
+            "labelFontSize": 10
+          }
+        },
+        "tooltip": [
+          {
+            "field": "LA",
+            "type": "nominal",
+            "title": "Local Authority"
+          },
+          {
+            "field": "Region",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "Weight_Category",
+            "type": "nominal",
+            "title": "Category"
+          },
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Prevalence (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": {"expr": "region_right"},
+        "fontSize": 14
+      },
+      "width": 400,
+      "height": 250,
+      "data": {
+        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/england_weights.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.LA != null && datum.LA != ''"
+        },
+        {
+          "filter": "datum.Region == region_right"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Underweight_Prevalence))",
+          "as": "Underweight_Rate"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Overweight_Prevalence))",
+          "as": "Overweight_Rate"
+        },
+        {
+          "calculate": "toNumber(trim(datum.Obesity_Prevalence))",
+          "as": "Obesity_Rate"
+        },
+        {
+          "filter": "datum.Obesity_Rate != null"
+        },
+        {
+          "fold": [
+            "Underweight_Rate",
+            "Overweight_Rate",
+            "Obesity_Rate"
+          ],
+          "as": ["Category", "Percentage"]
+        },
+        {
+          "calculate": "replace(datum.Category, '_Rate', '')",
+          "as": "Weight_Category"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "LA",
+          "type": "nominal",
+          "title": "Local Authority",
+          "axis": {
+            "labels": false,
+            "ticks": false,
+            "title": "Local Authorities"
+          }
+        },
+        "y": {
+          "field": "Weight_Category",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Underweight", "Overweight", "Obesity"],
+          "axis": {
+            "labels": false,
+            "ticks": false
+          }
+        },
+        "color": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Prevalence (%)",
+          "scale": {
+            "scheme": "blues",
+            "domain": [0, 35]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "LA",
+            "type": "nominal",
+            "title": "Local Authority"
+          },
+          {
+            "field": "Region",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "Weight_Category",
+            "type": "nominal",
+            "title": "Category"
+          },
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Prevalence (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  }
+}
