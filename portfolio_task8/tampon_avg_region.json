@@ -36,7 +36,7 @@
       }
     }
   ],
-  "mark": { "type": "line", "strokeWidth": 1.2 },
+  "mark": { "type": "line", "strokeWidth": 1.5 },
   "encoding": {
     "x": { "field": "Date", "type": "temporal", "title": " " },
     "y": {
