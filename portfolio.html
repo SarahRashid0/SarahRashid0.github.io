@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sarah Rashid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        /* Additional styles for portfolio page */
+        .collapsible {
+            background-color: var(--primary-teal);
+            color: white;
+            cursor: pointer;
+            padding: 1.2rem 1.5rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .collapsible:hover {
+            background-color: var(--primary-forest);
+            transform: translateX(4px);
+        }
+
+        .collapsible.active {
+            background-color: var(--primary-sage);
+        }
+
+        .collapsible::after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 1.5rem;
+        }
+
+        .collapsible.active::after {
+            content: "\2212";
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .content section {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--stone);
+        }
+
+        .content section:last-child {
+            border-bottom: none;
+        }
+
+        .chart-description h2 {
+            font-family: var(--font-serif);
+            color: var(--primary-teal);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .chart-description p {
+            color: var(--slate);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .chart-description img {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-medium);
+            margin: var(--spacing-md) 0;
+        }
+
+        #charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .chart-block {
+            background: var(--cream);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .chart-block h2 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--primary-forest);
+            margin-bottom: var(--spacing-sm);
+            text-align: center;
+        }
+
+        figure {
+            margin: var(--spacing-md) 0;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%);
+            color: white;
+            padding: calc(var(--spacing-xl) + 60px) var(--spacing-md) var(--spacing-lg);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .page-header p {
+            color: white;
+            opacity: 0.95;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Sarah Rashid</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="project.html">Project</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Weekly Portfolio</h1>
+        <p>A collection of technical challenges completed throughout the Data Visualisation module, demonstrating skills in web development, data visualization, APIs, and interactive design.</p>
+    </div>
+
+    <!-- Portfolio Tasks -->
+    <div class="container" style="padding-top: var(--spacing-lg); padding-bottom: var(--spacing-xl);">
+
+        <!------------------------------------------------------------Task 1------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 1: Hosting</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>A Basic Chart</h2>
+                    <p>This page has been organised into various sections, with each section containing a chart, title and a description. As a first example, this basic chart provided as an example.</p>
+                </div>
+                <figure id="Location1"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Another Basic Chart</h2>
+                    <p>One of the portfolio tasks is to add a chart from the repository to the live website. See below the added chart found in the repo.</p>
+                </div>
+                <figure id="Location2"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>A Chart from the Web</h2>
+                    <p>Another portfolio task is to add a chart from the web. Here is a chart that is not stored locally. This chart displays gun deaths and income. Using various US states, it shows median income on the x-axis and firearm deaths per 100,000 on the y-axis.</p>
+                </div>
+                <figure id="Location3"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 2------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 2: Building</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Adding in a Personal Chart</h2>
+                    <p>Portfolio Task 2 is to add our own charts. The following chart shows public sector employment in the UK.</p>
+                </div>
+                <figure id="Location4"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Adding in Another Personal Chart</h2>
+                    <p>The second chart shows internal displacement in Bangladesh.</p>
+                </div>
+                <figure id="Location5"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 3------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 3: Debate</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Use Visualisation in Policy Commentary</h2>
+                    <p>Visualising the "aggregation problem" in global policy data</p>
+                    <p>Should global progress on <a href="https://sdgs.un.org/goals/goal6">SDG 6</a> be judged by overall averages, or by improvements among the most disadvantaged groups?</p>
+                    <p>The first chart shows that global access to safely managed drinking water has improved only marginally, suggesting progress toward SDG 6.1 may be minimal:</p>
+                </div>
+                <figure id="Location6"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <p>Yet the second chart reveals faster improvement in rural areas, illustrating how disaggregated data exposes hidden progress and the need for targeted policy investment.</p>
+                </div>
+                <figure id="Location7"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 4------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 4: Replication</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Re-creating and Improving Someone Else's Chart</h2>
+                    <p>The following shows the Reuters "Gun deaths in Florida" chart. A reversed y-axis made it seem gun deaths declined after Florida's "Stand Your Ground" law in 2005, prompting backlash over how visual design can distort reality.</p>
+                    <img src="portfolio_task4/graph.png" alt="Reuters Gun Deaths in Florida Chart" width="350">
+                </div>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>My Replication</h2>
+                    <p>Below is my replication of the above chart.</p>
+                </div>
+                <figure id="Location8"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Improved Version</h2>
+                    <p>And finally, here is an improved version of the chart. The revised graph corrects the inverted y-axis to ensure accurate interpretation and incorporates interactive tooltips to improve data transparency and user comprehension.</p>
+                </div>
+                <figure id="Location9"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 5------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 5: Accessing Data</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>API Task</h2>
+                    <p>The following shows data on crime in London, accessed via an API.</p>
+                </div>
+                <figure id="Location10"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Scraper Task</h2>
+                    <p>Here is the link to the Google Collab python notebook where I conducted my data analysis:</p>
+                    <a href="https://colab.research.google.com/drive/1PxEOg8qmGpshaw8msP094xXporjWxJMO?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">View Google Colab Notebook</a>
+                </div>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 6------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 6: Loops</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Building a Dashboard</h2>
+                    <p>The following shows a dashboard built using loops and multiple food PPI datasets.</p>
+                </div>
+                <div id="charts-container"></div>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 7------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 7: Maps</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Choropleth Map (Scotland)</h2>
+                    <p>The following shows a choropleth map of happiness scores in Scotland by Local Authority Districts.</p>
+                </div>
+                <figure id="Location11"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Coordinates Map (Wales)</h2>
+                    <p>Here is a coordinates map of main GP Sites in Wales.</p>
+                </div>
+                <figure id="Location12"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 8------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 8: Big Data</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Making a Cake Over The Years</h2>
+                    <p>Analysis of cake pricing trends over time.</p>
+                </div>
+                <figure id="Location13"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Average Tampon Prices by Regions</h2>
+                    <p>Regional price analysis for feminine hygiene products.</p>
+                </div>
+                <figure id="Location14"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 9------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 9: Interactive Charts</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Paracetamol Prices Over The Years</h2>
+                    <p>Interactive analysis of painkiller pricing trends.</p>
+                </div>
+                <figure id="Location15"></figure>
+            </section>
+
+            <section>
+                <div class="chart-description">
+                    <h2>Suicide Rates by Social Group in England</h2>
+                    <p>Analysis of mental health outcomes across different social demographics.</p>
+                </div>
+                <figure id="Location16"></figure>
+            </section>
+        </div>
+
+        <!------------------------------------------------------------Task 10------------------------------------------------------------>
+        <button type="button" class="collapsible">Portfolio Task 10: Advanced Analysis and Machine Learning</button>
+        <div class="content">
+            <section>
+                <div class="chart-description">
+                    <h2>Comparing Weight Issues in England</h2>
+                    <p>Statistical analysis of health data across English regions.</p>
+                </div>
+                <figure id="Location17"></figure>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: var(--spacing-sm);">
+                <strong style="color: var(--cream);">Sarah Rashid</strong> | Data Visualisation Portfolio
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                <a href="https://www.linkedin.com/in/sarah-r-005a70204/">LinkedIn</a> | 
+                <a href="https://github.com/SarahRashid0/SarahRashid0.github.io.git">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- All the Vega-Lite embed scripts -->
+    <script>
+        // Task 1
+        vegaEmbed('#Location1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json");
+        vegaEmbed('#Location2', "portfolio_task1/wk1_chart2.json");
+        vegaEmbed('#Location3', "https://rdeconomist.github.io/charts/library/chartScatter3.json");
+
+        // Task 2
+        vegaEmbed('#Location4', "portfolio_task2/public_sector_employment.json");
+        vegaEmbed('#Location5', "portfolio_task2/displacement_bangladesh.json");
+
+        // Task 3
+        vegaEmbed('#Location6', "portfolio_task3/washdata.json");
+        vegaEmbed('#Location7', "portfolio_task3/washdata_urban_rural.json");
+
+        // Task 4
+        vegaEmbed('#Location8', "portfolio_task4/recreate_graph.json");
+        vegaEmbed('#Location9', "portfolio_task4/improved_graph.json");
+
+        // Task 5
+        vegaEmbed('#Location10', "portfolio_task5/crime_london.json");
+
+        // Task 6 - Dashboard with loops
+        const charts = [
+            { title: "Meats", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" },
+            { title: "Shrimp", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU02230503.json" },
+            { title: "Lobsters", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230503.json" },
+            { title: "Butter", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU023201.json" },
+            { title: "Coffee", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU025503011.json" },
+            { title: "Chocolate", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU026301.json" }
+        ];
+
+        charts.forEach((item, index) => {
+            const container = document.getElementById("charts-container");
+            const block = document.createElement("div");
+            block.className = "chart-block";
+
+            const title = document.createElement("h2");
+            title.textContent = item.title;
+            block.appendChild(title);
+
+            const chartDiv = document.createElement("div");
+            chartDiv.id = `chart-${index}`;
+            block.appendChild(chartDiv);
+
+            container.appendChild(block);
+
+            const spec = {
+                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                data: { url: item.url, format: { property: "observations" }},
+                transform: [{ calculate: "datum.value === '.' ? null : toNumber(datum.value)", as: "clean_value" }],
+                mark: "line",
+                encoding: {
+                    x: { field: "date", type: "temporal" },
+                    y: { field: "clean_value", type: "quantitative" }
+                }
+            };
+
+            vegaEmbed(`#chart-${index}`, spec, {actions: false});
+        });
+
+        // Task 7
+        vegaEmbed('#Location11', "portfolio_task7/scotland_happiness.json");
+        vegaEmbed('#Location12', "portfolio_task7/coordinate_wales_gp.json");
+
+        // Task 8
+        vegaEmbed('#Location13', "portfolio_task8/cake_avg.json");
+        vegaEmbed('#Location14', "portfolio_task8/tampon_avg_region.json");
+
+        // Task 9
+        vegaEmbed('#Location15', "portfolio_task9/avg_painkiller_price.json");
+        vegaEmbed('#Location16', "portfolio_task9/suicide_by_socialgroup.json");
+
+        // Task 10
+        vegaEmbed('#Location17', "portfolio_task10/england_weights_comparison.json");
+
+        // Collapsible functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const coll = document.getElementsByClassName("collapsible");
+            for (let i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    // Close all other collapsibles
+                    for (let j = 0; j < coll.length; j++) {
+                        if (coll[j] !== this) {
+                            coll[j].classList.remove("active");
+                            coll[j].nextElementSibling.style.maxHeight = null;
+                        }
+                    }
+                    // Toggle current one
+                    this.classList.toggle("active");
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
