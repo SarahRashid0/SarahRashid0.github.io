@@ -1,541 +1,163 @@
 <!DOCTYPE html>
-<html> 
-
-<head>    
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>My Portfolio</title> 
-
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Rashid | Data Visualisation Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body> 
-    <h1 class="big" style="margin-bottom: 0px;"> 
-        Sarah Rashid
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <a href="https://www.linkedin.com/in/sarah-r-005a70204/">LinkedIn</a> | <a
-            href="https://github.com/SarahRashid0/SarahRashid0.github.io.git">GitHub</a>
-    </p>
-    
-    <h3 class="small"> 
-        This page contains all the porfolio tasks that must be completed for the PP434 Project.
-    </h3>
-
-<!------------------------------------------------------------CC1------------------------------------------------------------>
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 1: Hosting</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-    
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p>
-                This page has been organised into various sections, with each section containing a chart, title and a description.
-                As a first example, this basic chart provided as an example.
-            </p>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Sarah Rashid</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="project.html">Project</a></li>
+            </ul>
         </div>
-        <figure id="Location1"></figure> 
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section-hero">
+        <div class="container">
+            <h1>Exploring Educational Inequality Through Data</h1>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: var(--spacing-md) auto; line-height: 1.7; opacity: 0.95;">
+                A data visualisation portfolio examining patterns of access, privilege, and opportunity in the UK education system.
+            </p>
+            <div style="margin-top: var(--spacing-lg); display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="project.html" class="btn btn-primary">View Project</a>
+                <a href="about.html" class="btn btn-secondary" style="color: white; border-color: white;">About Me</a>
+            </div>
+        </div>
     </section>
 
-    <script>
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; 
-        vegaEmbed('#Location1', figure_1_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Another basic chart</h2>
-            <p> 
-                One of the portfolio tasks is to add a chart from the repository to the live website. See below the added chart found in the repo.
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container-narrow">
+            <h2 class="text-center mb-lg">Welcome</h2>
+            <p style="font-size: 1.1rem; text-align: center;">
+                I'm Sarah, a student exploring how data visualisation can illuminate patterns of inequality in education. 
+                This portfolio showcases my work in the Data Visualisation module, with a particular focus on understanding 
+                access to independent schools in the UK.
             </p>
         </div>
-        <figure id="Location2"></figure> 
     </section>
 
-    <script>
-        let figure_2_spec = "portfolio_task1/wk1_chart2.json"; 
-        vegaEmbed('#Location2', figure_2_spec);
-    </script>
+    <!-- Featured Work Cards -->
+    <section class="section" style="background-color: var(--cream);">
+        <div class="container">
+            <h2 class="text-center mb-lg">Featured Work</h2>
+            <div class="grid grid-3">
+                <!-- Card 1: Project -->
+                <div class="card">
+                    <div style="height: 200px; background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); border-radius: var(--radius-md); margin-bottom: var(--spacing-sm);"></div>
+                    <h3 class="card-title">Education Project</h3>
+                    <p class="card-text">
+                        An interactive exploration of independent schools across the UK, examining geographic distribution, 
+                        the concentration in London, and the historic Clarendon Schools.
+                    </p>
+                    <a href="project.html" style="font-weight: 500; display: inline-block; margin-top: var(--spacing-sm);">
+                        Explore Project →
+                    </a>
+                </div>
 
-    <!-- Section 3 -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 3: A chart from the web</h2>
-            <p> 
-                Another portfolio task is to add a chart from the web. Here is a chart that is not stored locally. This chart displays gun deaths and income. Using various US states, it shows median income on the x-axis and firearm deaths per 100,000 on the y-axis.
+                <!-- Card 2: Portfolio -->
+                <div class="card">
+                    <div style="height: 200px; background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-forest) 100%); border-radius: var(--radius-md); margin-bottom: var(--spacing-sm);"></div>
+                    <h3 class="card-title">Weekly Portfolio</h3>
+                    <p class="card-text">
+                        A collection of weekly technical challenges covering web development, data visualization, 
+                        APIs, and interactive design throughout the module.
+                    </p>
+                    <a href="portfolio.html" style="font-weight: 500; display: inline-block; margin-top: var(--spacing-sm);">
+                        View Portfolio →
+                    </a>
+                </div>
+
+                <!-- Card 3: About -->
+                <div class="card">
+                    <div style="height: 200px; background: linear-gradient(135deg, var(--primary-forest) 0%, var(--accent-terracotta) 100%); border-radius: var(--radius-md); margin-bottom: var(--spacing-sm);"></div>
+                    <h3 class="card-title">My Story</h3>
+                    <p class="card-text">
+                        Learn about my personal connection to this research, including my experience attending 
+                        private school on a full bursary and what drives my interest in educational access.
+                    </p>
+                    <a href="about.html" style="font-weight: 500; display: inline-block; margin-top: var(--spacing-sm);">
+                        Read More →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-lg">Project Highlights</h2>
+            <div class="grid grid-3">
+                <div style="text-align: center;">
+                    <div style="font-size: 3.5rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary-teal); margin-bottom: var(--spacing-xs);">
+                        1,613
+                    </div>
+                    <p style="font-size: 1.1rem; color: var(--slate);">
+                        Independent schools mapped across England
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3.5rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary-sage); margin-bottom: var(--spacing-xs);">
+                        9
+                    </div>
+                    <p style="font-size: 1.1rem; color: var(--slate);">
+                        Historic Clarendon Schools highlighted
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3.5rem; font-family: var(--font-serif); font-weight: 600; color: var(--primary-forest); margin-bottom: var(--spacing-xs);">
+                        3
+                    </div>
+                    <p style="font-size: 1.1rem; color: var(--slate);">
+                        Interactive visualizations with scroll-driven narrative
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: var(--spacing-md);">Ready to Explore?</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto var(--spacing-lg); opacity: 0.95; color: white;">
+                Discover how geography, privilege, and opportunity intersect in the UK education system through 
+                interactive data visualisation.
+            </p>
+            <a href="project.html" class="btn" style="background-color: white; color: var(--primary-teal); font-weight: 600;">
+                View the Project
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: var(--spacing-sm);">
+                <strong style="color: var(--cream);">Sarah Rashid</strong> | Data Visualisation Portfolio
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                Created for Data Visualisation Module | January 2026
+            </p>
+            <p style="font-size: 0.9rem; margin-top: var(--spacing-sm);">
+                Data Sources: <a href="https://get-information-schools.service.gov.uk/" target="_blank">UK Government GIAS</a> | 
+                <a href="https://geoportal.statistics.gov.uk/" target="_blank">ONS Geography Portal</a>
             </p>
         </div>
-        <figure id="Location3"></figure> 
-    </section>
-    
-    <script>
-        let figure_3_spec = "https://rdeconomist.github.io/charts/library/chartScatter3.json"; 
-        vegaEmbed('#Location3', figure_3_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!------------------------------------------------------------CC2------------------------------------------------------------>
-
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 2: Building</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: Adding in a personal chart</h2>
-            <p> 
-                Portfolio Task 2 is to add our own charts. The following chart shows public sector employment in the UK.
-            </p>
-        </div>
-        <figure id="Location4"></figure> 
-    </section>
-
-    <script>
-        let figure_4_spec = "portfolio_task2/public_sector_employment.json"; 
-        vegaEmbed('#Location4', figure_4_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Adding in another personal chart</h2>
-            <p> 
-                The second chart shows internal displacement in Bangladesh.
-            </p>
-        </div>
-        <figure id="Location5"></figure> 
-    </section>
-
-    <script>
-        let figure_5_spec = "portfolio_task2/displacement_bangladesh.json"; 
-        vegaEmbed('#Location5', figure_5_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!---------------------------------------------------------CC3--------------------------------------------------------------->
-
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 3: Debate</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Use visualisation in policy commentary</h2>
-            <p> 
-                Visualising the “aggregation problem” in global policy data
-            </p>
-            <p> 
-                Should global progress on <a href="https://sdgs.un.org/goals/goal6">SDG 6</a> be judged by overall averages, or by improvements among the most disadvantaged groups?
-            </p>
-            <p> 
-                The first chart shows that global access to safely managed drinking water has improved only marginally, suggesting progress toward SDG 6.1 may be minimal:
-            </p>
-        </div>
-        <figure id="Location6"></figure> 
-    </section>
-
-    <script>
-        let figure_6_spec = "portfolio_task3/washdata.json"; 
-        vegaEmbed('#Location6', figure_6_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-            <p> 
-               Yet the second chart reveals faster improvement in rural areas, illustrating how disaggregated data exposes hidden progress and the need for targeted policy investment.
-            </p>
-        </div>
-        <figure id="Location7"></figure> 
-    </section>
-
-    <script>
-        let figure_7_spec = "portfolio_task3/washdata_urban_rural.json"; 
-        vegaEmbed('#Location7', figure_7_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!------------------------------------------------------------CC4----------------------------------------------------------->
-
- <!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 4: Replication</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Re-creating and improving someone else’s chart</h2>
-            <p> 
-                The following shows the Reuters “Gun deaths in Florida” chart. 
-                A reversed y-axis made it seem gun deaths declined after Florida’s “Stand Your Ground” law in 2005, 
-                prompting backlash over how visual design can distort reality.
-            </p>
-        </div>
-        <img src="portfolio_task4/graph.png" alt="Reuters Gun Deaths in Florida Chart" width="350">
-    </section>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-            <p> 
-                Below is my replication of the above chart. 
-            </p>
-        </div>
-        <figure id="Location8"></figure> 
-    </section>
-
-    <script>
-        let figure_8_spec = "portfolio_task4/recreate_graph.json"; 
-        vegaEmbed('#Location8', figure_8_spec);
-    </script>
-
-    <!-- Section 3 -->
-    <section>
-        <div class="chart-description">
-            <p> 
-                And finally, here is an improved version of the chart. 
-                The revised graph corrects the inverted y-axis to ensure accurate interpretation and incorporates interactive tooltips 
-                to improve data transparency and user comprehension.
-            </p>
-        </div>
-        <figure id="Location9"></figure> 
-    </section>
-
-    <script>
-        let figure_9_spec = "portfolio_task4/improved_graph.json"; 
-        vegaEmbed('#Location9', figure_9_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!----------------------------------------------------------CC5------------------------------------------------------------->
-
- <!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 5: Accessing data</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>API task</h2>
-            <p> 
-                The following shows data on crime in London, accessed via an API.
-            </p>
-        </div>
-        <figure id="Location10"></figure> 
-    </section>
-
-    <script>
-        let figure_10_spec = "portfolio_task5/crime_london.json"; 
-        vegaEmbed('#Location10', figure_10_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-             <h2>Scraper task</h2>
-
-            <p> 
-                Here is the link to the Google Collab python notebook where I conducted my data analysis
-            </p>
-        </div>
-
-        <a href="https://colab.research.google.com/drive/1PxEOg8qmGpshaw8msP094xXporjWxJMO?usp=sharing">Google Colab</a>
-        
-    </section>
-
-</div> <!-- end collapsible content -->
-
-<!---------------------------------------------------------CC6-------------------------------------------------------------->
-
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 6: Loops</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <section>
-        <div class="chart-description">
-            <h2>Building a Dashboard</h2>
-            <p>The following shows a dashboard built using loops and multiple food PPI datasets.</p>
-        </div>
-
-        <!-- A container to hold the charts -->
-        <div id="charts-container-wrapper">
-        <div id="charts-container"></div>
-    </section>
-
-    <!-- JS loop MUST be inside .content -->
-    <script>
-        const charts = [
-        { 
-            title: "Meats", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" 
-        },
-        { 
-            title: "Shrimp", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU02230503.json" 
-        },
-        { 
-            title: "Lobsters", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU02230503.json" 
-        },
-        { 
-            title: "Butter", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU023201.json" 
-        },
-        { 
-            title: "Coffee", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU025503011.json" 
-        },
-        { 
-            title: "Chocolate", 
-            url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU026301.json" 
-        }
-    ];
-
-        charts.forEach((item, index) => {
-            const container = document.getElementById("charts-container");
-
-            const block = document.createElement("div");
-            block.className = "chart-block";
-
-            const title = document.createElement("h2");
-            title.textContent = item.title;
-            block.appendChild(title);
-
-            const chartDiv = document.createElement("div");
-            chartDiv.id = `chart-${index}`;
-            block.appendChild(chartDiv);
-
-            container.appendChild(block);
-
-            const spec = {
-                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                data: { url: item.url, format: { property: "observations" }},
-                transform: [
-                    { calculate: "datum.value === '.' ? null : toNumber(datum.value)", as: "clean_value" }
-                ],
-                mark: "line",
-                encoding: {
-                    x: { field: "date", type: "temporal" },
-                    y: { field: "clean_value", type: "quantitative" }
-                }
-        };
-
-        vegaEmbed(`#chart-${index}`, spec);
-    });
-</script>
-
-</div>
-<!-- end collapsible content -->
-        
-<!-------------------------------------------------------------CC7----------------------------------------------------------->
-
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 7: Maps</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Choropleth Map (Scotland)</h2>
-            <p> 
-                The following shows a choropleth map of happiness scores in Scotland by Local Authority Districts.
-            </p>
-        </div>
-        <figure id="Location11"></figure> 
-    </section>
-
-    <script>
-        let figure_11_spec = "portfolio_task7/scotland_happiness.json"; 
-        vegaEmbed('#Location11', figure_11_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-             <h2>Coordinates Map (Wales)</h2>
-
-            <p> 
-                Here is a coordinates map of main GP Sites in Wales.
-            </p>
-        </div>
-        <figure id="Location12"></figure> 
-    </section>
-
-    <script>
-        let figure_12_spec = "portfolio_task7/coordinate_wales_gp.json"; 
-        vegaEmbed('#Location12', figure_12_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!------------------------------------------------------------CC8----------------------------------------------------------->
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 8: Big Data</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Making a Cake Over The Years</h2>
-            <p> 
-                Enter
-            </p>
-        </div>
-        <figure id="Location13"></figure> 
-    </section>
-
-    <script>
-        let figure_13_spec = "portfolio_task8/cake_avg.json"; 
-        vegaEmbed('#Location13', figure_13_spec);
-    </script>
-
-    <!-- Section 2 -->
-    <section>
-        <div class="chart-description">
-             <h2>Average Tampon Prices by Regions</h2>
-
-            <p> 
-                Enter
-            </p>
-        </div>
-        <figure id="Location14"></figure> 
-    </section>
-
-    <script>
-        let figure_14_spec = "portfolio_task8/tampon_avg_region.json"; 
-        vegaEmbed('#Location14', figure_14_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!------------------------------------------------------------CC9----------------------------------------------------------->
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 9: Interactive Charts</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Paracetamol Prices Over The Years</h2>
-            <p> 
-                Enter
-            </p>
-        </div>
-        <figure id="Location15"></figure> 
-    </section>
-
-    <script>
-        let figure_15_spec = "portfolio_task9/avg_painkiller_price.json"; 
-        vegaEmbed('#Location15', figure_15_spec);
-    </script>
-
-    <!-- Section 2 -->
-     <section>
-        <div class="chart-description">
-             <h2>Suicide Rates by Social Group in England</h2>
-
-            <p> 
-                Enter
-            </p>
-        </div>
-        <figure id="Location16"></figure> 
-    </section>
-
-    <script>
-        let figure_16_spec = "portfolio_task9/suicide_by_socialgroup.json"; 
-        vegaEmbed('#Location16', figure_16_spec);
-    </script>
-
-</div> <!-- end collapsible content -->
-
-<!------------------------------------------------------------CC10----------------------------------------------------------->
-<!-- Collapsible button -->
-<button type="button" class="collapsible">Portfolio Task 10: Advanced Analysis and Machine Learning</button>
-
-<!-- Collapsible content container -->
-<div class="content">
-
-    <!-- Section 1 -->
-    <section>
-        <div class="chart-description">
-            <h2>Comparing weight issues in England</h2>
-            <p> 
-                Enter
-            </p>
-        </div>
-        <figure id="Location17"></figure> 
-    </section>
-
-    <script>
-        let figure_17_spec = "portfolio_task10/england_weights_comparison.json"; 
-        vegaEmbed('#Location17', figure_17_spec);
-    </script>
-
-    <!-- Section 2 -->
-
-<!------------------------------------------------------------------------------------------------------------------------->
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const coll = document.getElementsByClassName("collapsible");
-    for (let i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            // Close all other collapsibles
-            for (let j = 0; j < coll.length; j++) {
-                if (coll[j] !== this) {
-                    coll[j].classList.remove("active");
-                    coll[j].nextElementSibling.style.maxHeight = null;
-                }
-            }
-            // Toggle current one
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-});
-</script>
-
-
+    </footer>
 </body>
-    
 </html>
