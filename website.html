@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Geography of Educational Privilege</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #2c3e50;
+        }
+
+        #intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        #intro h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        #intro p {
+            font-size: 1.3em;
+            max-width: 700px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        #scroll-container {
+            position: relative;
+        }
+
+        #vis-container {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+        }
+
+        #vis {
+            width: 90%;
+            height: 90vh;
+        }
+
+        .step {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .step-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            opacity: 0.4;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .step.is-active .step-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .step-content h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .step-content p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .step-content strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .stat {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            margin: 15px 0;
+        }
+
+        #conclusion {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+        }
+
+        #conclusion h2 {
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        #conclusion p {
+            font-size: 1.2em;
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .scroll-prompt {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9em;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .legend-note {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="intro">
+        <h1>The Geography of Educational Privilege</h1>
+        <p>A data-driven exploration of how independent schools shape — and reflect — inequality across England</p>
+        <div class="scroll-prompt">↓ Scroll to explore</div>
+    </section>
+
+    <div id="scroll-container">
+        <div id="vis-container">
+            <div id="vis"></div>
+        </div>
+
+        <div class="step" data-step="0">
+            <div class="step-content">
+                <h2>1,613 Independent Schools</h2>
+                <p>Across England, over 1,600 independent schools educate approximately 7% of all pupils.</p>
+                <p>But their distribution tells a story of <strong>geographic inequality</strong>.</p>
+                <p class="legend-note">Each point represents one school. Color indicates gender composition: Mixed (green), Boys (blue), Girls (pink).</p>
+            </div>
+        </div>
+
+        <div class="step" data-step="1">
+            <div class="step-content">
+                <h2>London's Concentration</h2>
+                <p>Zooming into London reveals a remarkable density of independent schools.</p>
+                <p>The capital contains a <strong>disproportionate share</strong> of private education, particularly in affluent boroughs like Westminster, Kensington & Chelsea, and Richmond.</p>
+                <p>This clustering reflects — and reinforces — broader patterns of wealth and opportunity.</p>
+            </div>
+        </div>
+
+        <div class="step" data-step="2">
+            <div class="step-content">
+                <h2>The Clarendon Nine</h2>
+                <p>At the pinnacle of this system sit the <strong>Clarendon Schools</strong> — nine historic institutions defined by the 1861 Clarendon Commission.</p>
+                <div class="stat">20 Prime Ministers</div>
+                <p>educated at Eton College alone.</p>
+                <p>These schools have shaped British politics, law, and culture for centuries, representing the most elite tier of an already exclusive system.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="conclusion">
+        <h2>Access & Opportunity</h2>
+        <p>As someone who attended private school on a full bursary, I've seen firsthand how transformative access to quality education can be.</p>
+        <p>But the geographic concentration of these institutions raises important questions about equality of opportunity in the UK education system.</p>
+        <p><strong>How can we ensure that where you're born doesn't determine the education you receive?</strong></p>
+    </section>
+
+    <script>
+        // Vega-Lite specifications for each view
+        const ukSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 800,
+            "height": 900,
+            "projection": {
+                "type": "mercator",
+                "center": [-2, 54],
+                "scale": 2200
+            },
+            "layer": [
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson",
+                        "format": {"type": "json"}
+                    },
+                    "mark": {
+                        "type": "geoshape",
+                        "fill": "#e8e8e8",
+                        "stroke": "white",
+                        "strokeWidth": 1
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+                    },
+                    "transform": [
+                        {"filter": "datum.Latitude != null && datum.Longitude != null"}
+                    ],
+                    "mark": {
+                        "type": "circle",
+                        "size": 30,
+                        "opacity": 0.7
+                    },
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"},
+                        "color": {
+                            "field": "Gender (name)",
+                            "type": "nominal",
+                            "scale": {
+                                "domain": ["Mixed", "Boys", "Girls", "Not applicable"],
+                                "range": ["#7fc97f", "#386cb0", "#f0027f", "#cccccc"]
+                            },
+                            "legend": {
+                                "title": "School Gender Type",
+                                "orient": "bottom-right"
+                            }
+                        },
+                        "tooltip": [
+                            {"field": "EstablishmentName", "type": "nominal", "title": "School Name"},
+                            {"field": "Town", "type": "nominal", "title": "Town"},
+                            {"field": "Gender (name)", "type": "nominal", "title": "Gender"},
+                            {"field": "NumberOfPupils", "type": "quantitative", "title": "Total Pupils", "format": ","}
+                        ]
+                    }
+                }
+            ],
+            "config": {"view": {"stroke": null}}
+        };
+
+        const londonSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 700,
+            "height": 700,
+            "projection": {
+                "type": "mercator",
+                "center": [-0.12, 51.5],
+                "scale": 35000
+            },
+            "layer": [
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/Anas1108/London_GeoJson_MapVisualization_using_D3/refs/heads/main/london_boroughs.json",
+                        "format": {"type": "json"}
+                    },
+                    "mark": {
+                        "type": "geoshape",
+                        "fill": "#f0f0f0",
+                        "stroke": "#999999",
+                        "strokeWidth": 1.5
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+                    },
+                    "transform": [
+                        {"filter": "datum.Latitude != null && datum.Longitude != null"},
+                        {"filter": "datum.Latitude > 51.28 && datum.Latitude < 51.69 && datum.Longitude > -0.51 && datum.Longitude < 0.33"},
+                        {"filter": "datum['GOR (name)'] == 'London'"}
+                    ],
+                    "mark": {
+                        "type": "circle",
+                        "size": 60,
+                        "opacity": 0.8
+                    },
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"},
+                        "color": {
+                            "field": "Gender (name)",
+                            "type": "nominal",
+                            "scale": {
+                                "domain": ["Mixed", "Boys", "Girls", "Not applicable"],
+                                "range": ["#7fc97f", "#386cb0", "#f0027f", "#cccccc"]
+                            },
+                            "legend": {
+                                "title": "School Gender Type",
+                                "orient": "bottom-right"
+                            }
+                        },
+                        "tooltip": [
+                            {"field": "EstablishmentName", "type": "nominal", "title": "School Name"},
+                            {"field": "Town", "type": "nominal", "title": "Location"},
+                            {"field": "Gender (name)", "type": "nominal", "title": "Gender"},
+                            {"field": "NumberOfPupils", "type": "quantitative", "title": "Total Pupils", "format": ","}
+                        ]
+                    }
+                }
+            ],
+            "config": {"view": {"stroke": null}}
+        };
+
+        const clarendonSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 800,
+            "height": 900,
+            "projection": {
+                "type": "mercator",
+                "center": [-1.5, 52.8],
+                "scale": 3200
+            },
+            "layer": [
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson",
+                        "format": {"type": "json"}
+                    },
+                    "mark": {
+                        "type": "geoshape",
+                        "fill": "#f5f5f5",
+                        "stroke": "#cccccc",
+                        "strokeWidth": 1
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+                    },
+                    "transform": [
+                        {"filter": "datum.Latitude != null && datum.Longitude != null"}
+                    ],
+                    "mark": {
+                        "type": "circle",
+                        "size": 20,
+                        "opacity": 0.15,
+                        "color": "#d3d3d3"
+                    },
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"}
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+                    },
+                    "transform": [
+                        {"filter": "datum.Latitude != null && datum.Longitude != null"},
+                        {"filter": "datum.EstablishmentName == 'Eton College' || datum.EstablishmentName == 'Harrow School' || datum.EstablishmentName == 'Winchester College' || datum.EstablishmentName == 'Charterhouse' || datum.EstablishmentName == 'Rugby School' || datum.EstablishmentName == 'Shrewsbury School' || datum.EstablishmentName == 'Westminster School' || datum.EstablishmentName == \"St Paul's School\" || datum.EstablishmentName == \"Merchant Taylors' School\""}
+                    ],
+                    "mark": {
+                        "type": "circle",
+                        "size": 400,
+                        "opacity": 0.9,
+                        "stroke": "#1a1a1a",
+                        "strokeWidth": 2
+                    },
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"},
+                        "color": {"value": "#d4af37"},
+                        "tooltip": [
+                            {"field": "EstablishmentName", "type": "nominal", "title": "School Name"},
+                            {"field": "Town", "type": "nominal", "title": "Location"},
+                            {"field": "NumberOfPupils", "type": "quantitative", "title": "Total Pupils", "format": ","},
+                            {"field": "Gender (name)", "type": "nominal", "title": "Gender"}
+                        ]
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+                    },
+                    "transform": [
+                        {"filter": "datum.Latitude != null && datum.Longitude != null"},
+                        {"filter": "datum.EstablishmentName == 'Eton College' || datum.EstablishmentName == 'Harrow School' || datum.EstablishmentName == 'Winchester College' || datum.EstablishmentName == 'Charterhouse' || datum.EstablishmentName == 'Rugby School' || datum.EstablishmentName == 'Shrewsbury School' || datum.EstablishmentName == 'Westminster School' || datum.EstablishmentName == \"St Paul's School\" || datum.EstablishmentName == \"Merchant Taylors' School\""}
+                    ],
+                    "mark": {
+                        "type": "text",
+                        "dy": -20,
+                        "fontSize": 11,
+                        "fontWeight": "bold",
+                        "color": "#1a1a1a"
+                    },
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"},
+                        "text": {"field": "EstablishmentName", "type": "nominal"}
+                    }
+                }
+            ],
+            "config": {"view": {"stroke": null}}
+        };
+
+        // Initialize with UK view
+        vegaEmbed('#vis', ukSpec, {actions: false});
+
+        // Setup Scrollama
+        const scroller = scrollama();
+
+        scroller
+            .setup({
+                step: '.step',
+                offset: 0.5,
+                debug: false
+            })
+            .onStepEnter(response => {
+                const step = response.element.dataset.step;
+                
+                if (step === '0') {
+                    vegaEmbed('#vis', ukSpec, {actions: false});
+                } else if (step === '1') {
+                    vegaEmbed('#vis', londonSpec, {actions: false});
+                } else if (step === '2') {
+                    vegaEmbed('#vis', clarendonSpec, {actions: false});
+                }
+            });
+
+        // Handle window resize
+        window.addEventListener('resize', scroller.resize);
+    </script>
+</body>
+</html>
