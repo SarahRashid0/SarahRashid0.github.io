@@ -1,67 +1,634 @@
-Code,Borough,IMD
-E09000002,Barking and Dagenham,32.8
-E09000003,Barnet,16.1
-E09000004,Bexley,16.3
-E09000005,Brent,25.6
-E09000006,Bromley,14.2
-E09000007,Camden,20.1
-E09000008,Croydon,22.5
-E09000009,Ealing,22.7
-E09000010,Enfield,25.8
-E09000011,Greenwich,24.5
-E09000012,Hackney,32.5
-E09000013,Hammersmith and Fulham,22.3
-E09000014,Haringey,28.0
-E09000015,Harrow,15.0
-E09000016,Havering,16.8
-E09000017,Hillingdon,18.2
-E09000018,Hounslow,21.5
-E09000019,Islington,27.5
-E09000020,Kensington and Chelsea,21.5
-E09000021,Kingston upon Thames,11.4
-E09000022,Lambeth,25.4
-E09000023,Lewisham,26.7
-E09000024,Merton,14.6
-E09000025,Newham,29.6
-E09000026,Redbridge,17.2
-E09000027,Richmond upon Thames,9.4
-E09000028,Southwark,25.8
-E09000029,Sutton,14.0
-E09000030,Tower Hamlets,27.9
-E09000031,Waltham Forest,25.2
-E09000032,Wandsworth,16.6
-E09000033,Westminster,20.3
-E12000007,London,14.7
-E09000002,Barking and Dagenham,32.8
-E09000003,Barnet,16.1
-E09000004,Bexley,16.3
-E09000005,Brent,25.6
-E09000006,Bromley,14.2
-E09000007,Camden,20.1
-E09000008,Croydon,22.5
-E09000009,Ealing,22.7
-E09000010,Enfield,25.8
-E09000011,Greenwich,24.5
-E09000012,Hackney,32.5
-E09000013,Hammersmith and Fulham,22.3
-E09000014,Haringey,28.0
-E09000015,Harrow,15.0
-E09000016,Havering,16.8
-E09000017,Hillingdon,18.2
-E09000018,Hounslow,21.5
-E09000019,Islington,27.5
-E09000020,Kensington and Chelsea,21.5
-E09000021,Kingston upon Thames,11.4
-E09000022,Lambeth,25.4
-E09000023,Lewisham,26.7
-E09000024,Merton,14.6
-E09000025,Newham,29.6
-E09000026,Redbridge,17.2
-E09000027,Richmond upon Thames,9.4
-E09000028,Southwark,25.8
-E09000029,Sutton,14.0
-E09000030,Tower Hamlets,27.9
-E09000031,Waltham Forest,25.2
-E09000032,Wandsworth,16.6
-E09000033,Westminster,20.3
-E12000007,London,14.7
+﻿Code,Name,Borough,IMD
+E05000026,Abbey,Barking and Dagenham,31.3
+E05000027,Alibon,Barking and Dagenham,35.4
+E05000028,Becontree,Barking and Dagenham,35.3
+E05000029,Chadwell Heath,Barking and Dagenham,32.1
+E05000030,Eastbrook,Barking and Dagenham,25.3
+E05000031,Eastbury,Barking and Dagenham,33.2
+E05000032,Gascoigne,Barking and Dagenham,37.1
+E05000033,Goresbrook,Barking and Dagenham,33.3
+E05000034,Heath,Barking and Dagenham,35.9
+E05000035,Longbridge,Barking and Dagenham,21.2
+E05000036,Mayesbrook,Barking and Dagenham,38.2
+E05000037,Parsloes,Barking and Dagenham,32.5
+E05000038,River,Barking and Dagenham,32.9
+E05000039,Thames,Barking and Dagenham,36.4
+E05000040,Valence,Barking and Dagenham,36.4
+E05000041,Village,Barking and Dagenham,36.1
+E05000042,Whalebone,Barking and Dagenham,24.5
+E05000043,Brunswick Park,Barnet,13.1
+E05000044,Burnt Oak,Barnet,28.0
+E05000045,Childs Hill,Barnet,19.7
+E05000046,Colindale,Barnet,25.2
+E05000047,Coppetts,Barnet,16.6
+E05000048,East Barnet,Barnet,15.0
+E05000049,East Finchley,Barnet,15.1
+E05000050,Edgware,Barnet,14.9
+E05000051,Finchley Church End,Barnet,10.5
+E05000052,Garden Suburb,Barnet,9.1
+E05000053,Golders Green,Barnet,19.2
+E05000054,Hale,Barnet,15.6
+E05000055,Hendon,Barnet,16.0
+E05000056,High Barnet,Barnet,11.1
+E05000057,Mill Hill,Barnet,13.9
+E05000058,Oakleigh,Barnet,11.9
+E05000059,Totteridge,Barnet,9.8
+E05000060,Underhill,Barnet,19.9
+E05000061,West Finchley,Barnet,12.1
+E05000062,West Hendon,Barnet,19.5
+E05000063,Woodhouse,Barnet,16.2
+E05011217,Barnehurst,Bexley,16.5
+E05011218,Belvedere,Bexley,22.6
+E05011219,Bexleyheath,Bexley,12.6
+E05011220,Blackfen & Lamorbey,Bexley,9.2
+E05011221,Blendon & Penhill,Bexley,9.3
+E05011222,Crayford,Bexley,21.2
+E05011223,Crook Log,Bexley,9.9
+E05011224,East Wickham,Bexley,14.2
+E05011225,Erith,Bexley,26.3
+E05011226,Falconwood & Welling,Bexley,11.1
+E05011227,Longlands,Bexley,10.4
+E05011228,Northumberland Heath,Bexley,19.6
+E05011230,Sidcup,Bexley,16.4
+E05011231,Slade Green & Northend,Bexley,31.7
+E05011229,St. Mary's & St. James,Bexley,13.2
+E05011232,Thamesmead East,Bexley,25.4
+E05011233,West Heath,Bexley,10.5
+E05000085,Alperton,Brent,22.5
+E05000086,Barnhill,Brent,25.2
+E05000087,Brondesbury Park,Brent,21.5
+E05000088,Dollis Hill,Brent,29.5
+E05000089,Dudden Hill,Brent,27.5
+E05000090,Fryent,Brent,19.9
+E05000091,Harlesden,Brent,39.6
+E05000092,Kensal Green,Brent,28.4
+E05000093,Kenton,Brent,13.0
+E05000094,Kilburn,Brent,31.1
+E05000095,Mapesbury,Brent,24.2
+E05000096,Northwick Park,Brent,14.9
+E05000097,Preston,Brent,20.8
+E05000098,Queens Park,Brent,19.0
+E05000099,Queensbury,Brent,19.9
+E05000100,Stonebridge,Brent,45.3
+E05000101,Sudbury,Brent,22.2
+E05000102,Tokyngton,Brent,21.9
+E05000103,Welsh Harp,Brent,27.6
+E05000104,Wembley Central,Brent,23.0
+E05000105,Willesden Green,Brent,29.9
+E05000106,Bickley,Bromley,8.2
+E05000107,Biggin Hill,Bromley,9.3
+E05000108,Bromley Common and Keston,Bromley,15.9
+E05000109,Bromley Town,Bromley,10.7
+E05000110,Chelsfield and Pratts Bottom,Bromley,6.7
+E05000111,Chislehurst,Bromley,9.8
+E05000112,Clock House,Bromley,12.4
+E05000113,Copers Cope,Bromley,11.4
+E05000114,Cray Valley East,Bromley,27.2
+E05000115,Cray Valley West,Bromley,28.3
+E05000116,Crystal Palace,Bromley,26.3
+E05000117,Darwin,Bromley,15.0
+E05000118,Farnborough and Crofton,Bromley,8.4
+E05000119,Hayes and Coney Hall,Bromley,7.2
+E05000120,Kelsey and Eden Park,Bromley,10.7
+E05000121,Mottingham and Chislehurst North,Bromley,28.0
+E05000122,Orpington,Bromley,16.1
+E05000123,Penge and Cator,Bromley,22.2
+E05000124,Petts Wood and Knoll,Bromley,5.0
+E05000125,Plaistow and Sundridge,Bromley,17.6
+E05000126,Shortlands,Bromley,6.3
+E05000127,West Wickham,Bromley,6.2
+E05000128,Belsize,Camden,11.9
+E05000129,Bloomsbury,Camden,17.2
+E05000130,Camden Town with Primrose Hill,Camden,24.1
+E05000131,Cantelowes,Camden,23.8
+E05000132,Fortune Green,Camden,17.0
+E05000133,Frognal and Fitzjohns,Camden,7.1
+E05000134,Gospel Oak,Camden,23.5
+E05000135,Hampstead Town,Camden,7.2
+E05000136,Haverstock,Camden,27.1
+E05000137,Highgate,Camden,18.5
+E05000138,Holborn and Covent Garden,Camden,21.1
+E05000139,Kentish Town,Camden,18.8
+E05000140,Kilburn,Camden,29.3
+E05000141,King's Cross,Camden,24.9
+E05000142,Regent's Park,Camden,26.1
+E05000143,St. Pancras and Somers Town,Camden,32.5
+E05000144,Swiss Cottage,Camden,13.3
+E05000145,West Hampstead,Camden,16.6
+E05009297,City of London,City of London,14.7
+E05011462,Addiscombe East,Croydon,16.9
+E05011463,Addiscombe West,Croydon,22.0
+E05011464,Bensham Manor,Croydon,25.2
+E05011465,Broad Green,Croydon,30.8
+E05011466,Coulsdon Town,Croydon,11.3
+E05011467,Crystal Palace & Upper Norwood,Croydon,21.1
+E05011468,Fairfield,Croydon,32.2
+E05011469,Kenley,Croydon,12.4
+E05011470,New Addington North,Croydon,38.2
+E05011471,New Addington South,Croydon,34.9
+E05011472,Norbury & Pollards Hill,Croydon,21.0
+E05011473,Norbury Park,Croydon,20.1
+E05011474,Old Coulsdon,Croydon,14.0
+E05011475,Park Hill & Whitgift,Croydon,12.1
+E05011476,Purley & Woodcote,Croydon,14.8
+E05011477,Purley Oaks & Riddlesdown,Croydon,11.7
+E05011478,Sanderstead,Croydon,8.8
+E05011479,Selhurst,Croydon,37.3
+E05011480,Selsdon & Addington Village,Croydon,15.4
+E05011481,Selsdon Vale & Forestdale,Croydon,13.7
+E05011482,Shirley North,Croydon,18.6
+E05011483,Shirly South,Croydon,17.3
+E05011484,South Croydon,Croydon,17.3
+E05011485,South Norwood,Croydon,30.3
+E05011486,Thornton Heath,Croydon,28.8
+E05011487,Waddon,Croydon,28.5
+E05011488,West Thornton,Croydon,29.2
+E05011489,Woodside,Croydon,26.2
+E05000170,Acton Central,Ealing,24.1
+E05000171,Cleveland,Ealing,21.7
+E05000172,Dormers Wells,Ealing,29.0
+E05000173,Ealing Broadway,Ealing,16.4
+E05000174,Ealing Common,Ealing,20.1
+E05000175,East Acton,Ealing,24.7
+E05000176,Elthorne,Ealing,24.2
+E05000177,Greenford Broadway,Ealing,27.1
+E05000178,Greenford Green,Ealing,19.1
+E05000179,Hanger Hill,Ealing,14.6
+E05000180,Hobbayne,Ealing,23.4
+E05000181,Lady Margaret,Ealing,20.6
+E05000183,North Greenford,Ealing,16.0
+E05000182,Northfield,Ealing,11.1
+E05000184,Northolt Mandeville,Ealing,27.2
+E05000185,Northolt West End,Ealing,33.3
+E05000186,Norwood Green,Ealing,32.9
+E05000187,Perivale,Ealing,17.7
+E05000188,South Acton,Ealing,29.0
+E05000189,Southall Broadway,Ealing,30.2
+E05000190,Southall Green,Ealing,27.9
+E05000191,Southfield,Ealing,12.7
+E05000192,Walpole,Ealing,14.9
+E05000193,Bowes,Enfield,21.2
+E05000194,Bush Hill Park,Enfield,13.7
+E05000195,Chase,Enfield,25.9
+E05000196,Cockfosters,Enfield,16.0
+E05000197,Edmonton Green,Enfield,41.9
+E05000198,Enfield Highway,Enfield,33.3
+E05000199,Enfield Lock,Enfield,32.2
+E05000200,Grange,Enfield,12.3
+E05000201,Haselbury,Enfield,31.8
+E05000202,Highlands,Enfield,16.0
+E05000203,Jubilee,Enfield,32.6
+E05000204,Lower Edmonton,Enfield,35.2
+E05000205,Palmers Green,Enfield,20.3
+E05000206,Ponders End,Enfield,34.5
+E05000207,Southbury,Enfield,29.1
+E05000208,Southgate,Enfield,13.8
+E05000209,Southgate Green,Enfield,16.9
+E05000210,Town,Enfield,13.3
+E05000211,Turkey Street,Enfield,35.3
+E05000212,Upper Edmonton,Enfield,36.2
+E05000213,Winchmore Hill,Enfield,12.9
+E05000214,Abbey Wood,Greenwich,30.5
+E05000215,Blackheath Westcombe,Greenwich,15.4
+E05000216,Charlton,Greenwich,25.1
+E05000217,Coldharbour and New Eltham,Greenwich,19.2
+E05000218,Eltham North,Greenwich,14.1
+E05000219,Eltham South,Greenwich,18.1
+E05000220,Eltham West,Greenwich,31.6
+E05000221,Glyndon,Greenwich,27.6
+E05000222,Greenwich West,Greenwich,20.0
+E05000223,Kidbrooke with Hornfair,Greenwich,27.7
+E05000224,Middle Park and Sutcliffe,Greenwich,29.1
+E05000225,Peninsula,Greenwich,24.0
+E05000226,Plumstead,Greenwich,25.8
+E05000227,Shooters Hill,Greenwich,17.5
+E05000228,Thamesmead Moorings,Greenwich,25.1
+E05000229,Woolwich Common,Greenwich,31.5
+E05000230,Woolwich Riverside,Greenwich,27.3
+E05009367,Brownswood,Hackney,27.0
+E05009368,Cazenove,Hackney,27.8
+E05009369,Clissold,Hackney,26.2
+E05009370,Dalston,Hackney,31.8
+E05009371,De Beauvoir,Hackney,28.5
+E05009372,Hackney Central,Hackney,33.4
+E05009373,Hackney Downs,Hackney,32.5
+E05009374,Hackney Wick,Hackney,40.8
+E05009375,Haggerston,Hackney,37.8
+E05009376,Homerton,Hackney,38.6
+E05009377,Hoxton East & Shoreditch,Hackney,30.3
+E05009378,Hoxton West,Hackney,31.4
+E05009379,King's Park,Hackney,37.0
+E05009380,Lea Bridge,Hackney,30.7
+E05009381,London Fields,Hackney,30.9
+E05009382,Shacklewell,Hackney,31.9
+E05009383,Springfield,Hackney,34.0
+E05009384,Stamford Hill West,Hackney,29.8
+E05009385,Stoke Newington,Hackney,27.5
+E05009386,Victoria,Hackney,33.6
+E05009387,Woodberry Down,Hackney,41.3
+E05000250,Addison,Hammersmith and Fulham,22.5
+E05000251,Askew,Hammersmith and Fulham,25.6
+E05000252,Avonmore and Brook Green,Hammersmith and Fulham,17.8
+E05000253,College Park and Old Oak,Hammersmith and Fulham,31.9
+E05000254,Fulham Broadway,Hammersmith and Fulham,23.5
+E05000255,Fulham Reach,Hammersmith and Fulham,18.2
+E05000256,Hammersmith Broadway,Hammersmith and Fulham,27.6
+E05000257,Munster,Hammersmith and Fulham,12.9
+E05000258,North End,Hammersmith and Fulham,23.1
+E05000259,Palace Riverside,Hammersmith and Fulham,10.9
+E05000260,Parsons Green and Walham,Hammersmith and Fulham,14.7
+E05000261,Ravenscourt Park,Hammersmith and Fulham,20.4
+E05000262,Sands End,Hammersmith and Fulham,20.2
+E05000263,Shepherd's Bush Green,Hammersmith and Fulham,30.4
+E05000264,Town,Hammersmith and Fulham,17.6
+E05000265,Wormholt and White City,Hammersmith and Fulham,33.5
+E05000266,Alexandra,Haringey,11.9
+E05000267,Bounds Green,Haringey,25.0
+E05000268,Bruce Grove,Haringey,35.0
+E05000269,Crouch End,Haringey,14.1
+E05000270,Fortis Green,Haringey,13.7
+E05000271,Harringay,Haringey,25.5
+E05000272,Highgate,Haringey,15.3
+E05000273,Hornsey,Haringey,24.8
+E05000274,Muswell Hill,Haringey,13.0
+E05000275,Noel Park,Haringey,34.0
+E05000276,Northumberland Park,Haringey,46.5
+E05000278,Seven Sisters,Haringey,28.9
+E05000277,St. Ann's,Haringey,26.5
+E05000279,Stroud Green,Haringey,20.1
+E05000280,Tottenham Green,Haringey,38.7
+E05000281,Tottenham Hale,Haringey,35.1
+E05000282,West Green,Haringey,33.2
+E05000283,White Hart Lane,Haringey,42.3
+E05000284,Woodside,Haringey,28.5
+E05000285,Belmont,Harrow,9.7
+E05000286,Canons,Harrow,14.6
+E05000287,Edgware,Harrow,17.4
+E05000288,Greenhill,Harrow,19.1
+E05000289,Harrow on the Hill,Harrow,15.0
+E05000290,Harrow Weald,Harrow,18.1
+E05000291,Hatch End,Harrow,11.4
+E05000292,Headstone North,Harrow,8.4
+E05000293,Headstone South,Harrow,13.2
+E05000294,Kenton East,Harrow,17.0
+E05000295,Kenton West,Harrow,12.2
+E05000296,Marlborough,Harrow,19.1
+E05000297,Pinner,Harrow,12.7
+E05000298,Pinner South,Harrow,6.8
+E05000299,Queensbury,Harrow,13.6
+E05000300,Rayners Lane,Harrow,10.2
+E05000301,Roxbourne,Harrow,21.5
+E05000302,Roxeth,Harrow,17.1
+E05000303,Stanmore Park,Harrow,17.1
+E05000304,Wealdstone,Harrow,22.1
+E05000305,West Harrow,Harrow,15.0
+E05000306,Brooklands,Havering,21.1
+E05000307,Cranham,Havering,7.2
+E05000308,Elm Park,Havering,16.7
+E05000309,Emerson Park,Havering,8.7
+E05000310,Gooshays,Havering,33.8
+E05000311,Hacton,Havering,9.2
+E05000312,Harold Wood,Havering,17.0
+E05000313,Havering Park,Havering,22.6
+E05000314,Heaton,Havering,30.7
+E05000315,Hylands,Havering,11.2
+E05000316,Mawneys,Havering,17.2
+E05000317,Pettits,Havering,11.1
+E05000318,Rainham and Wennington,Havering,18.5
+E05000319,Romford Town,Havering,18.0
+E05000321,South Hornchurch,Havering,22.5
+E05000322,Squirrel's Heath,Havering,10.6
+E05000320,St. Andrew's,Havering,12.1
+E05000323,Upminster,Havering,6.8
+E05000324,Barnhill,Hillingdon,24.5
+E05000325,Botwell,Hillingdon,25.6
+E05000326,Brunel,Hillingdon,18.2
+E05000327,Cavendish,Hillingdon,8.8
+E05000328,Charville,Hillingdon,17.5
+E05000329,Eastcote and East Ruislip,Hillingdon,8.4
+E05000330,Harefield,Hillingdon,19.6
+E05000331,Heathrow Villages,Hillingdon,22.5
+E05000332,Hillingdon East,Hillingdon,15.5
+E05000333,Ickenham,Hillingdon,6.8
+E05000334,Manor,Hillingdon,8.1
+E05000335,Northwood,Hillingdon,10.5
+E05000336,Northwood Hills,Hillingdon,12.9
+E05000337,Pinkwell,Hillingdon,23.1
+E05000338,South Ruislip,Hillingdon,12.2
+E05000339,Townfield,Hillingdon,28.9
+E05000340,Uxbridge North,Hillingdon,14.3
+E05000341,Uxbridge South,Hillingdon,16.9
+E05000342,West Drayton,Hillingdon,26.7
+E05000343,West Ruislip,Hillingdon,9.8
+E05000344,Yeading,Hillingdon,25.3
+E05000345,Yiewsley,Hillingdon,28.0
+E05000346,Bedfont,Hounslow,23.9
+E05000347,Brentford,Hounslow,27.1
+E05000348,Chiswick Homefields,Hounslow,12.7
+E05000349,Chiswick Riverside,Hounslow,14.4
+E05000350,Cranford,Hounslow,24.6
+E05000351,Feltham North,Hounslow,23.0
+E05000352,Feltham West,Hounslow,24.2
+E05000353,Hanworth,Hounslow,28.2
+E05000354,Hanworth Park,Hounslow,21.0
+E05000355,Heston Central,Hounslow,21.9
+E05000356,Heston East,Hounslow,20.7
+E05000357,Heston West,Hounslow,26.9
+E05000358,Hounslow Central,Hounslow,22.1
+E05000359,Hounslow Heath,Hounslow,23.2
+E05000360,Hounslow South,Hounslow,12.9
+E05000361,Hounslow West,Hounslow,20.9
+E05000362,Isleworth,Hounslow,25.8
+E05000363,Osterley and Spring Grove,Hounslow,14.8
+E05000364,Syon,Hounslow,22.9
+E05000365,Turnham Green,Hounslow,13.7
+E05000366,Barnsbury,Islington,23.8
+E05000367,Bunhill,Islington,23.9
+E05000368,Caledonian,Islington,29.8
+E05000369,Canonbury,Islington,29.3
+E05000370,Clerkenwell,Islington,25.2
+E05000371,Finsbury Park,Islington,34.1
+E05000372,Highbury East,Islington,20.7
+E05000373,Highbury West,Islington,24.4
+E05000374,Hillrise,Islington,30.3
+E05000375,Holloway,Islington,29.1
+E05000376,Junction,Islington,30.0
+E05000377,Mildmay,Islington,29.0
+E05000378,St. George's,Islington,27.6
+E05000379,St. Mary's,Islington,25.1
+E05000380,St. Peter's,Islington,27.0
+E05000381,Tollington,Islington,30.7
+E05009388,Abingdon,Kensington and Chelsea,13.3
+E05009389,Brompton & Hans Town,Kensington and Chelsea,14.5
+E05009390,Campden,Kensington and Chelsea,11.0
+E05009391,Chelsea Riverside,Kensington and Chelsea,29.7
+E05009392,Colville,Kensington and Chelsea,29.3
+E05009393,Courtfield,Kensington and Chelsea,13.7
+E05009394,Dalgarno,Kensington and Chelsea,39.5
+E05009395,Earl's Court,Kensington and Chelsea,26.2
+E05009396,Golborne,Kensington and Chelsea,46.6
+E05009397,Holland,Kensington and Chelsea,17.5
+E05009398,Norland,Kensington and Chelsea,18.2
+E05009399,Notting Dale,Kensington and Chelsea,40.3
+E05009400,Pembridge,Kensington and Chelsea,16.8
+E05009401,Queen's Gate,Kensington and Chelsea,9.9
+E05009402,Redcliffe,Kensington and Chelsea,14.7
+E05009403,Royal Hospital,Kensington and Chelsea,12.9
+E05009404,St. Helen's,Kensington and Chelsea,30.6
+E05009405,Stanley,Kensington and Chelsea,16.3
+E05000400,Alexandra,Kingston upon Thames,9.2
+E05000401,Berrylands,Kingston upon Thames,13.1
+E05000402,Beverley,Kingston upon Thames,14.7
+E05000403,Canbury,Kingston upon Thames,8.8
+E05000404,Chessington North and Hook,Kingston upon Thames,13.5
+E05000405,Chessington South,Kingston upon Thames,12.2
+E05000406,Coombe Hill,Kingston upon Thames,9.5
+E05000407,Coombe Vale,Kingston upon Thames,7.9
+E05000408,Grove,Kingston upon Thames,12.6
+E05000409,Norbiton,Kingston upon Thames,20.4
+E05000410,Old Malden,Kingston upon Thames,10.5
+E05000411,St. James,Kingston upon Thames,12.2
+E05000412,St. Mark's,Kingston upon Thames,8.9
+E05000413,Surbiton Hill,Kingston upon Thames,9.8
+E05000414,Tolworth and Hook Rise,Kingston upon Thames,14.0
+E05000415,Tudor,Kingston upon Thames,6.3
+E05000416,Bishop's,Lambeth,21.5
+E05000417,Brixton Hill,Lambeth,23.5
+E05000418,Clapham Common,Lambeth,19.4
+E05000419,Clapham Town,Lambeth,22.7
+E05000420,Coldharbour,Lambeth,35.9
+E05000421,Ferndale,Lambeth,31.0
+E05000422,Gipsy Hill,Lambeth,30.8
+E05000423,Herne Hill,Lambeth,21.9
+E05000424,Knight's Hill,Lambeth,26.4
+E05000425,Larkhall,Lambeth,28.8
+E05000426,Oval,Lambeth,25.7
+E05000427,Prince's,Lambeth,26.8
+E05000428,St. Leonard's,Lambeth,23.7
+E05000429,Stockwell,Lambeth,27.8
+E05000430,Streatham Hill,Lambeth,22.8
+E05000431,Streatham South,Lambeth,20.9
+E05000432,Streatham Wells,Lambeth,20.9
+E05000433,Thornton,Lambeth,20.5
+E05000434,Thurlow Park,Lambeth,22.3
+E05000435,Tulse Hill,Lambeth,28.5
+E05000436,Vassall,Lambeth,28.7
+E05000437,Bellingham,Lewisham,37.1
+E05000438,Blackheath,Lewisham,19.4
+E05000439,Brockley,Lewisham,25.4
+E05000440,Catford South,Lewisham,22.0
+E05000441,Crofton Park,Lewisham,18.4
+E05000442,Downham,Lewisham,34.6
+E05000443,Evelyn,Lewisham,30.6
+E05000444,Forest Hill,Lewisham,20.8
+E05000445,Grove Park,Lewisham,25.3
+E05000446,Ladywell,Lewisham,21.1
+E05000447,Lee Green,Lewisham,19.1
+E05000448,Lewisham Central,Lewisham,30.5
+E05000449,New Cross,Lewisham,33.9
+E05000450,Perry Vale,Lewisham,23.5
+E05000451,Rushey Green,Lewisham,33.9
+E05000452,Sydenham,Lewisham,26.4
+E05000453,Telegraph Hill,Lewisham,24.4
+E05000454,Whitefoot,Lewisham,31.3
+E05000455,Abbey,Merton,11.7
+E05000456,Cannon Hill,Merton,9.3
+E05000457,Colliers Wood,Merton,15.7
+E05000458,Cricket Green,Merton,26.7
+E05000459,Dundonald,Merton,6.6
+E05000460,Figge's Marsh,Merton,25.8
+E05000461,Graveney,Merton,14.0
+E05000462,Hillside,Merton,6.6
+E05000463,Lavender Fields,Merton,19.7
+E05000464,Longthornton,Merton,17.0
+E05000465,Lower Morden,Merton,9.3
+E05000466,Merton Park,Merton,8.2
+E05000467,Pollards Hill,Merton,23.1
+E05000468,Ravensbury,Merton,23.4
+E05000469,Raynes Park,Merton,9.8
+E05000470,St. Helier,Merton,22.7
+E05000471,Trinity,Merton,10.0
+E05000472,Village,Merton,5.9
+E05000473,West Barnes,Merton,8.2
+E05000474,Wimbledon Park,Merton,9.4
+E05000475,Beckton,Newham,30.3
+E05000476,Boleyn,Newham,28.0
+E05000477,Canning Town North,Newham,35.8
+E05000478,Canning Town South,Newham,33.8
+E05000479,Custom House,Newham,35.4
+E05000480,East Ham Central,Newham,28.3
+E05000481,East Ham North,Newham,26.0
+E05000482,East Ham South,Newham,31.6
+E05000483,Forest Gate North,Newham,25.5
+E05000484,Forest Gate South,Newham,31.4
+E05000485,Green Street East,Newham,27.4
+E05000486,Green Street West,Newham,27.9
+E05000487,Little Ilford,Newham,31.5
+E05000488,Manor Park,Newham,30.3
+E05000489,Plaistow North,Newham,30.4
+E05000490,Plaistow South,Newham,29.4
+E05000491,Royal Docks,Newham,22.5
+E05000492,Stratford and New Town,Newham,28.5
+E05000493,Wall End,Newham,27.8
+E05000494,West Ham,Newham,28.2
+E05011234,Aldborough,Redbridge,16.4
+E05011235,Barkingside,Redbridge,12.0
+E05011236,Bridge,Redbridge,15.6
+E05011237,Chadwell,Redbridge,16.9
+E05011238,Churchfields,Redbridge,14.0
+E05011239,Clayhall,Redbridge,10.7
+E05011240,Clementswood,Redbridge,23.1
+E05011241,Cranbrook,Redbridge,16.0
+E05011242,Fairlop,Redbridge,16.1
+E05011243,Fullwell,Redbridge,17.1
+E05011244,Goodmayes,Redbridge,21.2
+E05011245,Hainault,Redbridge,26.2
+E05011246,Ilford Town,Redbridge,25.1
+E05011247,Loxford,Redbridge,28.6
+E05011248,Mayfield,Redbridge,16.9
+E05011249,Monkhams,Redbridge,6.5
+E05011250,Newbury,Redbridge,16.1
+E05011251,Seven Kings,Redbridge,19.9
+E05011252,South Woodford,Redbridge,8.9
+E05011253,Valentines,Redbridge,19.7
+E05011254,Wanstead Park,Redbridge,15.5
+E05011255,Wanstead Village,Redbridge,11.5
+E05000516,Barnes,Richmond upon Thames,9.8
+E05000517,East Sheen,Richmond upon Thames,6.3
+E05000518,Fulwell and Hampton Hill,Richmond upon Thames,7.3
+E05000519,"Ham, Petersham and Richmond Riverside",Richmond upon Thames,12.7
+E05000520,Hampton,Richmond upon Thames,8.5
+E05000521,Hampton North,Richmond upon Thames,17.4
+E05000522,Hampton Wick,Richmond upon Thames,8.8
+E05000523,Heathfield,Richmond upon Thames,16.4
+E05000524,Kew,Richmond upon Thames,9.4
+E05000525,Mortlake and Barnes Common,Richmond upon Thames,9.7
+E05000526,North Richmond,Richmond upon Thames,11.2
+E05000528,South Richmond,Richmond upon Thames,8.1
+E05000529,South Twickenham,Richmond upon Thames,5.5
+E05000527,St. Margarets and North Twickenham,Richmond upon Thames,6.3
+E05000530,Teddington,Richmond upon Thames,6.1
+E05000531,Twickenham Riverside,Richmond upon Thames,6.5
+E05000532,West Twickenham,Richmond upon Thames,10.3
+E05000533,Whitton,Richmond upon Thames,10.4
+E05011095,Borough & Bankside,Southwark,20.9
+E05011096,Camberwell Green,Southwark,30.7
+E05011097,Champion Hill,Southwark,18.4
+E05011098,Chaucer,Southwark,25.4
+E05011099,Dulwich Hill,Southwark,17.5
+E05011100,Dulwich Village,Southwark,10.0
+E05011101,Dulwich Wood,Southwark,20.5
+E05011102,Faraday,Southwark,35.0
+E05011103,Goose Green,Southwark,16.4
+E05011104,London Bridge & West Bermondsey,Southwark,23.6
+E05011105,Newington,Southwark,30.3
+E05011106,North Bermondsey,Southwark,22.1
+E05011107,North Walworth,Southwark,33.3
+E05011108,Nunhead & Queen's Road,Southwark,33.9
+E05011109,Old Kent Road,Southwark,31.9
+E05011110,Peckham,Southwark,33.9
+E05011111,Peckham Rye,Southwark,20.9
+E05011112,Rotherhithe,Southwark,23.7
+E05011113,Rye Lane,Southwark,27.4
+E05011116,South Bermondsey,Southwark,29.2
+E05011114,St. George's,Southwark,31.3
+E05011115,St. Giles,Southwark,27.2
+E05011117,Surrey Docks,Southwark,18.0
+E05000555,Beddington North,Sutton,12.2
+E05000556,Beddington South,Sutton,23.0
+E05000557,Belmont,Sutton,11.1
+E05000558,Carshalton Central,Sutton,8.9
+E05000559,Carshalton South and Clockhouse,Sutton,8.9
+E05000560,Cheam,Sutton,6.0
+E05000561,Nonsuch,Sutton,7.0
+E05000562,St. Helier,Sutton,27.5
+E05000563,Stonecot,Sutton,8.9
+E05000564,Sutton Central,Sutton,19.5
+E05000565,Sutton North,Sutton,12.7
+E05000566,Sutton South,Sutton,13.1
+E05000567,Sutton West,Sutton,9.2
+E05000568,The Wrythe,Sutton,17.1
+E05000569,Wallington North,Sutton,12.9
+E05000570,Wallington South,Sutton,15.2
+E05000571,Wandle Valley,Sutton,25.4
+E05000572,Worcester Park,Sutton,9.4
+E05009317,Bethnal Green,Tower Hamlets,29.7
+E05009318,Blackwall & Cubitt Town,Tower Hamlets,18.3
+E05009319,Bow East,Tower Hamlets,28.8
+E05009320,Bow West,Tower Hamlets,26.3
+E05009321,Bromley North,Tower Hamlets,33.8
+E05009322,Bromley South,Tower Hamlets,31.1
+E05009323,Canary Wharf,Tower Hamlets,17.7
+E05009324,Island Gardens,Tower Hamlets,14.4
+E05009325,Lansbury,Tower Hamlets,39.2
+E05009326,Limehouse,Tower Hamlets,22.1
+E05009327,Mile End,Tower Hamlets,30.3
+E05009328,Poplar,Tower Hamlets,33.4
+E05009332,Shadwell,Tower Hamlets,32.1
+E05009333,Spitalfields & Banglatown,Tower Hamlets,30.9
+E05009329,St. Dunstan's,Tower Hamlets,33.4
+E05009330,St. Katharine's & Wapping,Tower Hamlets,14.1
+E05009331,St. Peter's,Tower Hamlets,31.9
+E05009334,Stepney Green,Tower Hamlets,32.4
+E05009335,Weavers,Tower Hamlets,31.8
+E05009336,Whitechapel,Tower Hamlets,25.3
+E05000590,Cann Hall,Waltham Forest,26.6
+E05000591,Cathall,Waltham Forest,29.7
+E05000592,Chapel End,Waltham Forest,20.1
+E05000593,Chingford Green,Waltham Forest,18.6
+E05000594,Endlebury,Waltham Forest,19.1
+E05000595,Forest,Waltham Forest,24.9
+E05000596,Grove Green,Waltham Forest,18.5
+E05000597,Hale End and Highams Park,Waltham Forest,20.3
+E05000598,Hatch Lane,Waltham Forest,24.1
+E05000599,High Street,Waltham Forest,24.4
+E05000600,Higham Hill,Waltham Forest,32.1
+E05000601,Hoe Street,Waltham Forest,28.3
+E05000602,Larkswood,Waltham Forest,23.7
+E05000603,Lea Bridge,Waltham Forest,30.0
+E05000604,Leyton,Waltham Forest,30.3
+E05000605,Leytonstone,Waltham Forest,21.8
+E05000606,Markhouse,Waltham Forest,29.7
+E05000607,Valley,Waltham Forest,25.3
+E05000608,William Morris,Waltham Forest,24.2
+E05000609,Wood Street,Waltham Forest,28.3
+E05000610,Balham,Wandsworth,10.7
+E05000611,Bedford,Wandsworth,17.4
+E05000612,Earlsfield,Wandsworth,14.4
+E05000613,East Putney,Wandsworth,11.6
+E05000614,Fairfield,Wandsworth,12.4
+E05000615,Furzedown,Wandsworth,18.0
+E05000616,Graveney,Wandsworth,20.3
+E05000617,Latchmere,Wandsworth,28.6
+E05000618,Nightingale,Wandsworth,12.9
+E05000619,Northcote,Wandsworth,8.7
+E05000620,Queenstown,Wandsworth,23.7
+E05000621,Roehampton and Putney Heath,Wandsworth,27.5
+E05000623,Shaftesbury,Wandsworth,14.6
+E05000624,Southfields,Wandsworth,12.2
+E05000622,St. Mary's Park,Wandsworth,16.1
+E05000625,Thamesfield,Wandsworth,10.1
+E05000626,Tooting,Wandsworth,21.7
+E05000627,Wandsworth Common,Wandsworth,13.8
+E05000628,West Hill,Wandsworth,17.8
+E05000629,West Putney,Wandsworth,17.5
+E05000630,Abbey Road,Westminster,10.1
+E05000631,Bayswater,Westminster,16.3
+E05000632,Bryanston and Dorset Square,Westminster,13.1
+E05000634,Church Street,Westminster,41.5
+E05000633,Churchill,Westminster,28.9
+E05000635,Harrow Road,Westminster,28.6
+E05000636,Hyde Park,Westminster,17.7
+E05000637,Knightsbridge and Belgravia,Westminster,8.2
+E05000638,Lancaster Gate,Westminster,15.7
+E05000639,Little Venice,Westminster,18.0
+E05000640,Maida Vale,Westminster,18.0
+E05000641,Marylebone High Street,Westminster,10.9
+E05000642,Queen's Park,Westminster,32.4
+E05000643,Regent's Park,Westminster,14.3
+E05000644,St. James's,Westminster,23.1
+E05000645,Tachbrook,Westminster,17.6
+E05000646,Vincent Square,Westminster,19.8
+E05000647,Warwick,Westminster,15.8
+E05000649,West End,Westminster,16.9
+E05000648,Westbourne,Westminster,34.9
