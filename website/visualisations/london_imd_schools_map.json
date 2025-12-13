@@ -1,0 +1,177 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 600,
+
+  "title": {
+    "text": "Independent Schools in London",
+    "fontSize": 18,
+    "anchor": "middle",
+    "subtitle": "Distribution vs. Index of Multiple Deprivation (IMD) across London",
+    "font": "Baskerville, 'Libre Baskerville', 'Baskerville Old Face', 'Times New Roman', serif",
+    "color": "#2C3531",
+    "subtitleFont": "Baskerville, 'Libre Baskerville', 'Baskerville Old Face', 'Times New Roman', serif",
+    "subtitleColor": "#545B5A",
+    "subtitleFontSize": 15
+  },
+
+  "projection": {
+    "type": "mercator",
+    "center": [-0.12, 51.50],
+    "scale": 40000
+  },
+
+  "params": [
+    {
+      "name": "imd_level_select",
+      "value": "Borough",
+      "bind": {
+        "input": "select",
+        "options": ["Borough", "LSOA"],
+        "name": "IMD Level: "
+      }
+    }
+  ],
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Anas1108/London_GeoJson_MapVisualization_using_D3/refs/heads/main/london_boroughs.json",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "transform": [
+        { "filter": "imd_level_select == 'Borough'" }, 
+        {
+          "lookup": "properties.code",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/material_deprivation_londonLAD.csv"
+            },
+            "key": "Code",
+            "fields": ["IMD"]
+          }
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#dee3df",
+        "strokeWidth": 1
+      },
+
+      "encoding": {
+        "color": {
+          "field": "IMD",
+          "type": "quantitative",
+          "title": "IMD Score",
+          "scale": {
+            "range": ["#E8E4DA", "#7A9B76", "#4A6B5C"],
+            "interpolate": "hcl"
+          },
+          "legend": {
+            "title": "IMD Score",
+            "titleFont": "Baskerville, serif",
+            "labelFont": "Baskerville, serif",
+            "titleColor": "#2C3531",
+            "labelColor": "#545B5A"
+          }
+        },
+        "tooltip": [
+          { "field": "properties.name", "title": "Borough" },
+          { "field": "IMD", "title": "IMD Score" }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/map-data/refs/heads/main/gbr/cities/london/LSOA_2011.json",
+        "format": {
+          "type": "topojson",
+          "feature": "geog"
+        }
+      },
+
+      "transform": [
+        { "filter": "imd_level_select == 'LSOA'" },
+        {
+          "lookup": "properties.id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/material_deprivation_londonLSOA.csv"
+            },
+            "key": "Code",
+            "fields": ["IMD"]
+          }
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#A8ACA9",
+        "strokeWidth": 0.5
+      },
+
+      "encoding": {
+        "color": {
+          "field": "IMD",
+          "type": "quantitative",
+          "title": "IMD Score",
+          "scale": {
+            "range": ["#E8E4DA", "#7A9B76", "#4A6B5C"],
+            "interpolate": "hcl"
+          },
+          "legend": {
+            "titleFont": "Baskerville, serif",
+            "labelFont": "Baskerville, serif",
+            "titleColor": "#2C3531",
+            "labelColor": "#545B5A"
+          }
+        },
+        "tooltip": [
+          { "field": "properties.name", "title": "LSOA" },
+          { "field": "IMD", "title": "IMD Score" }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+      },
+
+      "transform": [
+        { "filter": "datum.Latitude != null && datum.Longitude != null" },
+        { "filter": "datum.Latitude > 51.28 && datum.Latitude < 51.69" },
+        { "filter": "datum.Longitude > -0.51 && datum.Longitude < 0.33" },
+        { "filter": "datum['GOR (name)'] == 'London'" }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "color": "navy",
+        "size": 30,
+        "opacity": 0.6,
+        "stroke": "#FDFBF7",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "longitude": { "field": "Longitude" },
+        "latitude": { "field": "Latitude" },
+        "tooltip": [
+          { "field": "EstablishmentName", "title": "School Name" },
+          { "field": "Gender (name)", "title": "Gender" }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": { "stroke": null, "fill": "#FDFBF7" }
+  }
+}
