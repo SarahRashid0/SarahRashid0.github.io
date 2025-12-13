@@ -58,7 +58,7 @@
                 </div>
             </div>
             
-            <!-- Visualization Column -->
+            <!-- Visualisation Column -->
             <div>
                 <div id="vis-england-map"></div>
                 <div id="vis-london-map" style="display: none;"></div>
@@ -133,7 +133,7 @@
         <div class="container-narrow">
             <h2>Data</h2>
             <p>
-                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019-2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilized ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators.
+                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019-2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators.
             </p>
             <p>
                 All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. While initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
@@ -149,10 +149,10 @@
                 Data cleaning and analysis were performed using Python (pandas, scipy.stats) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance.
             </p>
             <p>
-                Visualizations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualization specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
+                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualisation specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
             </p>
             <p>
-                Key technical challenges included handling missing historical data (some schools lacked complete fee records across all years), managing data type mismatches during borough-level merges (GSS codes vs. numeric LA codes), and optimizing map rendering performance with 1,600+ data points. These were addressed through strategic data filtering, explicit type conversions, and layered visualization approaches that balance detail with performance.
+                Key technical challenges included handling missing historical data (some schools lacked complete fee records across all years), managing data type mismatches during borough-level merges (GSS codes vs. numeric LA codes), and optimising map rendering performance with 1,600+ data points. These were addressed through strategic data filtering, explicit type conversions, and layered visualisation approaches that balance detail with performance.
             </p>
         </div>
     </section>
@@ -181,7 +181,7 @@
         <div class="container text-center">
             <h2 style="color: white; margin-bottom: var(--spacing-md);">Open Data & Code</h2>
             <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto var(--spacing-md); opacity: 0.95;">
-                All data, code, and visualizations are publicly accessible for reproducibility and further research.
+                All data, code, and visualisations are publicly accessible for reproducibility and further research.
             </p>
             <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
                 <a href="https://github.com/SarahRashid0/SarahRashid0.github.io" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal);">
