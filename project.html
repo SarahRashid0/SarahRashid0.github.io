@@ -119,15 +119,17 @@
                 Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20-30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020-2021) temporarily inflated results across both sectors.
             </p>
             
-            <!-- Two Column Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
-                <div>
-                    <h3 style="text-align: center; margin-bottom: var(--spacing-md);">GCSE Results</h3>
-                    <div id="vis-gcse"></div>
-                </div>
-                <div>
-                    <h3 style="text-align: center; margin-bottom: var(--spacing-md);">A-Level Results</h3>
-                    <div id="vis-alevel"></div>
+            <!-- Dashboard Container -->
+            <div style="max-width: 1400px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">GCSE Results</h3>
+                        <div id="vis-gcse" style="width: 100%; display: flex; justify-content: center;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">A-Level Results</h3>
+                        <div id="vis-alevel" style="width: 100%; display: flex; justify-content: center;"></div>
+                    </div>
                 </div>
             </div>
             
