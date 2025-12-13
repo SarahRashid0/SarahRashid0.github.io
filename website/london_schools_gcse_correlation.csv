@@ -1,0 +1,44 @@
+Code,Name,gcse_grade5_pct,independent_school_count
+E09000002,Barking and Dagenham,46.9,1
+E09000003,Barnet,66.6,34
+E09000004,Bexley,55.0,4
+E09000005,Brent,55.7,10
+E09000006,Bromley,55.7,10
+E09000007,Camden,50.7,30
+E09000008,Croydon,44.2,17
+E09000009,Ealing,57.7,13
+E09000010,Enfield,48.3,10
+E09000011,Greenwich,49.3,9
+E09000012,Hackney,53.5,29
+E09000013,Hammersmith and Fulham,64.4,18
+E09000014,Haringey,49.6,10
+E09000015,Harrow,56.7,9
+E09000016,Havering,52.2,7
+E09000017,Hillingdon,53.3,8
+E09000018,Hounslow,55.0,10
+E09000019,Islington,51.3,6
+E09000020,Kensington and Chelsea,62.2,29
+E09000021,Kingston upon Thames,70.4,11
+E09000022,Lambeth,43.8,5
+E09000023,Lewisham,45.6,6
+E09000024,Merton,55.1,14
+E09000025,Newham,56.4,6
+E09000026,Redbridge,64.5,12
+E09000027,Richmond upon Thames,66.6,23
+E09000028,Southwark,56.1,8
+E09000029,Sutton,68.0,4
+E09000030,Tower Hamlets,51.6,14
+E09000031,Waltham Forest,45.2,6
+E09000032,Wandsworth,59.1,25
+E09000033,Westminster,61.3,27
+E12000001,North East,42.1,0
+E12000002,North West,42.5,0
+E12000003,Yorkshire and The Humber,43.6,0
+E12000004,East Midlands,43.7,0
+E12000005,West Midlands,42.4,0
+E12000006,East of England,45.9,0
+E12000007,London,55.1,0
+E12000008,South East,48.6,0
+E12000009,South West,45.8,0
+E13000001,Inner London,53.7,0
+E13000002,Outer London,55.8,0
