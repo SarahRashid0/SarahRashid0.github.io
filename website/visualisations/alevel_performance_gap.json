@@ -1,5 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "#FDFBF7",
+    "view": { "stroke": null, "fill": "#FDFBF7" }
+  },
   "title": {
     "text": "A-Level Performance Gap: Independent vs State-Funded Schools",
     "subtitle": "% achieving either 'Grade A and above' or 'Grade C and above' in all subjects (Select from dropdown)",
@@ -123,10 +127,10 @@
       "mark": {
         "type": "line",
         "point": {
-          "size": 50,
+          "size": 30,
           "filled": true
         },
-        "strokeWidth": 3
+        "strokeWidth": 2
       },
       "encoding": {
         "x": {
