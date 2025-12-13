@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
    "config": {
-    "background": "#FDFBF7",
-    "view": { "stroke": null, "fill": "#FDFBF7" }
+    "background": "#F5F1E8",
+    "view": { "stroke": null, "fill": "#F5F1E8" }
   },
   "title": {
     "text": "GCSE Performance Gap: Independent vs State-Funded Schools",
