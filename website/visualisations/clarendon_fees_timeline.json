@@ -1,0 +1,170 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Baskerville, sans-serif",
+    "view": {"stroke": "transparent"},
+    "range": {"category": {"scheme": "brownbluegreen"}},
+    "point": {"filled": true, "opacity": 0.95},
+    "axis": {
+      "labelColor": "#5a6b5a",
+      "labelFontSize": 11,
+      "labelFont": "Baskerville, sans-serif",
+      "labelOpacity": 0.7,
+      "tickColor": "#5a6b5a",
+      "tickOpacity": 0.5,
+      "domainColor": "#5a6b5a",
+      "domainOpacity": 0.5,
+      "gridColor": "#5a6b5a",
+      "gridDash": [2, 2],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#5a6b5a",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisYQuantitative": {
+      "gridColor": "#5a6b5a",
+      "gridDash": [1, 5],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "legend": {
+      "titleFont": "Baskerville, sans-serif",
+      "titleFontSize": 14,
+      "titleColor": "#2d3e2d",
+      "title": null,
+      "labelColor": "#2d3e2d",
+      "labelFontSize": 12
+    },
+    "title": {
+      "font": "Baskerville, sans-serif",
+      "fontSize": 18,
+      "color": "#2d3e2d",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#5a6b5a"
+    }
+  },
+  "title": {
+    "text": "The Rising Cost of Elite Education",
+    "subtitle": [
+      "Annual fees at the historic Clarendon Schools (1930-2025)",
+      "Adjusted for inflation to 2025 prices",
+      ""
+    ],
+    "anchor": "start"
+  },
+  "height": 400,
+  "width": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/clarendon_school_fees_inflation_adjusted.csv"
+  },
+  "params": [
+    {
+      "name": "fee_type",
+      "value": "Boarding",
+      "bind": {
+        "input": "select",
+        "options": ["Boarding", "Day"],
+        "labels": ["Boarding fees (8 schools)", "Day fees (6 schools)"],
+        "name": "Select fee type: "
+      }
+    },
+    {
+      "name": "hover",
+      "select": {"type": "point", "fields": ["School"], "on": "pointerover"},
+      "value": [{"School": "None"}]
+    }
+  ],
+  "transform": [
+    {
+      "fold": [
+        "Boarding_1930", "Boarding_1940", "Boarding_1950", "Boarding_1960",
+        "Boarding_1970", "Boarding_1980", "Boarding_1990", "Boarding_2000",
+        "Boarding_2010", "Boarding_2020", "Boarding_2025",
+        "Day_1930", "Day_1940", "Day_1950", "Day_1960",
+        "Day_1970", "Day_1980", "Day_1990", "Day_2000",
+        "Day_2010", "Day_2020", "Day_2025"
+      ],
+      "as": ["fee_column", "fee"]
+    },
+    {
+      "calculate": "split(datum.fee_column, '_')[0]",
+      "as": "type"
+    },
+    {
+      "calculate": "split(datum.fee_column, '_')[1]",
+      "as": "year"
+    },
+    {
+      "filter": "datum.fee != null && datum.fee != ''"
+    },
+    {
+      "calculate": "toNumber(datum.fee)",
+      "as": "fee_numeric"
+    },
+    {
+      "calculate": "datetime(toNumber(datum.year), 0, 1)",
+      "as": "year_date"
+    },
+    {
+      "filter": "datum.type == fee_type"
+    },
+    {
+      "filter": "fee_type == 'Boarding' ? datum.School != 'Merchant Taylor\\'s' : (datum.School != 'Eton College' && datum.School != 'Winchester College' && datum.School != 'Harrow')"
+    }
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "field": "year_date",
+      "type": "temporal",
+      "timeUnit": "year",
+      "axis": {
+        "labelAngle": 0,
+        "grid": false,
+        "format": "%Y",
+        "values": [
+          {"year": 1940},
+          {"year": 1950},
+          {"year": 1960},
+          {"year": 1970},
+          {"year": 1980},
+          {"year": 1990},
+          {"year": 2000},
+          {"year": 2010},
+          {"year": 2020},
+          {"year": 2025}
+        ]
+      }
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "fee_numeric",
+      "type": "quantitative",
+      "title": "Total annual fees (£, 2025 prices)"
+    },
+    "color": {
+      "field": "School",
+      "type": "nominal",
+      "scale": {
+        "scheme": "tealblues"
+      }
+    },
+    "opacity": {
+      "condition": {"param": "hover", "value": 1},
+      "value": 0.7
+    },
+    "tooltip": [
+      {"field": "School", "type": "nominal", "title": "School"},
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "fee_numeric", "type": "quantitative", "title": "Annual fee (£)", "format": ",.0f"}
+    ]
+  }
+}

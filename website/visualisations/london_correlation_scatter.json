@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Independent School Density and State School Performance",
+    "subtitle": "London boroughs: Does private school presence correlate with state GCSE results?",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d",
+    "subtitleFont": "Baskerville, sans-serif",
+    "subtitleColor": "#5a6b5a",
+    "subtitleFontSize": 14
+  },
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/london_schools_gcse_correlation.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "independent_school_count",
+          "type": "quantitative",
+          "title": "Number of Independent Schools",
+          "scale": {"zero": true},
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "y": {
+          "field": "gcse_grade5_pct",
+          "type": "quantitative",
+          "title": "State School GCSE Performance (% Grade 5+)",
+          "scale": {"zero": false, "domain": [40, 75]},
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "color": {
+          "value": "#4a7c7c"
+        },
+        "tooltip": [
+          {"field": "Name", "type": "nominal", "title": "Borough"},
+          {"field": "independent_school_count", "type": "quantitative", "title": "Independent Schools"},
+          {"field": "gcse_grade5_pct", "type": "quantitative", "title": "GCSE Grade 5+ (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#2d3e2d",
+        "strokeWidth": 2
+      },
+      "transform": [
+        {
+          "regression": "gcse_grade5_pct",
+          "on": "independent_school_count",
+          "extent": [0, 35]
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "independent_school_count",
+          "type": "quantitative",
+          "scale": {"zero": true}
+        },
+        "y": {
+          "field": "gcse_grade5_pct",
+          "type": "quantitative",
+          "scale": {"zero": false, "domain": [40, 75]}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 13,
+        "font": "Baskerville, sans-serif",
+        "color": "#5a6b5a"
+      },
+      "encoding": {
+        "x": {"value": 10},
+        "y": {"value": 10},
+        "text": {"value": ["r = 0.533 (p < 0.001)", "R² =0.145"]}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}

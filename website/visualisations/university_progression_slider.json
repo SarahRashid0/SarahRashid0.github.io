@@ -1,0 +1,152 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "University Access Gap: High Tariff Institutions",
+    "subtitle": "Percentage of students progressing to top universities by school type (2008-2024)",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d",
+    "subtitleFont": "Baskerville, sans-serif",
+    "subtitleColor": "#5a6b5a",
+    "subtitleFontSize": 14
+  },
+  "width": 600,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/university_progression_high_tariff.csv"
+  },
+  "params": [
+    {
+      "name": "year_slider",
+      "value": 2023,
+      "bind": {
+        "input": "range",
+        "min": 2008,
+        "max": 2023,
+        "step": 1,
+        "name": "Select year: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": ["Independent", "Other_State", "Selective_State"],
+      "as": ["school_type", "progression_rate"]
+    },
+    {
+      "calculate": "split(datum.year, '/')[0]",
+      "as": "year_numeric"
+    },
+    {
+      "calculate": "toNumber(datum.year_numeric)",
+      "as": "year_num"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Academic Year",
+          "axis": {
+            "labelAngle": -45,
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "y": {
+          "field": "progression_rate",
+          "type": "quantitative",
+          "title": "High Tariff University Progression (%)",
+          "scale": {
+            "domain": [0, 70]
+          },
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "color": {
+          "field": "school_type",
+          "type": "nominal",
+          "title": "School Type",
+          "scale": {
+            "domain": ["Independent", "Selective_State", "Other_State"],
+            "range": ["#6b8e6b", "#8b9d77", "#4a7c7c"]
+          },
+          "legend": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d",
+            "labelExpr": "datum.label == 'Independent' ? 'Independent Schools' : datum.label == 'Selective_State' ? 'Selective State (Grammar)' : 'Other State Schools'"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 120
+      },
+      "transform": [
+        {"filter": "datum.year_num == year_slider"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "progression_rate",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "school_type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Independent", "Selective_State", "Other_State"],
+            "range": ["#6b8e6b", "#8b9d77", "#4a7c7c"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "school_type", "type": "nominal", "title": "School Type"},
+          {"field": "progression_rate", "type": "quantitative", "title": "High Tariff Progression (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#999999",
+        "strokeWidth": 1.5
+      },
+      "transform": [
+        {"filter": "datum.year_num == year_slider"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}

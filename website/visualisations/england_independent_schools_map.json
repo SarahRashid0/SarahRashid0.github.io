@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 800,
+  "title": {
+    "text": "Independent Schools Across England",
+    "subtitle": "Geographic distribution of 1,613 independent schools",
+    "anchor": "middle",
+    "fontSize": 18, 
+    "font": "Baskerville, 'Libre Baskerville', 'Baskerville Old Face', serif", 
+    "color": "#2C3531",
+    "subtitleFont": "Baskerville, serif",
+    "subtitleColor": "#545B5A",
+    "subtitleFontSize": 15
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [-2, 55],
+    "scale": 2400
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson",
+        "format": {
+          "type": "json"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E8E4DA", 
+        "stroke": "#FDFBF7", 
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/independent_schools_with_coordinates.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.Latitude != null && datum.Longitude != null"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "navy",
+        "size": 30,
+        "opacity": 0.6,
+        "stroke": "#FDFBF7",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "EstablishmentName", "type": "nominal", "title": "School Name"},
+          {"field": "LA (name)", "type": "nominal", "title": "Local Authority"},
+          {"field": "Gender (name)", "type": "nominal", "title": "Gender"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null,
+      "fill": "#FDFBF7" 
+    }
+  }
+}
