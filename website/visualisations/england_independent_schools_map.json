@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 500,
-  "height": 700,
+  "height": 500,
   "title": {
     "text": "Independent Schools Across England",
     "subtitle": "Geographic distribution of 1,613 independent schools",
@@ -16,7 +16,7 @@
   "projection": {
     "type": "mercator",
     "center": [-2, 55],
-    "scale": 2000
+    "scale": 1750
   },
   "layer": [
     {
