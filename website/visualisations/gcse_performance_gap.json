@@ -3,15 +3,15 @@
   "title": {
     "text": "GCSE Performance Gap: Independent vs State-Funded Schools",
     "subtitle": "% achieving either 'Grade 7 and above' or 'Grade 4 and above' in all subjects (Select from dropdown)",
-    "fontSize": 18,
+    "fontSize": 13,
     "anchor": "start",
     "font": "Baskerville, sans-serif",
     "subtitleFont": "Baskerville, sans-serif",
     "subtitleColor": "#5a6b5a",
-    "subtitleFontSize": 14,
+    "subtitleFontSize": 11,
     "color": "#2d3e2d"
   },
-  "width": 300,
+  "width": 400,
   "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/gcse_results_by_institution.csv"
@@ -123,10 +123,10 @@
       "mark": {
         "type": "line",
         "point": {
-          "size": 50,
+          "size": 30,
           "filled": true
         },
-        "strokeWidth": 3
+        "strokeWidth": 2
       },
       "encoding": {
         "x": {
