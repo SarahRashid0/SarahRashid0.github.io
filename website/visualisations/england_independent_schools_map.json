@@ -68,6 +68,7 @@
     }
   ],
   "config": {
+    "background": "#F5F1E8",
     "view": {
       "stroke": null,
       "fill": "#F5F1E8"
