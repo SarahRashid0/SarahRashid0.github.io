@@ -11,8 +11,8 @@
     "subtitleFontSize": 14,
     "color": "#2d3e2d"
   },
-  "width": 600,
-  "height": 400,
+  "width": 300,
+  "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/gcse_results_by_institution.csv"
   },

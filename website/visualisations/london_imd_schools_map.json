@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 600,
+  "width": 500,
+  "height": 500,
 
   "title": {
     "text": "Independent Schools in London",
@@ -18,7 +18,7 @@
   "projection": {
     "type": "mercator",
     "center": [-0.12, 51.50],
-    "scale": 40000
+    "scale": 30000
   },
 
   "params": [
