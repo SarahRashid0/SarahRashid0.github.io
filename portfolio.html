@@ -162,7 +162,13 @@
         }
 
         figure {
-            margin: var(--spacing-md) 0;
+            margin: var(--spacing-md) auto;
+            display: block;
+            text-align: center;
+        }
+
+        figure > div {
+            margin: 0 auto;
         }
 
         .quick-nav {
@@ -362,12 +368,17 @@
             <div class="subsection">
                 <h3>API Task</h3>
                 <p>The following shows data on crime in London, accessed via an API.</p>
+                <p style="font-family: monospace; background: var(--cream); padding: var(--spacing-sm); border-radius: var(--radius-sm); font-size: 0.9rem; margin: var(--spacing-sm) 0;">
+                    API URL: https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278
+                </p>
                 <figure id="Location10"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Scraper Task</h3>
-                <p>Data collection and analysis using web scraping techniques. View the full analysis in the Google Colab notebook:</p>
+                <p>Data collection and analysis using web scraping techniques. The chart below visualises data extracted through web scraping and processed in Python.</p>
+                <figure id="Location11"></figure>
+                <p style="margin-top: var(--spacing-md);">View the full analysis in the Google Colab notebook:</p>
                 <a href="https://colab.research.google.com/drive/1PxEOg8qmGpshaw8msP094xXporjWxJMO?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">View Google Colab Notebook</a>
             </div>
         </section>
@@ -387,6 +398,8 @@
             <div class="subsection">
                 <h3>Building a Dashboard</h3>
                 <p>The following shows a dashboard built using JavaScript loops and multiple food Producer Price Index datasets, demonstrating programmatic chart generation.</p>
+                <p style="margin-bottom: var(--spacing-md);">View the Python notebook showing the data download process using loops:</p>
+                <a href="https://colab.research.google.com/drive/1r2HrJFZrVMTBzbO_GiSXBRZ8CbkfRuFv?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-bottom: var(--spacing-md);">View Google Colab Notebook</a>
                 <div id="charts-container"></div>
             </div>
         </section>
@@ -431,13 +444,13 @@
             <div class="subsection">
                 <h3>Making a Cake Over The Years</h3>
                 <p>Analysis of cake pricing trends over time using large-scale retail pricing data.</p>
-                <figure id="Location13"></figure>
+                <figure id="Location14"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Average Tampon Prices by Regions</h3>
                 <p>Regional price analysis for feminine hygiene products, exploring geographic pricing patterns.</p>
-                <figure id="Location14"></figure>
+                <figure id="Location15"></figure>
             </div>
         </section>
 
@@ -456,13 +469,13 @@
             <div class="subsection">
                 <h3>Paracetamol Prices Over The Years</h3>
                 <p>Interactive analysis of painkiller pricing trends with dynamic filtering and tooltips.</p>
-                <figure id="Location15"></figure>
+                <figure id="Location16"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Suicide Rates by Social Group in England</h3>
                 <p>Analysis of mental health outcomes across different social demographics, with interactive exploration.</p>
-                <figure id="Location16"></figure>
+                <figure id="Location17"></figure>
             </div>
         </section>
 
@@ -549,6 +562,9 @@
         vegaEmbed('#Location8', "portfolio_task4/recreate_graph.json", {actions: false});
         vegaEmbed('#Location9', "portfolio_task4/improved_graph.json", {actions: false});
         vegaEmbed('#Location10', "portfolio_task5/crime_london.json", {actions: false});
+        vegaEmbed('#Location11', "portfolio_task5/scraper_task.json", {actions: false});
+
+        vegaEmbed('#Location11', "portfolio_task5/scraper_task.json", {actions: false});
 
         const charts = [
             { title: "Meats", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" },
@@ -585,14 +601,14 @@
             vegaEmbed(`#chart-${index}`, spec, {actions: false});
         });
 
-        vegaEmbed('#Location11', "portfolio_task7/scotland_happiness.json", {actions: false});
-        vegaEmbed('#Location12', "portfolio_task7/coordinate_wales_gp.json", {actions: false});
-        vegaEmbed('#Location13', "portfolio_task8/cake_avg.json", {actions: false});
-        vegaEmbed('#Location14', "portfolio_task8/tampon_avg_region.json", {actions: false});
-        vegaEmbed('#Location15', "portfolio_task9/avg_painkiller_price.json", {actions: false});
-        vegaEmbed('#Location16', "portfolio_task9/suicide_by_socialgroup.json", {actions: false});
-        vegaEmbed('#Location17', "portfolio_task10/england_weights_comparison.json", {actions: false});
-        vegaEmbed('#Location18', "portfolio_task10/life_expectancy_regression.json", {actions: false});
+        vegaEmbed('#Location12', "portfolio_task7/scotland_happiness.json", {actions: false});
+        vegaEmbed('#Location13', "portfolio_task7/coordinate_wales_gp.json", {actions: false});
+        vegaEmbed('#Location14', "portfolio_task8/cake_avg.json", {actions: false});
+        vegaEmbed('#Location15', "portfolio_task8/tampon_avg_region.json", {actions: false});
+        vegaEmbed('#Location16', "portfolio_task9/avg_painkiller_price.json", {actions: false});
+        vegaEmbed('#Location17', "portfolio_task9/suicide_by_socialgroup.json", {actions: false});
+        vegaEmbed('#Location18', "portfolio_task10/england_weights_comparison.json", {actions: false});
+        vegaEmbed('#Location19', "portfolio_task10/life_expectancy_regression.json", {actions: false});
     </script>
 </body>
 </html>
