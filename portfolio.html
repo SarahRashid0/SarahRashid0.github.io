@@ -163,12 +163,8 @@
 
         figure {
             margin: var(--spacing-md) auto;
-            display: block;
-            text-align: center;
-        }
-
-        figure > div {
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
         }
 
         .quick-nav {
@@ -552,18 +548,28 @@
             brief.classList.toggle('open');
         }
 
+        // Task 1
         vegaEmbed('#Location1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json", {actions: false});
         vegaEmbed('#Location2', "portfolio_task1/wk1_chart2.json", {actions: false});
         vegaEmbed('#Location3', "https://rdeconomist.github.io/charts/library/chartScatter3.json", {actions: false});
+
+        // Task 2
         vegaEmbed('#Location4', "portfolio_task2/public_sector_employment.json", {actions: false});
         vegaEmbed('#Location5', "portfolio_task2/displacement_bangladesh.json", {actions: false});
+
+        // Task 3
         vegaEmbed('#Location6', "portfolio_task3/washdata.json", {actions: false});
         vegaEmbed('#Location7', "portfolio_task3/washdata_urban_rural.json", {actions: false});
+
+        // Task 4
         vegaEmbed('#Location8', "portfolio_task4/recreate_graph.json", {actions: false});
         vegaEmbed('#Location9', "portfolio_task4/improved_graph.json", {actions: false});
+
+        // Task 5
         vegaEmbed('#Location10', "portfolio_task5/crime_london.json", {actions: false});
         vegaEmbed('#Location11', "portfolio_task5/scraper_task.json", {actions: false});
 
+        // Task 6 - Dashboard with loops
         const charts = [
             { title: "Meats", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/main/portfolio_task6/food_ppi_WPU0221.json" },
             { title: "Shrimp", url: "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task6/food_ppi_WPU02230503.json" },
@@ -599,12 +605,19 @@
             vegaEmbed(`#chart-${index}`, spec, {actions: false});
         });
 
+        // Task 7
         vegaEmbed('#Location12', "portfolio_task7/scotland_happiness.json", {actions: false});
         vegaEmbed('#Location13', "portfolio_task7/coordinate_wales_gp.json", {actions: false});
+
+        // Task 8
         vegaEmbed('#Location14', "portfolio_task8/cake_avg.json", {actions: false});
         vegaEmbed('#Location15', "portfolio_task8/tampon_avg_region.json", {actions: false});
+
+        // Task 9
         vegaEmbed('#Location16', "portfolio_task9/avg_painkiller_price.json", {actions: false});
         vegaEmbed('#Location17', "portfolio_task9/suicide_by_socialgroup.json", {actions: false});
+
+        // Task 10
         vegaEmbed('#Location18', "portfolio_task10/england_weights_comparison.json", {actions: false});
         vegaEmbed('#Location19', "portfolio_task10/life_expectancy_regression.json", {actions: false});
     </script>
