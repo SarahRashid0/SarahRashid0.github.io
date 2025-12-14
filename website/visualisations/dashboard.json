@@ -1,0 +1,541 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "#F5F1E8",
+    "view": { "stroke": null, "fill": "#F5F1E8" }
+  },
+  "title": {
+    "text": "Academic Performance Gap: Independent vs State-Funded Schools (2019-2025)",
+    "fontSize": 15,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d"
+  },
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "GCSE: Grade 4+ (C) in All Subjects",
+            "fontSize": 12,
+            "font": "Baskerville, sans-serif",
+            "color": "#2d3e2d"
+          },
+          "width": 300,
+          "height": 180,
+          "data": {
+            "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/gcse_results_by_institution.csv"
+          },
+          "transform": [
+            {
+              "fold": [
+                "AboveC_2025", "AboveC_2024", "AboveC_2023", "AboveC_2022", 
+                "AboveC_2021", "AboveC_2020", "AboveC_2019"
+              ],
+              "as": ["metric_year", "value"]
+            },
+            {
+              "calculate": "split(datum.metric_year, '_')[1]",
+              "as": "year"
+            },
+            {
+              "calculate": "toNumber(replace(datum.value, '%', ''))",
+              "as": "percentage"
+            },
+            {
+              "calculate": "datum['Centre type'] == 'All state-funded' ? 'State-funded' : (datum['Centre type'] == 'Independent school including city training colleges (CTCs)' ? 'Independent' : 'Other')",
+              "as": "school_type"
+            },
+            {
+              "filter": "datum.school_type != 'Other'"
+            }
+          ],
+          "layer": [
+            {
+              "transform": [
+                {
+                  "pivot": "school_type",
+                  "value": "percentage",
+                  "groupby": ["year"]
+                },
+                {
+                  "calculate": "datum.Independent - datum['State-funded']",
+                  "as": "gap"
+                }
+              ],
+              "mark": {
+                "type": "area",
+                "opacity": 0.3,
+                "color": "#d3d3d3"
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "State-funded",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 100]}
+                },
+                "y2": {"field": "Independent"},
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "gap", "title": "Gap (pp)", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "point": {"size": 25, "filled": true},
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "percentage",
+                  "type": "quantitative",
+                  "title": null,
+                  "scale": {"domain": [0, 100]},
+                  "axis": {
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "color": {
+                  "field": "school_type",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Independent", "State-funded"],
+                    "range": ["#6b8e6b", "#4a7c7c"]
+                  },
+                  "legend": {
+                    "orient": "bottom",
+                    "direction": "horizontal",
+                    "labelFont": "Baskerville, sans-serif",
+                    "titleFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "titleColor": "#2d3e2d",
+                    "title": "School Type"
+                  }
+                },
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "school_type", "title": "School Type"},
+                  {"field": "percentage", "title": "%", "format": ".1f"}
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "GCSE: Grade 7+ (A) in All Subjects",
+            "fontSize": 12,
+            "font": "Baskerville, sans-serif",
+            "color": "#2d3e2d"
+          },
+          "width": 300,
+          "height": 180,
+          "data": {
+            "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/gcse_results_by_institution.csv"
+          },
+          "transform": [
+            {
+              "fold": [
+                "AboveA_2025", "AboveA_2024", "AboveA_2023", "AboveA_2022", 
+                "AboveA_2021", "AboveA_2020", "AboveA_2019"
+              ],
+              "as": ["metric_year", "value"]
+            },
+            {
+              "calculate": "split(datum.metric_year, '_')[1]",
+              "as": "year"
+            },
+            {
+              "calculate": "toNumber(replace(datum.value, '%', ''))",
+              "as": "percentage"
+            },
+            {
+              "calculate": "datum['Centre type'] == 'All state-funded' ? 'State-funded' : (datum['Centre type'] == 'Independent school including city training colleges (CTCs)' ? 'Independent' : 'Other')",
+              "as": "school_type"
+            },
+            {
+              "filter": "datum.school_type != 'Other'"
+            }
+          ],
+          "layer": [
+            {
+              "transform": [
+                {
+                  "pivot": "school_type",
+                  "value": "percentage",
+                  "groupby": ["year"]
+                },
+                {
+                  "calculate": "datum.Independent - datum['State-funded']",
+                  "as": "gap"
+                }
+              ],
+              "mark": {
+                "type": "area",
+                "opacity": 0.3,
+                "color": "#d3d3d3"
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "State-funded",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 100]}
+                },
+                "y2": {"field": "Independent"},
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "gap", "title": "Gap (pp)", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "point": {"size": 25, "filled": true},
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "percentage",
+                  "type": "quantitative",
+                  "title": null,
+                  "scale": {"domain": [0, 100]},
+                  "axis": {
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "color": {
+                  "field": "school_type",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Independent", "State-funded"],
+                    "range": ["#6b8e6b", "#4a7c7c"]
+                  },
+                  "legend": null
+                },
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "school_type", "title": "School Type"},
+                  {"field": "percentage", "title": "%", "format": ".1f"}
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "A-Level: Grade C+ in All Subjects",
+            "fontSize": 12,
+            "font": "Baskerville, sans-serif",
+            "color": "#2d3e2d"
+          },
+          "width": 300,
+          "height": 180,
+          "data": {
+            "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/alevel_results_by_intitutions.csv"
+          },
+          "transform": [
+            {
+              "fold": [
+                "AboveC_2025", "AboveC_2024", "AboveC_2023", "AboveC_2022", 
+                "AboveC_2021", "AboveC_2020", "AboveC_2019"
+              ],
+              "as": ["metric_year", "value"]
+            },
+            {
+              "calculate": "split(datum.metric_year, '_')[1]",
+              "as": "year"
+            },
+            {
+              "calculate": "toNumber(replace(datum.value, '%', ''))",
+              "as": "percentage"
+            },
+            {
+              "calculate": "datum['Centre type'] == 'All state-funded' ? 'State-funded' : (datum['Centre type'] == 'Independent school including city training colleges (CTCs)' ? 'Independent' : 'Other')",
+              "as": "school_type"
+            },
+            {
+              "filter": "datum.school_type != 'Other'"
+            }
+          ],
+          "layer": [
+            {
+              "transform": [
+                {
+                  "pivot": "school_type",
+                  "value": "percentage",
+                  "groupby": ["year"]
+                },
+                {
+                  "calculate": "datum.Independent - datum['State-funded']",
+                  "as": "gap"
+                }
+              ],
+              "mark": {
+                "type": "area",
+                "opacity": 0.3,
+                "color": "#d3d3d3"
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "State-funded",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 100]}
+                },
+                "y2": {"field": "Independent"},
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "gap", "title": "Gap (pp)", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "point": {"size": 25, "filled": true},
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "percentage",
+                  "type": "quantitative",
+                  "title": null,
+                  "scale": {"domain": [0, 100]},
+                  "axis": {
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "color": {
+                  "field": "school_type",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Independent", "State-funded"],
+                    "range": ["#6b8e6b", "#4a7c7c"]
+                  },
+                  "legend": {
+                    "orient": "bottom",
+                    "direction": "horizontal",
+                    "labelFont": "Baskerville, sans-serif",
+                    "titleFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "titleColor": "#2d3e2d",
+                    "title": "School Type"
+                  }
+                },
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "school_type", "title": "School Type"},
+                  {"field": "percentage", "title": "%", "format": ".1f"}
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "A-Level: Grade A+ in All Subjects",
+            "fontSize": 12,
+            "font": "Baskerville, sans-serif",
+            "color": "#2d3e2d"
+          },
+          "width": 300,
+          "height": 180,
+          "data": {
+            "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/alevel_results_by_intitutions.csv"
+          },
+          "transform": [
+            {
+              "fold": [
+                "AboveA_2025", "AboveA_2024", "AboveA_2023", "AboveA_2022", 
+                "AboveA_2021", "AboveA_2020", "AboveA_2019"
+              ],
+              "as": ["metric_year", "value"]
+            },
+            {
+              "calculate": "split(datum.metric_year, '_')[1]",
+              "as": "year"
+            },
+            {
+              "calculate": "toNumber(replace(datum.value, '%', ''))",
+              "as": "percentage"
+            },
+            {
+              "calculate": "datum['Centre type'] == 'All state-funded' ? 'State-funded' : (datum['Centre type'] == 'Independent school including city training colleges (CTCs)' ? 'Independent' : 'Other')",
+              "as": "school_type"
+            },
+            {
+              "filter": "datum.school_type != 'Other'"
+            }
+          ],
+          "layer": [
+            {
+              "transform": [
+                {
+                  "pivot": "school_type",
+                  "value": "percentage",
+                  "groupby": ["year"]
+                },
+                {
+                  "calculate": "datum.Independent - datum['State-funded']",
+                  "as": "gap"
+                }
+              ],
+              "mark": {
+                "type": "area",
+                "opacity": 0.3,
+                "color": "#d3d3d3"
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "State-funded",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 100]}
+                },
+                "y2": {"field": "Independent"},
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "gap", "title": "Gap (pp)", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "point": {"size": 25, "filled": true},
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+                  "axis": {
+                    "labelAngle": 0,
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "y": {
+                  "field": "percentage",
+                  "type": "quantitative",
+                  "title": null,
+                  "scale": {"domain": [0, 100]},
+                  "axis": {
+                    "labelFont": "Baskerville, sans-serif",
+                    "labelColor": "#2d3e2d",
+                    "title": null
+                  }
+                },
+                "color": {
+                  "field": "school_type",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Independent", "State-funded"],
+                    "range": ["#6b8e6b", "#4a7c7c"]
+                  },
+                  "legend": null
+                },
+                "tooltip": [
+                  {"field": "year", "title": "Year"},
+                  {"field": "school_type", "title": "School Type"},
+                  {"field": "percentage", "title": "%", "format": ".1f"}
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spacing": 20
+}
