@@ -9,6 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Section fade-in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -40,7 +53,7 @@
     </section>
 
     <!-- Introduction Section -->
-    <section class="section">
+    <section class="section fade-in-section">
         <div class="container-narrow">
             <h2 class="text-center mb-lg">Welcome</h2>
             <p style="font-size: 1.1rem; text-align: center; line-height: 1.8;">
@@ -52,7 +65,7 @@
     </section>
 
     <!-- Featured Work Cards -->
-    <section class="section" style="background-color: var(--cream);">
+    <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
             <h2 class="text-center mb-lg">Featured Work</h2>
             <div class="grid grid-3">
@@ -99,7 +112,7 @@
     </section>
 
     <!-- Key Statistics Section -->
-    <section class="section">
+    <section class="section fade-in-section">
         <div class="container">
             <h2 class="text-center mb-lg">Project Highlights</h2>
             <div class="grid grid-3">
@@ -132,7 +145,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white;">
+    <section class="section fade-in-section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white;">
         <div class="container text-center">
             <h2 style="color: white; margin-bottom: var(--spacing-md);">Ready to Explore?</h2>
             <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto var(--spacing-lg); opacity: 0.95; color: white;">
@@ -161,5 +174,30 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Fade-in scroll effect
+        const faders = document.querySelectorAll('.fade-in-section');
+        
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
 </body>
 </html>
