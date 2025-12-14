@@ -68,6 +68,48 @@
             margin-bottom: var(--spacing-sm);
         }
 
+        .task-brief-toggle {
+            background: transparent;
+            border: 1px solid var(--primary-teal);
+            color: var(--primary-teal);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: var(--spacing-xs);
+            transition: all 0.3s ease;
+        }
+
+        .task-brief-toggle:hover {
+            background: var(--primary-teal);
+            color: white;
+        }
+
+        .task-brief {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--cream);
+            border-left: 3px solid var(--primary-teal);
+            margin-top: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .task-brief.open {
+            max-height: 500px;
+        }
+
+        .task-brief-content {
+            padding: var(--spacing-sm);
+            font-size: 0.95rem;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .task-brief-content strong {
+            color: var(--primary-forest);
+        }
+
         .subsection {
             background: white;
             padding: var(--spacing-md);
@@ -195,6 +237,20 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 1</div>
                 <h2 class="task-title">Hosting</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief1')">View Task Brief ▼</button>
+                <div id="brief1" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Set up a GitHub account and live page using GitHub Pages. Display charts on your own site using the vegaEmbed function.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Add two charts to the website</li>
+                            <li>One chart from the course repository</li>
+                            <li>One chart from an external web source</li>
+                            <li>Ensure the live site is working correctly</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -220,6 +276,19 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 2</div>
                 <h2 class="task-title">Building</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief2')">View Task Brief ▼</button>
+                <div id="brief2" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Create your own visualizations using the Economics Observatory Data Hub.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Build two separate charts using the "create" tool</li>
+                            <li>Export JSON code and save to GitHub repo</li>
+                            <li>Embed both charts in the webpage using vegaEmbed</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -239,6 +308,19 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 3</div>
                 <h2 class="task-title">Debate</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief3')">View Task Brief ▼</button>
+                <div id="brief3" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Use visualisation in policy commentary.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Set out a policy topic (max 25 words)</li>
+                            <li>Create two charts that support, refute, or relate to an argument on this topic</li>
+                            <li>Add commentary (max 25 words) explaining findings</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -260,6 +342,20 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 4</div>
                 <h2 class="task-title">Replication</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief4')">View Task Brief ▼</button>
+                <div id="brief4" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Re-create, then improve, someone else's chart.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Find a chart from a policy organization, journalist, or think tank</li>
+                            <li>Display the original chart as an image file</li>
+                            <li>Replicate the chart in Vega-Lite (matching axes, titles, colors)</li>
+                            <li>Improve the chart and explain changes (max 25 words)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -285,6 +381,25 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 5</div>
                 <h2 class="task-title">Accessing Data</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief5')">View Task Brief ▼</button>
+                <div id="brief5" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Access data through APIs and web scraping.
+                        <br><br>
+                        <strong>API Task:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Add a chart using a live API link</li>
+                            <li>Include functional description of the API (base URL, elements, final URL)</li>
+                        </ul>
+                        <strong>Scraper Task:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Scrape a website using Google Colab</li>
+                            <li>Clean and normalize data, export in tidy format</li>
+                            <li>Create a chart from scraped data</li>
+                            <li>Comment on data source and challenges (max 25 words)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -304,6 +419,21 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 6</div>
                 <h2 class="task-title">Loops</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief6')">View Task Brief ▼</button>
+                <div id="brief6" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Build a dashboard using loops for batch downloading and chart embedding.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Use a loop to batch download six different time series as JSON files</li>
+                            <li>Save files to GitHub and use raw files to supply data</li>
+                            <li>Display six charts in a grid layout (3x2 or 2x3)</li>
+                            <li>Use a JavaScript loop to embed all six charts programmatically</li>
+                            <li>Link to Google Colab notebook showing the data download process</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -317,6 +447,20 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 7</div>
                 <h2 class="task-title">Maps</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief7')">View Task Brief ▼</button>
+                <div id="brief7" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Create base maps and choropleths.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Produce two maps: one of Scotland, one of Wales</li>
+                            <li>One map should be a coordinates map (point data)</li>
+                            <li>One map should be a choropleth (shaded regions)</li>
+                            <li>Choose any data of interest to visualize</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -336,6 +480,20 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 8</div>
                 <h2 class="task-title">Big Data</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief8')">View Task Brief ▼</button>
+                <div id="brief8" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Extract a story from millions of prices using UK retail pricing databases.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Produce two charts using UK prices datasets (LRPD or AutoCPI)</li>
+                            <li>Simplify/reduce the data before plotting (grouping, aggregation)</li>
+                            <li>Explain what you have done (max 50 words)</li>
+                            <li>Avoid plotting raw scatter data with thousands of observations</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -355,6 +513,20 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 9</div>
                 <h2 class="task-title">Interactive Charts</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief9')">View Task Brief ▼</button>
+                <div id="brief9" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Produce two charts with meaningful interactivity.
+                        <br><br>
+                        <strong>Requirements:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Create two interactive charts</li>
+                            <li>Simple tooltips and color selection do not count</li>
+                            <li>Use advanced interactivity: sliders, drop-down boxes, clickable legends, etc.</li>
+                            <li>Interactivity should help users better understand the data</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -374,6 +546,26 @@
             <div class="task-header">
                 <div class="task-number">Portfolio Task 10</div>
                 <h2 class="task-title">Advanced Analysis and Machine Learning</h2>
+                <button class="task-brief-toggle" onclick="toggleBrief('brief10')">View Task Brief ▼</button>
+                <div id="brief10" class="task-brief">
+                    <div class="task-brief-content">
+                        <strong>Objective:</strong> Conduct advanced analytics and machine learning analysis.
+                        <br><br>
+                        <strong>Advanced Analytics:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Create a chart using advanced techniques beyond standard line/bar/scatter</li>
+                            <li>Options include: bubble charts, histograms, de-trended analysis, diff-in-diff, heat maps</li>
+                        </ul>
+                        <strong>Machine Learning:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Apply supervised (regression/classification) or unsupervised (clustering) learning</li>
+                            <li>Transform data into standardized X matrix and y vector format</li>
+                            <li>Use sklearn in Python</li>
+                            <li>State hypothesis (max 25 words) and create at least one visualization</li>
+                            <li>Comment on findings (max 25 words)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="subsection">
@@ -432,6 +624,11 @@
     </footer>
 
     <script>
+        function toggleBrief(briefId) {
+            const brief = document.getElementById(briefId);
+            brief.classList.toggle('open');
+        }
+
         vegaEmbed('#Location1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json", {actions: false});
         vegaEmbed('#Location2', "portfolio_task1/wk1_chart2.json", {actions: false});
         vegaEmbed('#Location3', "https://rdeconomist.github.io/charts/library/chartScatter3.json", {actions: false});
