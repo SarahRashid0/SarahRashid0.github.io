@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+            background-color: #f5f1e8;
+            margin: 0;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .timeline-container {
+            max-width: 1400px;
+            margin: 0 auto 80px;
+            position: relative;
+            min-height: 800px;
+        }
+
+        .timeline-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 900px;
+        }
+
+        .arrow-path {
+            stroke: #2d5016;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .arrow-path.visible {
+            opacity: 1;
+        }
+
+        .photo-container {
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            z-index: 2;
+        }
+
+        .photo-container.visible {
+            opacity: 1;
+        }
+
+        .photo-label {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #2d5016;
+            font-weight: 500;
+        }
+
+        .photo-container img {
+            width: 240px;
+            height: 320px;
+            object-fit: cover;
+            border: 4px solid #7fa055;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .question-mark {
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            z-index: 2;
+            font-size: 120px;
+            color: #5a7a3d;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .question-mark.visible {
+            opacity: 1;
+        }
+
+        #primary {
+            left: 50px;
+            top: 150px;
+        }
+
+        #secondary {
+            left: 500px;
+            top: 30px;
+        }
+
+        #graduation {
+            left: 950px;
+            top: 30px;
+        }
+
+        #question1 {
+            left: 530px;
+            top: 520px;
+        }
+
+        #question2 {
+            left: 980px;
+            top: 520px;
+        }
+
+        .story-section {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .story-section.visible {
+            opacity: 1;
+        }
+
+        .story-section h2 {
+            font-size: 32px;
+            color: #2d5016;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .story-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #3d3d3d;
+            text-align: justify;
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline-container">
+        <svg class="timeline-svg">
+            <defs>
+                <marker
+                    id="arrowhead"
+                    markerWidth="10"
+                    markerHeight="10"
+                    refX="9"
+                    refY="3"
+                    orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#2d5016" />
+                </marker>
+            </defs>
+            
+            <!-- Arrow from primary to secondary -->
+            <path
+                id="arrow1"
+                class="arrow-path"
+                d="M 320 300 L 480 180"
+                marker-end="url(#arrowhead)" />
+            
+            <!-- Arrow from secondary to graduation -->
+            <path
+                id="arrow2"
+                class="arrow-path"
+                d="M 760 240 L 920 240"
+                marker-end="url(#arrowhead)" />
+            
+            <!-- Arrow from primary to question mark -->
+            <path
+                id="arrow3"
+                class="arrow-path"
+                d="M 320 350 L 480 550"
+                marker-end="url(#arrowhead)" />
+            
+            <!-- Arrow from first question to second question -->
+            <path
+                id="arrow4"
+                class="arrow-path"
+                d="M 760 600 L 920 600"
+                marker-end="url(#arrowhead)" />
+        </svg>
+
+        <!-- Primary School Photo -->
+        <div id="primary" class="photo-container">
+            <div class="photo-label">First Day Primary</div>
+            <img src="aboutme/firstday_primary.jpg" alt="First day of primary school">
+        </div>
+
+        <!-- Secondary School Photo -->
+        <div id="secondary" class="photo-container">
+            <div class="photo-label">First Day Secondary</div>
+            <img src="aboutme/firstday_secondary.jpg" alt="First day of secondary school">
+        </div>
+
+        <!-- Graduation Photo -->
+        <div id="graduation" class="photo-container">
+            <div class="photo-label">Graduating from LSE</div>
+            <img src="aboutme/graduation.jpg" alt="Graduation from LSE">
+        </div>
+
+        <!-- Question Marks -->
+        <div id="question1" class="question-mark">?</div>
+        <div id="question2" class="question-mark">?</div>
+    </div>
+
+    <!-- Story Section -->
+    <div class="story-section">
+        <h2>My Personal Connection to the Research</h2>
+        
+        <div class="story-content">
+            <p>
+                I attended a state primary school, but for secondary education, my family really wanted me to attend the independent school near us. It was definitely not something we could afford, so my mum went to the school to enquire about bursaries. The receptionist told her it would be very unlikely for me to receive one.
+            </p>
+            
+            <p>
+                But I ended up getting a 100% bursary—tuition fees, school uniform, lunch, everything covered.
+            </p>
+            
+            <p>
+                None of my friends went to this school. I would often wish that I could have gone to the same secondary school as them, sharing those formative years together.
+            </p>
+            
+            <p>
+                But would I have had the same outcomes? This is the question that sparked my interest in this research.
+            </p>
+            
+            <p>
+                Would I not have made it to LSE to complete my undergraduate and master's degrees? Does private schooling really have that much of an impact? Or would I have found another path to the same destination?
+            </p>
+            
+            <p>
+                This project explores these questions not just for me, but for the thousands of students across England navigating an education system marked by profound inequality.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Animation sequence with timings
+        const animationSequence = [
+            { id: 'primary', delay: 500 },
+            { id: 'arrow1', delay: 1300 },
+            { id: 'secondary', delay: 2100 },
+            { id: 'arrow2', delay: 2900 },
+            { id: 'graduation', delay: 3700 },
+            { id: 'arrow3', delay: 4500 },
+            { id: 'question1', delay: 5300 },
+            { id: 'arrow4', delay: 6100 },
+            { id: 'question2', delay: 6900 },
+            { id: 'story', delay: 7700 }
+        ];
+
+        // Function to show element
+        function showElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.add('visible');
+            } else {
+                // For story section
+                const storySection = document.querySelector('.story-section');
+                if (storySection) {
+                    storySection.classList.add('visible');
+                }
+            }
+        }
+
+        // Start animation sequence when page loads
+        window.addEventListener('load', function() {
+            animationSequence.forEach(({ id, delay }) => {
+                setTimeout(() => showElement(id), delay);
+            });
+        });
+    </script>
+</body>
+</html>
