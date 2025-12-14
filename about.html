@@ -118,17 +118,11 @@
         .story-section {
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-        }
-
-        .story-section.visible {
-            opacity: 1;
         }
 
         .story-section h2 {
-            font-size: 32px;
-            color: #2d5016;
+            font-size: 2rem;
+            color: var(--charcoal);
             margin-bottom: 30px;
             font-weight: 500;
             text-align: center;
@@ -240,7 +234,11 @@
     </section>
 
     <!-- Story Section -->
+<<<<<<< HEAD
+    <section class="section" style="padding: var(--spacing-xl) 0 var(--spacing-xl) 0;">
+=======
     <section class="section" style="padding: 0 0 var(--spacing-xl) 0;">
+>>>>>>> 31cc474ee92c1e5bac6eaaa48cc3a105d2a01549
     <div class="story-section">
         <h2>My Personal Connection to the Research</h2>
         
@@ -384,8 +382,7 @@
             { id: 'arrow3', delay: 4500 },
             { id: 'question1', delay: 5300 },
             { id: 'arrow4', delay: 6100 },
-            { id: 'question2', delay: 6900 },
-            { id: 'story', delay: 7700 }
+            { id: 'question2', delay: 6900 }
         ];
 
         // Function to show element
@@ -393,12 +390,6 @@
             const element = document.getElementById(id);
             if (element) {
                 element.classList.add('visible');
-            } else {
-                // For story section
-                const storySection = document.querySelector('.story-section');
-                if (storySection) {
-                    storySection.classList.add('visible');
-                }
             }
         }
 
