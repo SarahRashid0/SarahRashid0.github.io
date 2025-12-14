@@ -377,9 +377,43 @@
             </div>
 
             <div class="subsection">
-                <h3>Comparing Weight Issues in England</h3>
+                <h3>Part 1: Comparing Weight Issues in England</h3>
                 <p>Statistical analysis of health data across English regions using advanced analytical techniques.</p>
                 <figure id="Location17"></figure>
+            </div>
+
+            <div class="subsection">
+                <h3>Part 2: Life Expectancy Regression Analysis</h3>
+                <p>Machine learning regression model predicting life expectancy based on socioeconomic and health indicators. This analysis explores the relationships between various factors and population health outcomes.</p>
+                <p>The interactive visualization below shows the regression results with confidence intervals:</p>
+                <figure id="Location18"></figure>
+                
+                <div class="content-box" style="margin-top: var(--spacing-md);">
+                    <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Regression Results</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-forest); margin-bottom: var(--spacing-xs);">Male Model:</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>R² Score:</strong> 0.7188</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>RMSE:</strong> 0.6927 years</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>Coefficient:</strong> -1.1075</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>Intercept:</strong> 79.7256</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--accent-terracotta); margin-bottom: var(--spacing-xs);">Female Model:</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>R² Score:</strong> 0.4553</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>RMSE:</strong> 0.9238 years</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>Coefficient:</strong> -0.8446</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>Intercept:</strong> 84.0609</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: var(--spacing-sm); font-size: 0.95rem; color: var(--slate);">
+                        The male model shows stronger predictive power (R² = 0.72) compared to the female model (R² = 0.46), 
+                        suggesting socioeconomic factors have a more pronounced relationship with male life expectancy.
+                    </p>
+                </div>
+                
+                <p style="margin-top: var(--spacing-md);">For detailed methodology, model training, and statistical analysis, view the complete Python notebook:</p>
+                <a href="https://colab.research.google.com/drive/1xBiNUosVI1GWlfxvO7NomXqA5PBL7AH_?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">View Regression Analysis Notebook</a>
             </div>
         </section>
 
@@ -451,6 +485,7 @@
         vegaEmbed('#Location15', "portfolio_task9/avg_painkiller_price.json", {actions: false});
         vegaEmbed('#Location16', "portfolio_task9/suicide_by_socialgroup.json", {actions: false});
         vegaEmbed('#Location17', "portfolio_task10/england_weights_comparison.json", {actions: false});
+        vegaEmbed('#Location18', "portfolio_task10/life_expectancy_regression.json", {actions: false});
     </script>
 </body>
 </html>
