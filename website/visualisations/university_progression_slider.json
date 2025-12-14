@@ -18,14 +18,25 @@
   },
   "params": [
     {
-      "name": "year_slider",
+      "name": "start_year",
+      "value": 2008,
+      "bind": {
+        "input": "range",
+        "min": 2008,
+        "max": 2023,
+        "step": 1,
+        "name": "Start Year: "
+      }
+    },
+    {
+      "name": "end_year",
       "value": 2023,
       "bind": {
         "input": "range",
         "min": 2008,
         "max": 2023,
         "step": 1,
-        "name": "Select year: "
+        "name": "End Year: "
       }
     }
   ],
@@ -41,6 +52,9 @@
     {
       "calculate": "toNumber(datum.year_numeric)",
       "as": "year_num"
+    },
+    {
+      "filter": "datum.year_num >= start_year && datum.year_num <= end_year"
     }
   ],
   "layer": [
@@ -98,11 +112,8 @@
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 120
+        "size": 50
       },
-      "transform": [
-        {"filter": "datum.year_num == year_slider"}
-      ],
       "encoding": {
         "x": {
           "field": "year",
@@ -126,23 +137,6 @@
           {"field": "school_type", "type": "nominal", "title": "School Type"},
           {"field": "progression_rate", "type": "quantitative", "title": "High Tariff Progression (%)", "format": ".1f"}
         ]
-      }
-    },
-    {
-      "mark": {
-        "type": "rule",
-        "strokeDash": [4, 4],
-        "color": "#999999",
-        "strokeWidth": 1.5
-      },
-      "transform": [
-        {"filter": "datum.year_num == year_slider"}
-      ],
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "ordinal"
-        }
       }
     }
   ],
