@@ -1,3 +1,8 @@
+/* ===================================
+   Portfolio Website CSS
+   Sophisticated, Modern, Educational
+   =================================== */
+
 /* CSS Variables for Easy Customisation */
 :root {
     /* Color Palette - Earthy, Educational, Sophisticated */
@@ -13,11 +18,11 @@
     --stone: #E8E4DA;               /* Light stone */
     --charcoal: #2C3531;            /* Deep charcoal */
     --slate: #545B5A;               /* Medium slate */
-    --light-gray: #A8ACA9;          /* Soft gray */
+    --light-gray: #A8ACA9;          /* Soft grey */
     
     /* Typography */
     --font-serif: 'Baskerville', 'Libre Baskerville', 'Baskerville Old Face', 'Times New Roman', serif;
-    --font-sans: 'Baskerville', 'Libre Baskerville', 'Baskerville Old Face', sans-serif;
+    --font-sans: 'Baskerville', 'Libre Baskerville', 'Baskerville Old Face', 'Times New Roman', serif;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -56,7 +61,7 @@ body {
     background-color: var(--off-white);
     color: var(--charcoal);
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* ===================================
@@ -92,7 +97,7 @@ h4 {
 p {
     margin-bottom: var(--spacing-sm);
     color: var(--slate);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 a {
@@ -313,7 +318,7 @@ nav {
 }
 
 /* ===================================
-   Visualization Containers
+   Visualisation Containers
    =================================== */
 
 .viz-container {
