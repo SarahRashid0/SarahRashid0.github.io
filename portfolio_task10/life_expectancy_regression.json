@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Life expectancy vs Deprivation in London Boroughs",
+  "width": 650,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task10/life_expectancy_regression_data.csv"
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.Type == 'Actual'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100
+      },
+      "encoding": {
+        "x": {
+          "field": "IMD",
+          "type": "quantitative",
+          "title": "Index of Multiple Deprivation (IMD)",
+          "scale": {
+            "domain": [8, 34]
+          }
+        },
+        "y": {
+          "field": "LifeExpectancy",
+          "type": "quantitative",
+          "title": "Life Expectancy (years)",
+          "scale": {
+            "domain": [76, 87]
+          }
+        },
+        "color": {
+          "field": "Sex",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Male", "Female"],
+            "range": ["#4A90E2", "#E24A90"]
+          },
+          "legend": {
+            "title": "Sex",
+            "orient": "top-right"
+          }
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "tooltip": [
+          {"field": "Borough", "type": "nominal", "title": "Borough"},
+          {"field": "LifeExpectancy", "type": "quantitative", "title": "Life Expectancy", "format": ".2f"},
+          {"field": "IMD", "type": "quantitative", "title": "IMD Score"},
+          {"field": "Sex", "type": "nominal", "title": "Sex"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.Type == 'Regression'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "IMD",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "LifeExpectancy",
+          "type": "quantitative",
+          "scale": {
+            "domain": [76, 87]
+          }
+        },
+        "color": {
+          "field": "Sex",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Male", "Female"],
+            "range": ["#4A90E2", "#E24A90"]
+          },
+          "legend": null
+        }
+      }
+    }
+  ]
+}
