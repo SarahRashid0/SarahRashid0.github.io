@@ -138,6 +138,18 @@
         .story-content p {
             margin-bottom: 20px;
         }
+
+        /* Section fade-in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -165,7 +177,7 @@
     </section>
 
     <!-- Timeline Section -->
-    <section class="section" style="background-color: var(--cream); padding: var(--spacing-lg) 0 var(--spacing-md) 0;">
+    <section class="section fade-in-section" style="background-color: var(--cream); padding: var(--spacing-lg) 0 var(--spacing-md) 0;">
         <div class="timeline-container">
             <svg class="timeline-svg">
                 <defs>
@@ -234,7 +246,7 @@
     </section>
 
     <!-- Story Section -->
-    <section class="section" style="padding: var(--spacing-xl) 0 var(--spacing-xl) 0;">
+    <section class="section fade-in-section" style="padding: var(--spacing-xl) 0 var(--spacing-xl) 0;">
         <div class="story-section">
             <h2 class="text-center mb-lg">My Personal Connection to the Research</h2>
             
@@ -267,7 +279,7 @@
     </section>
 
     <!-- More About Me Section -->
-    <section class="section" style="background-color: var(--cream);">
+    <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container-narrow">
             <h2 class="text-center mb-lg">More About Me</h2>
             <div style="font-size: 1.1rem; line-height: 1.8; color: var(--slate); text-align: justify; max-width: 800px; margin: 0 auto;">
@@ -293,7 +305,7 @@
     </section>
 
     <!-- Other Projects Section -->
-    <section class="section">
+    <section class="section fade-in-section">
         <div class="container">
             <h2 class="text-center mb-lg">Other Data Science Work</h2>
             <div class="grid grid-3">
@@ -343,7 +355,7 @@
     </section>
 
     <!-- Connect Section -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white;">
+    <section class="section fade-in-section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white;">
         <div class="container text-center">
             <h2 style="color: white; margin-bottom: var(--spacing-md);">Let's Connect</h2>
             <a href="https://www.linkedin.com/in/sarah-r-005a70204/" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal); font-weight: 600;">
@@ -365,7 +377,7 @@
     </footer>
 
     <script>
-        // Animation sequence with timings
+        // Animation sequence with timings for timeline
         const animationSequence = [
             { id: 'primary', delay: 500 },
             { id: 'arrow1', delay: 1300 },
@@ -391,6 +403,29 @@
             animationSequence.forEach(({ id, delay }) => {
                 setTimeout(() => showElement(id), delay);
             });
+        });
+
+        // Fade-in scroll effect for sections
+        const faders = document.querySelectorAll('.fade-in-section');
+        
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
     </script>
 </body>
