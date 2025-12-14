@@ -13,6 +13,11 @@
             min-height: 100vh;
         }
 
+        /* Override the default section background */
+        .section {
+            background-color: white;
+        }
+
         .timeline-container {
             max-width: 1400px;
             margin: 0 auto 80px;
@@ -166,7 +171,7 @@
     </section>
 
     <!-- Timeline Section -->
-    <section class="section" style="background-color: #f5f1e8; padding: var(--spacing-xl) 0;">
+    <section class="section" style="background-color: var(--cream); padding: var(--spacing-xl) 0;">
     <div class="timeline-container">
         <svg class="timeline-svg">
             <defs>
@@ -212,13 +217,13 @@
 
         <!-- Primary School Photo -->
         <div id="primary" class="photo-container">
-            <div class="photo-label">First Day of Primary School</div>
+            <div class="photo-label">First Day Primary</div>
             <img src="aboutme/firstday_primary.jpg" alt="First day of primary school">
         </div>
 
         <!-- Secondary School Photo -->
         <div id="secondary" class="photo-container">
-            <div class="photo-label">First Day of Secondary School</div>
+            <div class="photo-label">First Day Secondary</div>
             <img src="aboutme/firstday_secondary.jpg" alt="First day of secondary school">
         </div>
 
@@ -235,7 +240,7 @@
     </section>
 
     <!-- Story Section -->
-    <section class="section" style="background-color: #f5f1e8; padding: 0 0 var(--spacing-xl) 0;">
+    <section class="section" style="padding: 0 0 var(--spacing-xl) 0;">
     <div class="story-section">
         <h2>My Personal Connection to the Research</h2>
         
@@ -268,22 +273,33 @@
     </section>
 
     <!-- More About Me Section -->
-    <section class="section">
+    <section class="section" style="background-color: var(--cream);">
         <div class="container-narrow">
             <h2 class="text-center mb-lg">More About Me</h2>
             <div style="font-size: 1.1rem; line-height: 1.8; color: var(--slate); text-align: justify; max-width: 800px; margin: 0 auto;">
                 <p style="margin-bottom: var(--spacing-md);">
                     I am currently completing my <strong>MSc in Inequalities and Social Science</strong> at the London School of Economics. I graduated with a <strong>BSc in International Social and Public Policy</strong>, also from LSE.
                 </p>
-                <p style="margin-bottom: var(--spacing-md);">
-                    Much of my research is inspired by personal, lived experiences. A particular passion of mine is <strong>tackling menstrual health stigma amongst Bangladeshi women</strong>—a topic I explored in depth in my <a href="papers/dissertation.pdf" target="_blank" style="color: var(--primary-teal); font-weight: 500;">undergraduate dissertation</a>.
+                <p style="margin-bottom: var(--spacing-lg);">
+                    Much of my research is inspired by personal, lived experiences. A particular passion of mine is <strong>tackling menstrual health stigma amongst Bangladeshi women</strong>—a topic I explored in depth in my undergraduate dissertation.
                 </p>
+                
+                <!-- Dissertation Box -->
+                <div style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); border-radius: var(--radius-md); padding: var(--spacing-lg); text-align: center; margin: var(--spacing-lg) auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h3 style="color: white; margin-bottom: var(--spacing-sm); font-size: 1.3rem;">Undergraduate Dissertation</h3>
+                    <p style="color: white; opacity: 0.95; margin-bottom: var(--spacing-md); font-size: 1.05rem;">
+                        Menstrual Health Stigma Amongst Bangladeshi Women
+                    </p>
+                    <a href="papers/dissertation.pdf" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal); font-weight: 600; display: inline-block;">
+                        View My Dissertation
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Other Projects Section -->
-    <section class="section" style="background-color: var(--cream);">
+    <section class="section">
         <div class="container">
             <h2 class="text-center mb-lg">Other Data Science Work</h2>
             <div class="grid grid-3">
