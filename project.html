@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style>
-        /* Center all visualisations */
+        /* Centre all visualisations */
         #vis-england-map, #vis-london-map, #vis-fees, #vis-gcse, #vis-alevel, #vis-university, #vis-correlation {
             display: flex;
             justify-content: center;
@@ -116,7 +116,7 @@
         <div class="container">
             <h2 class="text-center mb-lg">Academic Performance Gap</h2>
             <p class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-lg); text-align: justify;">
-                Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20-30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020-2021) temporarily inflated results across both sectors.
+                Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20–30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020–2021) temporarily inflated results across both sectors.
             </p>
             
             <!-- Dashboard Container -->
@@ -166,10 +166,10 @@
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Data</h2>
             <p>
-                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019-2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators.
+                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators.
             </p>
             <p>
-                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
+                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
             </p>
         </div>
     </section>
@@ -195,7 +195,7 @@
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Conclusions</h2>
             <p>
-                This analysis reveals that whilst independent schools demonstrably produce superior academic outcomes—with performance gaps of 20-30 percentage points at GCSE and A-level, and nearly triple the university access rates to elite institutions—these advantages cannot be attributed to school quality alone. The statistically significant positive correlation between independent school concentration and state school performance (r=0.380, R²=0.145, p=0.032) indicates that private schools cluster in already-advantaged geographic areas where state provision is comparatively strong.
+                This analysis reveals that whilst independent schools demonstrably produce superior academic outcomes—with performance gaps of 20–30 percentage points at GCSE and A-level, and nearly triple the university access rates to elite institutions—these advantages cannot be attributed to school quality alone. The statistically significant positive correlation between independent school concentration and state school performance (r=0.380, R²=0.145, p=0.032) indicates that private schools cluster in already-advantaged geographic areas where state provision is comparatively strong.
             </p>
             <p>
                 The answer to whether private education creates advantage or reflects it appears to be: both. Independent schools do deliver measurably better examination results and university access, justifying their positioning as high-performing institutions. However, these schools concentrate in wealthy areas with strong local state sectors, suggesting that the "independent school premium" partly represents the purchase of access to advantaged geographic and social networks rather than purely superior pedagogy.
