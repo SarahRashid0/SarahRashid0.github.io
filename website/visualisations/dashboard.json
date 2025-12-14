@@ -4,13 +4,7 @@
     "background": "#F5F1E8",
     "view": { "stroke": null, "fill": "#F5F1E8" }
   },
-  "title": {
-    "text": "Academic Performance Gap: Independent vs State-Funded Schools (2019-2025)",
-    "fontSize": 15,
-    "anchor": "start",
-    "font": "Baskerville, sans-serif",
-    "color": "#2d3e2d"
-  },
+  
   "vconcat": [
     {
       "hconcat": [
