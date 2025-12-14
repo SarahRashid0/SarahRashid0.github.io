@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style>
         /* Centre all visualisations */
-        #vis-england-map, #vis-london-map, #vis-fees, #vis-gcse, #vis-alevel, #vis-university, #vis-correlation {
+        #vis-england-map, #vis-london-map, #vis-fees, #vis-dashboard, #vis-university, #vis-correlation {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -52,7 +52,7 @@
     <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white; padding: var(--spacing-xl) 0 var(--spacing-xl) 0;">
         <div class="container text-center" style="padding-top: var(--spacing-lg);">
             <h1 style="color: white; margin-bottom: var(--spacing-md); line-height: 1.3;">Does Private Education Create Advantage or Reflect It?</h1>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.95; color: white;">
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.95;">
                 A data-driven investigation into education and inequality in the UK
             </p>
         </div>
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    <!-- Academic Performance Section - Side by Side -->
+    <!-- Academic Performance Section -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
             <h2 class="text-center mb-lg">Academic Performance Gap</h2>
@@ -119,19 +119,7 @@
                 Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20–30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020–2021) temporarily inflated results across both sectors.
             </p>
             
-            <!-- Dashboard Container -->
-            <div style="max-width: 1400px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">GCSE Results</h3>
-                        <div id="vis-gcse" style="width: 100%; display: flex; justify-content: center;"></div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">A-Level Results</h3>
-                        <div id="vis-alevel" style="width: 100%; display: flex; justify-content: center;"></div>
-                    </div>
-                </div>
-            </div>
+            <div id="vis-dashboard" style="display: flex; justify-content: center; width: 100%;"></div>
             
             <p style="font-size: 0.9rem; font-style: italic; color: var(--slate); text-align: center; margin-top: var(--spacing-md);">
                 *Note: Results for 2020 and 2021 reflect centre/teacher-assessed grades during the COVID-19 pandemic when examinations were cancelled.
@@ -250,11 +238,8 @@
         // Fees
         vegaEmbed('#vis-fees', 'website/visualisations/clarendon_fees_timeline.json');
         
-        // GCSE
-        vegaEmbed('#vis-gcse', 'website/visualisations/gcse_performance_gap.json');
-        
-        // A-Level
-        vegaEmbed('#vis-alevel', 'website/visualisations/alevel_performance_gap.json');
+        // Academic Performance Dashboard (combined GCSE & A-Level)
+        vegaEmbed('#vis-dashboard', 'website/visualisations/dashboard.json');
         
         // University
         vegaEmbed('#vis-university', 'website/visualisations/university_progression_slider.json');
