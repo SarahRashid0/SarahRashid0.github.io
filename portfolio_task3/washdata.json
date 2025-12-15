@@ -2,21 +2,47 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 
   "data": {"url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task3/washdata.csv"},
-  
+
   "width": 300,
   "height": 300,
 
   "mark": {
     "type": "line",
-    "size": 3,
+    "size": 2,
     "color": "steelblue",
-    "point": true},
-  
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal", "title": ""},
-    "y": {"field": "Coverage", "type": "quantitative", "title": "Safely Managed Water (%)"}
+    "point": true
   },
 
-  "title": "Global Access to Safely Managed Drinking Water (2012–2024)"
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
+    },
+    "y": {
+      "field": "Coverage",
+      "type": "quantitative",
+      "title": "Safely Managed Water (%)",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
+    }
+  },
 
+  "title": {
+    "text": "Global Access to Safely Managed Drinking Water (2012–2024)",
+    "font": "Baskerville"
+  },
+
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
+  }
 }
