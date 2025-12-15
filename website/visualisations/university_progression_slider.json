@@ -1,10 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "University Access Gap: High Tariff Institutions",
-    "subtitle": "Percentage of students progressing to top universities by school type (2008-2024)",
+    "text": "Percentage of students progressing to top universities by school type (2008-2024)",
     "fontSize": 18,
-    "anchor": "start",
+    "anchor": "middle",
     "font": "Baskerville, sans-serif",
     "color": "#2d3e2d",
     "subtitleFont": "Baskerville, sans-serif",
