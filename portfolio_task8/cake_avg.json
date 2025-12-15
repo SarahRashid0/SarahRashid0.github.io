@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {
-    "font": "Montserrat, sans-serif",
+    "font": "Baskerville, serif",
     "view": {"stroke": "transparent"},
     "range": {"category": {"scheme": "brownbluegreen"}},
     "point": {"filled": true, "opacity": 0.95},
     "axis": {
       "labelColor": "#676A86",
       "labelFontSize": 11,
-      "labelFont": "Montserrat, sans-serif",
+      "labelFont": "Baskerville",
       "labelOpacity": 0.7,
       "tickColor": "#676A86",
       "tickOpacity": 0.5,
@@ -37,7 +37,7 @@
       "titleY": -5
     },
     "legend": {
-      "titleFont": "Montserrat, sans-serif",
+      "titleFont": "Baskerville",
       "titleFontSize": 14,
       "titleColor": "#1a1a1a",
       "title": null,
@@ -45,7 +45,7 @@
       "labelFontSize": 12
     },
     "title": {
-      "font": "Montserrat, sans-serif",
+      "font": "Baskerville",
       "fontSize": 16,
       "color": "#1a1a1a",
       "subtitleFontSize": 14,
@@ -54,6 +54,8 @@
   },
   "title": {
     "text": "The Price of Making A Cake",
+    "font": "Baskerville",
+    "subtitleFont": "Baskerville",
     "subtitle": [
       "Average price of cake components",
       "Source: ONS microdata via Davies (2021)",
