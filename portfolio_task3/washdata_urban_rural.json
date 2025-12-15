@@ -35,7 +35,7 @@
       "field": "Residence Type",
       "type": "nominal",
       "title": "Residence Type",
-      "scale": {"scheme": "set2"},
+      "scale": {"scheme": "greenblue"},
       "legend": {
         "labelFont": "Baskerville",
         "titleFont": "Baskerville"
