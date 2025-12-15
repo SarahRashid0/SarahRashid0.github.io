@@ -1,18 +1,51 @@
 {
-  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
+  },
   "data": {"name": "data-85d8ada622f1a22b2556b80677af16fc"},
   "mark": {"type": "bar"},
   "encoding": {
-    "color": {"field": "Source", "type": "nominal"},
+    "color": {
+      "field": "Source",
+      "type": "nominal",
+      "legend": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
+    },
     "tooltip": [
       {"field": "word", "type": "nominal"},
       {"field": "Source", "type": "nominal"},
       {"field": "count", "type": "quantitative"}
     ],
-    "x": {"field": "count", "title": "Word Frequency", "type": "quantitative"},
-    "y": {"field": "word", "sort": "-x", "title": "Word", "type": "nominal"}
+    "x": {
+      "field": "count",
+      "title": "Word Frequency",
+      "type": "quantitative",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
+    },
+    "y": {
+      "field": "word",
+      "sort": "-x",
+      "title": "Word",
+      "type": "nominal",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
+    }
   },
-  "title": "Comparison of Crime Reporting Language in Headlines: BBC News, Sky News, GB News & The Guardian",
+  "title": {
+    "text": "Comparison of Crime Reporting Language in Headlines: BBC News, Sky News, GB News & The Guardian",
+    "font": "Baskerville"
+  },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
   "datasets": {
     "data-85d8ada622f1a22b2556b80677af16fc": [
