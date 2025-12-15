@@ -33,6 +33,8 @@
     "text": "Gun deaths in Florida (Interactive)",
     "subtitle": "Hover to view number of gun deaths by year",
     "anchor": "start",
+    "font": "Baskerville",
+    "subtitleFont": "Baskerville",
     "fontSize": 18,
     "subtitleFontSize": 12
   },
@@ -43,12 +45,21 @@
         "x": {
           "field": "Year",
           "type": "quantitative",
-          "axis": {"format": "d", "title": null}
+          "axis": {
+            "format": "d",
+            "title": null,
+            "labelFont": "Baskerville",
+            "titleFont": "Baskerville"
+          }
         },
         "y": {
           "field": "Number of murders",
           "type": "quantitative",
-          "axis": {"title": null}
+          "axis": {
+            "title": null,
+            "labelFont": "Baskerville",
+            "titleFont": "Baskerville"
+          }
         }
       }
     },
@@ -99,5 +110,11 @@
         }
       ]
     }
-  ]
+  ],
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
+  }
 }
