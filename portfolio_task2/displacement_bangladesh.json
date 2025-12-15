@@ -3,7 +3,9 @@
   "title": {
     "text": "Displacement",
     "anchor": "start",
+    "font": "Baskerville",
     "subtitle": "Internally Displaced Persons | UNHCR via ECO-API",
+    "subtitleFont": "Baskerville",
     "fontSize": "14",
     "subtitleFontSize": "12",
     "color": "#000000",
@@ -25,7 +27,7 @@
   },
   "mark": {
     "type": "line",
-    "color": "#f4134d",
+    "color": "teal",
     "strokeWidth": "2"
   },
   "encoding": {
@@ -46,6 +48,12 @@
         "titleColor": "#122B39",
         "grid": false
       }
+    }
+  },
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
     }
   }
 }
