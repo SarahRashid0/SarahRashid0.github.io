@@ -382,9 +382,19 @@
             <div class="subsection">
                 <h3>API Task</h3>
                 <p>The following shows data on crime in London, accessed via an API.</p>
-                <p style="font-family: monospace; background: var(--cream); padding: var(--spacing-sm); border-radius: var(--radius-sm); font-size: 0.9rem; margin: var(--spacing-sm) 0;">
-                    API URL: https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278
-                </p>
+                
+                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin: var(--spacing-md) 0;">
+                    <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">API Functional Description</h4>
+                    <p style="margin-bottom: var(--spacing-xs);"><strong>Base URL:</strong> <code>https://data.police.uk/api/</code></p>
+                    <p style="margin-bottom: var(--spacing-xs);"><strong>Endpoint:</strong> <code>crimes-street/all-crime</code></p>
+                    <p style="margin-bottom: var(--spacing-xs);"><strong>Parameters:</strong></p>
+                    <ul style="margin-left: var(--spacing-md); margin-bottom: var(--spacing-xs);">
+                        <li><code>lat</code> - Latitude coordinate (e.g., 51.5074 for central London)</li>
+                        <li><code>lng</code> - Longitude coordinate (e.g., -0.1278 for central London)</li>
+                    </ul>
+                    <p style="margin-bottom: 0;"><strong>Full URL used:</strong> <code style="word-break: break-all;">https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278</code></p>
+                </div>
+                
                 <figure id="chart10"></figure>
             </div>
 
@@ -460,6 +470,11 @@
             </div>
 
             <div class="subsection">
+                <h3>Data Processing Methodology</h3>
+                <p>Both charts use the Long Run Prices Database (LRPD), containing millions of price observations from 1988 onwards. To extract meaningful insights, I grouped data by product category and time period, calculating average prices to reduce dimensionality. The cake analysis aggregates prices monthly to show inflation trends, whilst the tampon analysis groups by region to reveal geographic pricing disparities across the UK.</p>
+            </div>
+
+            <div class="subsection">
                 <h3>Making a Cake Over The Years</h3>
                 <p>Analysis of cake pricing trends over time using large-scale retail pricing data.</p>
                 <figure id="chart14"></figure>
@@ -519,6 +534,12 @@
 
             <div class="subsection">
                 <h3>Part 2: Life Expectancy Regression Analysis</h3>
+                
+                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                    <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Hypothesis</h4>
+                    <p style="font-style: italic; margin-bottom: 0;">Higher income deprivation scores are associated with lower life expectancy, with this relationship being stronger for males than females across English local authorities.</p>
+                </div>
+                
                 <p>Machine learning regression model predicting life expectancy based on socioeconomic and health indicators. This analysis explores the relationships between various factors and population health outcomes.</p>
                 <p>The interactive visualisation below shows the regression results with confidence intervals:</p>
                 <figure id="chart19"></figure>
@@ -541,10 +562,11 @@
                             <p style="margin-bottom: 0.3rem;"><strong>Intercept:</strong> 84.0609</p>
                         </div>
                     </div>
-                    <p style="margin-top: var(--spacing-sm); font-size: 0.95rem; color: var(--slate);">
-                        The male model shows stronger predictive power (R² = 0.72) compared to the female model (R² = 0.46), 
-                        suggesting socioeconomic factors have a more pronounced relationship with male life expectancy.
-                    </p>
+                </div>
+                
+                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin-top: var(--spacing-md);">
+                    <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Key Findings</h4>
+                    <p style="margin-bottom: 0;">The hypothesis is confirmed: income deprivation significantly predicts life expectancy. The male model shows substantially stronger predictive power, suggesting socioeconomic factors affect male mortality more acutely than female.</p>
                 </div>
                 
                 <p style="margin-top: var(--spacing-md);">For detailed methodology, model training, and statistical analysis, view the complete Python notebook:</p>
