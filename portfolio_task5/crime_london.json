@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Knife crime incidents in London using UK Police API",
 
-  "data": { 
+  "data": {
     "url": "https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278",
     "format": {"type": "json"}
   },
@@ -14,12 +14,20 @@
       "field": "category",
       "type": "nominal",
       "title": "Crime Category",
-      "sort": "-x"
+      "sort": "-x",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
     },
     "x": {
       "aggregate": "count",
       "type": "quantitative",
-      "title": "Number of Crimes"
+      "title": "Number of Crimes",
+      "axis": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
     },
     "color": {
       "field": "category",
@@ -30,5 +38,11 @@
       {"field": "category", "title": "Category"},
       {"aggregate": "count", "title": "Number of Crimes"}
     ]
+  },
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
   }
 }
