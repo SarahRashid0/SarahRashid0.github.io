@@ -1,13 +1,15 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Map showing Welsh Local Authority District boundaries using 2025 administrative boundaries.",
-  "title": "Scottish Local Authorities and Happiness Scores (2023)",
+  "title": {
+    "text": "Scottish Local Authorities and Happiness Scores (2023)",
+    "font": "Baskerville"
+  },
   "width": 400,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
-    
+
     "format": {"type": "topojson", "feature": "object_name"}
   },
 
@@ -36,7 +38,11 @@
     "color": {
       "field": "2023",
       "type": "quantitative",
-      "title": "Happiness Scores"
+      "title": "Happiness Scores",
+      "legend": {
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
+      }
     },
     "tooltip": [
       {
@@ -48,5 +54,11 @@
         "title": "Happiness Scores"
       }
     ]
+    },
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
     }
+  }
 }

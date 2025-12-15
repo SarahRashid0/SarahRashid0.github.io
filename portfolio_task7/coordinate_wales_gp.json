@@ -1,8 +1,10 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Map showing Welsh Local Authority District boundaries using 2025 administrative boundaries.",
-  "title": "GP Practices in Wales",
+  "title": {
+    "text": "GP Practices in Wales",
+    "font": "Baskerville"
+  },
   "width": 400,
   "height": 400,
 
@@ -10,7 +12,7 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
-        
+
         "format": {"type": "topojson", "feature": "object_name"}
       },
       "projection": {"type": "mercator"},
@@ -40,5 +42,11 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
+  }
 }
