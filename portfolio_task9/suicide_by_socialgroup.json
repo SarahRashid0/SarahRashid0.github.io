@@ -4,7 +4,9 @@
     "text": "Suicide Rates Across Social Groups in England and Wales",
     "subtitle": "Rate per 100,000 population (2011 Census data)",
     "fontSize": 16,
-    "anchor": "start"
+    "anchor": "start",
+    "font": "Baskerville",
+    "subtitleFont": "Baskerville"
   },
   "data": {
     "values": [
@@ -104,10 +106,12 @@
     "y": {
       "field": "Exposure",
       "type": "nominal",
-      "title": "Social Dimension",
+      "title": " ",
       "axis": {
         "labelFontSize": 11,
-        "titleFontSize": 12
+        "titleFontSize": 12,
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
       }
     },
     "x": {
@@ -117,7 +121,9 @@
       "axis": {
         "labelAngle": -45,
         "labelFontSize": 10,
-        "titleFontSize": 12
+        "titleFontSize": 12,
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
       }
     },
     "color": {
@@ -129,7 +135,9 @@
       },
       "legend": {
         "titleFontSize": 11,
-        "labelFontSize": 10
+        "labelFontSize": 10,
+        "labelFont": "Baskerville",
+        "titleFont": "Baskerville"
       }
     },
     "tooltip": [
@@ -142,6 +150,10 @@
   },
   "config": {
     "view": {"strokeWidth": 0},
-    "axis": {"grid": false}
+    "axis": {"grid": false},
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    }
   }
 }

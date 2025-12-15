@@ -5,12 +5,14 @@
     "anchor": "start",
     "fontSize": 18,
     "fontWeight": "bold",
+    "font": "Baskerville",
     "subtitle": [
       "Average prices over time",
       "Source: Source: ONS microdata via Davies"
     ],
     "subtitleFontSize": 13,
-    "subtitleColor": "#666"
+    "subtitleColor": "#666",
+    "subtitleFont": "Baskerville"
   },
   "width": 500,
   "height": 300,
@@ -85,7 +87,9 @@
         "grid": true,
         "format": "d",
         "orient": "bottom",
-        "tickCount": 10
+        "tickCount": 10,
+        "titleFont": "Baskerville",
+        "labelFont": "Baskerville"
       },
       "scale": {"domain": [1997, 2025]}
     },
@@ -95,7 +99,9 @@
       "title": "Average Price (£)",
       "axis": {
         "grid": true,
-        "format": ".2f"
+        "format": ".2f",
+        "titleFont": "Baskerville",
+        "labelFont": "Baskerville"
       },
       "scale": {"zero": false}
     },
@@ -110,7 +116,9 @@
       "legend": {
         "orient": "bottom",
         "direction": "horizontal",
-        "titleOrient": "left"
+        "titleOrient": "left",
+        "titleFont": "Baskerville",
+        "labelFont": "Baskerville"
       }
     },
     "opacity": {
@@ -125,12 +133,15 @@
   },
   "config": {
     "view": {"stroke": null},
+    "font": "Baskerville",
     "axis": {
       "titleFontSize": 14,
       "labelFontSize": 12,
       "gridColor": "#E5E5E5",
       "titleColor": "#1a1a1a",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "titleFont": "Baskerville",
+      "labelFont": "Baskerville"
     },
     "legend": {
       "titleFontSize": 13,
@@ -138,7 +149,13 @@
       "symbolType": "stroke",
       "symbolStrokeWidth": 3,
       "symbolSize": 200,
-      "labelLimit": 150
+      "labelLimit": 150,
+      "titleFont": "Baskerville",
+      "labelFont": "Baskerville"
+    },
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
     }
   }
 }

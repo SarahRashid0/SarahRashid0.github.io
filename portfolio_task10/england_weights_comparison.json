@@ -3,7 +3,8 @@
   "title": {
     "text": "Weight Issues Comparison: English Local Authorities by Region",
     "fontSize": 18,
-    "anchor": "start"
+    "anchor": "start",
+    "font": "Baskerville"
   },
   "params": [
     {
@@ -52,7 +53,8 @@
     {
       "title": {
         "text": {"expr": "region_left"},
-        "fontSize": 14
+        "fontSize": 14,
+        "font": "Baskerville"
       },
       "width": 400,
       "height": 250,
@@ -107,7 +109,9 @@
           "axis": {
             "labels": false,
             "ticks": false,
-            "title": "Local Authorities (Hover for more details)"
+            "title": "Local Authorities (Hover for more details)",
+            "titleFont": "Baskerville",
+            "labelFont": "Baskerville"
           }
         },
         "y": {
@@ -116,7 +120,9 @@
           "title": "Weight Category",
           "sort": ["Underweight", "Overweight", "Obesity"],
           "axis": {
-            "labelFontSize": 11
+            "labelFontSize": 11,
+            "titleFont": "Baskerville",
+            "labelFont": "Baskerville"
           }
         },
         "color": {
@@ -129,7 +135,9 @@
           },
           "legend": {
             "titleFontSize": 11,
-            "labelFontSize": 10
+            "labelFontSize": 10,
+            "titleFont": "Baskerville",
+            "labelFont": "Baskerville"
           }
         },
         "tooltip": [
@@ -160,7 +168,8 @@
     {
       "title": {
         "text": {"expr": "region_right"},
-        "fontSize": 14
+        "fontSize": 14,
+        "font": "Baskerville"
       },
       "width": 400,
       "height": 250,
@@ -215,7 +224,9 @@
           "axis": {
             "labels": false,
             "ticks": false,
-            "title": "Local Authorities"
+            "title": "Local Authorities",
+            "titleFont": "Baskerville",
+            "labelFont": "Baskerville"
           }
         },
         "y": {
@@ -225,7 +236,9 @@
           "sort": ["Underweight", "Overweight", "Obesity"],
           "axis": {
             "labels": false,
-            "ticks": false
+            "ticks": false,
+            "titleFont": "Baskerville",
+            "labelFont": "Baskerville"
           }
         },
         "color": {
@@ -267,6 +280,23 @@
   "resolve": {
     "scale": {
       "color": "shared"
+    }
+  },
+  "config": {
+    "style": {
+      "guide-label": {"font": "Baskerville"},
+      "guide-title": {"font": "Baskerville"}
+    },
+    "title": {
+      "font": "Baskerville"
+    },
+    "axis": {
+      "titleFont": "Baskerville",
+      "labelFont": "Baskerville"
+    },
+    "legend": {
+      "titleFont": "Baskerville",
+      "labelFont": "Baskerville"
     }
   }
 }
