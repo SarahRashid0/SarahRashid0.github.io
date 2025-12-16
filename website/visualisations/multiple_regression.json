@@ -88,7 +88,7 @@
       "data": {
         "values": [
           {"labelXYZ": ["R² = 0.504", "Adjusted R² = 0.408"]}  
-        ],
+        ]
       },
        "encoding": {
             "x": {"value": 10},
