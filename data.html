@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sources | Sarah Rashid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .source-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .source-section h3 {
+            color: var(--primary-forest);
+            border-bottom: 2px solid var(--primary-sage);
+            padding-bottom: var(--spacing-xs);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .source-link {
+            display: block;
+            background-color: var(--cream);
+            padding: var(--spacing-sm);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary-teal);
+        }
+
+        .source-link a {
+            word-break: break-all;
+            font-size: 0.95rem;
+        }
+
+        .source-description {
+            margin-top: var(--spacing-xs);
+            font-size: 1rem;
+            color: var(--slate);
+            font-style: italic;
+        }
+
+        .technical-note {
+            background-color: var(--stone);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            margin: var(--spacing-sm) 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Sarah Rashid</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="project.html">Project</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white; padding: var(--spacing-lg) 0; margin-top: 60px;">
+        <div class="container text-center">
+            <h1 style="color: white; margin-bottom: var(--spacing-sm);">Data Collection Methodology</h1>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; opacity: 0.95; color: white;">
+                A detailed account of data sources and collection methods
+            </p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+        <div class="container-narrow">
+            <p style="text-align: center; font-size: 1.15rem; color: var(--slate); line-height: 1.8;">
+                This page documents the complete data collection process for each visualisation in the project, including sources, technical challenges, and workarounds employed.
+            </p>
+        </div>
+    </section>
+
+    <!-- Data Sources by Section -->
+    <section class="section" style="background-color: var(--cream);">
+        <div class="container-narrow">
+            
+            <!-- Academic Performance Gap -->
+            <div class="source-section">
+                <h3>Academic Performance Gap</h3>
+                <p>
+                    GCSE and A-level results by institution type (state-funded vs. independent schools) were obtained from Ofqual's official analytics dashboards, covering academic years 2019–2025.
+                </p>
+                
+                <div class="source-link">
+                    <strong>GCSE Results:</strong><br>
+                    <a href="https://analytics.ofqual.gov.uk/apps/GCSE/CentreType/" target="_blank">
+                        https://analytics.ofqual.gov.uk/apps/GCSE/CentreType/
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>A-Level Results:</strong><br>
+                    <a href="https://analytics.ofqual.gov.uk/apps/Alevel/CentreType/" target="_blank">
+                        https://analytics.ofqual.gov.uk/apps/Alevel/CentreType/
+                    </a>
+                </div>
+            </div>
+
+            <!-- University Access Gap -->
+            <div class="source-section">
+                <h3>University Access Gap</h3>
+                <p>
+                    University progression data by institution type was accessed through the Department for Education's statistical service, showing progression rates to high-tariff institutions.
+                </p>
+                
+                <div class="source-link">
+                    <strong>Higher Education Progression Data:</strong><br>
+                    <a href="https://explore-education-statistics.service.gov.uk/data-tables/progression-to-higher-education-or-training" target="_blank">
+                        https://explore-education-statistics.service.gov.uk/data-tables/progression-to-higher-education-or-training
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rising Cost of Elite Education -->
+            <div class="source-section">
+                <h3>The Rising Cost of Elite Education</h3>
+                <p>
+                    Historical fee data for the Clarendon Schools was compiled from multiple sources. Initial data (1929–2018) came from a Strathclyde University dataset, which I filtered to include only the nine Clarendon Schools.
+                </p>
+                
+                <div class="source-link">
+                    <strong>Historical Fee Data (1929–2018):</strong><br>
+                    <a href="https://pureportal.strath.ac.uk/en/datasets/uk-independent-school-fee-data-years-1929-1930-1940-1950-19601970/" target="_blank">
+                        https://pureportal.strath.ac.uk/en/datasets/uk-independent-school-fee-data-years-1929-1930-1940-1950-19601970/
+                    </a>
+                    <p class="source-description">
+                        Dataset covers years: 1929, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2018
+                    </p>
+                </div>
+
+                <div class="technical-note">
+                    <strong>Technical Challenge:</strong> To maintain consistent 10-year intervals, I needed 2020 data instead of 2018. This was easier for some schools than others. I primarily used the <a href="https://web.archive.org/" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">Wayback Machine</a> to access archived school websites. When school website snapshots were unavailable, I used archives of <a href="https://www.mytopschools.co.uk" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">MyTopSchools.co.uk</a> to find listed fees.
+                </div>
+
+                <p style="margin-top: var(--spacing-md);">
+                    All historical fees were adjusted for inflation using Bank of England historical multipliers to convert values to 2025 prices.
+                </p>
+            </div>
+
+            <!-- Bursary Provision -->
+            <div class="source-section">
+                <h3>Bursary Provision at Clarendon Schools</h3>
+                <p>
+                    Bursary statistics required manual collection from individual school sources. I first checked school websites for published statistics; where unavailable, I searched annual reports and charity commission filings. Annual fee income data came from respective Charity Commission records.
+                </p>
+
+                <div class="source-link">
+                    <strong>Charity Commission:</strong><br>
+                    <a href="https://www.gov.uk/government/organisations/charity-commission" target="_blank">
+                        https://www.gov.uk/government/organisations/charity-commission
+                    </a>
+                </div>
+
+                <p style="margin-top: var(--spacing-md); font-weight: 500;">Individual School Sources:</p>
+
+                <div class="source-link">
+                    <strong>St Paul's School:</strong><br>
+                    <a href="https://web.archive.org/web/20240616113304/https://www.stpaulsschool.org.uk/founders-awards/" target="_blank">
+                        Founders Awards (via Wayback Machine)
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Merchant Taylors' School:</strong><br>
+                    <a href="https://www.mtsn.org.uk/admissions/fee-assistance/" target="_blank">
+                        https://www.mtsn.org.uk/admissions/fee-assistance/
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Shrewsbury School:</strong><br>
+                    <a href="https://www.shrewsbury.org.uk/userfiles/shrewsburysmvc/documents/Development/Annual%20Reports/ShrewsburySchoolFoundation_2024%20-%20Web.pdf" target="_blank">
+                        Annual Report 2024 (PDF)
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Winchester College:</strong><br>
+                    <a href="https://www.winchestercollege.org/wp-content/uploads/2025/06/winchester-college-bursaries-brochure.pdf.pdf" target="_blank">
+                        Bursaries Brochure (PDF)
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Charterhouse:</strong><br>
+                    <a href="https://online.flippingbook.com/view/86341697/16/" target="_blank">
+                        Digital Brochure
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Westminster School:</strong><br>
+                    <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=/accounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A16878116&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=/accounts-and-annual-returns&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=312728" target="_blank">
+                        Charity Commission Accounts
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Eton College:</strong><br>
+                    <a href="https://www.etoncollege.com/wp-content/uploads/2025/06/23-24-ETON-COLLEGE-CONSOLIDATED-Signed-12-5-25.pdf" target="_blank">
+                        Consolidated Accounts 2023-24 (PDF)
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Harrow School:</strong><br>
+                    <a href="https://www.harrowschool.org.uk/support/bursaries-and-scholarships" target="_blank">
+                        https://www.harrowschool.org.uk/support/bursaries-and-scholarships
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Rugby School:</strong><br>
+                    <a href="https://www.rugbyschool.co.uk/news/rugby-schools-head-master-gareth-parker-jones-features-in-talk-educations-view-from-the-top-on-why-bursaries-benefit-everyone/" target="_blank">
+                        News Article on Bursaries
+                    </a>
+                </div>
+            </div>
+
+            <!-- Geographic Distribution -->
+            <div class="source-section">
+                <h3>Geographic Distribution of Independent Schools</h3>
+                <p>
+                    Independent school locations across England were obtained from the Department for Education's Get Information About Schools (GIAS) service, which provides comprehensive establishment data including coordinates and institutional characteristics.
+                </p>
+                
+                <div class="source-link">
+                    <strong>GIAS Service:</strong><br>
+                    <a href="https://get-information-schools.service.gov.uk/Establishments/Search?tok=1MyGQEwp" target="_blank">
+                        https://get-information-schools.service.gov.uk/Establishments/Search
+                    </a>
+                </div>
+
+                <div class="technical-note">
+                    <strong>Technical Challenge:</strong> The GIAS data provided coordinates in British National Grid format (Eastings and Northings) rather than latitude/longitude. I had to convert all coordinates to WGS84 format for web mapping compatibility using Python's pyproj library.
+                </div>
+
+                <div class="source-link">
+                    <strong>England Map Boundaries:</strong><br>
+                    <a href="https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson" target="_blank">
+                        ITL1 2021 GeoJSON (via Josh Hellings)
+                    </a>
+                </div>
+            </div>
+
+            <!-- London Deprivation Map -->
+            <div class="source-section">
+                <h3>London's Concentration and Deprivation</h3>
+                <p>
+                    To visualise the relationship between independent school clustering and area deprivation in London, I needed deprivation scores at LSOA (Lower Layer Super Output Area) level alongside corresponding geographic boundaries.
+                </p>
+
+                <div class="source-link">
+                    <strong>Indices of Deprivation by LSOA:</strong><br>
+                    <a href="https://data.london.gov.uk/dataset/indices-of-deprivation-2l15g/" target="_blank">
+                        https://data.london.gov.uk/dataset/indices-of-deprivation-2l15g/
+                    </a>
+                </div>
+
+                <div class="technical-note">
+                    <strong>Technical Challenge:</strong> I struggled to find an LSOA map of London with the correct geographic boundaries. Fortunately, a fellow student (Josh Hellings) had already compiled this data, which I was able to use for the visualisation.
+                </div>
+
+                <div class="source-link">
+                    <strong>London LSOA Map with Deprivation Data:</strong><br>
+                    <a href="https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/material_deprivation_londonLSOA.csv" target="_blank">
+                        Material Deprivation London LSOA (via Josh Hellings)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Correlation Analysis -->
+            <div class="source-section">
+                <h3>Geographic Correlation Analysis</h3>
+                <p>
+                    To examine the relationship between independent school density and state school performance, I needed GCSE attainment data at London borough level.
+                </p>
+
+                <div class="source-link">
+                    <strong>GCSE Results by Borough:</strong><br>
+                    <a href="https://data.london.gov.uk/dataset/gcse-results-by-borough-20pd9/" target="_blank">
+                        https://data.london.gov.uk/dataset/gcse-results-by-borough-20pd9/
+                    </a>
+                </div>
+            </div>
+
+            <!-- Multiple Regression -->
+            <div class="source-section">
+                <h3>Multiple Linear Regression Analysis</h3>
+                <p>
+                    To control for socioeconomic confounders in the correlation analysis, I collected borough-level data on household income, educational qualifications, house prices, and deprivation indices from multiple London datasets.
+                </p>
+
+                <div class="source-link">
+                    <strong>Gross Household Income (MSOA Level):</strong><br>
+                    <a href="https://trustforlondon.org.uk/data/gross-household-income-for-small-areas-msoa/" target="_blank">
+                        https://trustforlondon.org.uk/data/gross-household-income-for-small-areas-msoa/
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Educational Qualifications by Borough:</strong><br>
+                    <a href="https://trustforlondon.org.uk/data/qualifications-obtained-borough/" target="_blank">
+                        https://trustforlondon.org.uk/data/qualifications-obtained-borough/
+                    </a>
+                </div>
+
+                <div class="source-link">
+                    <strong>Average House Prices by Borough:</strong><br>
+                    <a href="https://data.london.gov.uk/dataset/average-house-prices-by-borough-ward-msoa-and-lsoa-2jkxd/" target="_blank">
+                        https://data.london.gov.uk/dataset/average-house-prices-by-borough-ward-msoa-and-lsoa-2jkxd/
+                    </a>
+                </div>
+
+                <p style="margin-top: var(--spacing-md);">
+                    Index of Multiple Deprivation scores were sourced from the same London Datastore dataset used for the deprivation heat map.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back to Project Link -->
+    <section class="section" style="background-color: var(--cream); padding: var(--spacing-lg) 0;">
+        <div class="container text-center">
+            <a href="project.html" class="btn btn-primary">
+                ← Back to Project
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: var(--spacing-sm);">
+                <strong style="color: var(--cream);">Sarah Rashid</strong> | Data Visualisation Project
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                January 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
