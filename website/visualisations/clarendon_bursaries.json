@@ -1,0 +1,193 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Annual fees vs. bursary provision at the Clarendon Schools (2024/25)",
+    "subtitle": "Boarding Fees [L] and Day Fees [R]",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d",
+    "subtitleFont": "Baskerville, sans-serif",
+    "subtitleColor": "#5a6b5a",
+    "subtitleFontSize": 14
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/clarendon_bursaries_fees.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Size": "number",
+        "Percent_With_Bursaries": "number",
+        "Boarding_Fee_2025": "number",
+        "Day_Fee_2025": "number",
+        "Bursary_Spending_Millions": "number",
+        "Gross_Fee_Income_Millions": "number"
+      }
+    }
+  },
+  "hconcat": [
+    {
+      "title": " ",
+      "width": 400,
+      "height": 400,
+      "transform": [
+        {
+          "filter": "datum.Boarding_Fee_2025 > 0 && datum.Percent_With_Bursaries > 0"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Boarding_Fee_2025",
+          "type": "quantitative",
+          "title": "Annual Boarding Fee (£)",
+          "scale": {
+            "domain": [53000, 67000]
+          },
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d",
+            "format": ",.0f"
+          }
+        },
+        "y": {
+          "field": "Percent_With_Bursaries",
+          "type": "quantitative",
+          "title": "Pupils Receiving Bursaries (%)",
+          "scale": {
+            "domain": [5, 27]
+          },
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "color": {
+          "field": "Gross_Fee_Income_Millions",
+          "type": "quantitative",
+          "title": "Annual Fee Income (£m)",
+          "scale": {
+            "scheme": "tealblues"
+          },
+          "legend": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d",
+            "format": ".0f"
+          }
+        },
+        "size": {
+          "field": "Bursary_Spending_Millions",
+          "type": "quantitative",
+          "title": "Bursary Spending (£m)",
+          "scale": {
+            "type": "log",
+            "range": [250, 2000]
+          },
+          "legend": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d",
+            "format": ".1f"
+          }
+        },
+        "tooltip": [
+          {"field": "School", "type": "nominal", "title": "School"},
+          {"field": "Boarding_Fee_2025", "type": "quantitative", "title": "Boarding Fee (£)", "format": ",.0f"},
+          {"field": "Percent_With_Bursaries", "type": "quantitative", "title": "% With Bursaries", "format": ".1f"},
+          {"field": "Gross_Fee_Income_Millions", "type": "quantitative", "title": "Fee Income (£m)", "format": ".1f"},
+          {"field": "Bursary_Spending_Millions", "type": "quantitative", "title": "Bursary Spending (£m)", "format": ".1f"}
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.7,
+        "stroke": "#2d3e2d",
+        "strokeWidth": 1.5
+      }
+    },
+    {
+      "title": " ",
+      "width": 400,
+      "height": 400,
+      "transform": [
+        {
+          "filter": "datum.Day_Fee_2025 > 0 && datum.Percent_With_Bursaries > 0"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Day_Fee_2025",
+          "type": "quantitative",
+          "title": "Annual Day Fee (£)",
+          "scale": {
+            "domain": [30000, 51000]
+          },
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d",
+            "format": ",.0f"
+          }
+        },
+        "y": {
+          "field": "Percent_With_Bursaries",
+          "type": "quantitative",
+          "title": "Pupils Receiving Bursaries (%)",
+          "scale": {
+            "domain": [5, 27]
+          },
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "color": {
+          "field": "Gross_Fee_Income_Millions",
+          "type": "quantitative",
+          "title": "Annual Fee Income (£m)",
+          "scale": {
+            "scheme": "tealblues"
+          },
+          "legend": null
+        },
+        "size": {
+          "field": "Bursary_Spending_Millions",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "range": [250, 2000]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "School", "type": "nominal", "title": "School"},
+          {"field": "Day_Fee_2025", "type": "quantitative", "title": "Day Fee (£)", "format": ",.0f"},
+          {"field": "Percent_With_Bursaries", "type": "quantitative", "title": "% With Bursaries", "format": ".1f"},
+          {"field": "Gross_Fee_Income_Millions", "type": "quantitative", "title": "Fee Income (£m)", "format": ".1f"},
+          {"field": "Bursary_Spending_Millions", "type": "quantitative", "title": "Bursary Spending (£m)", "format": ".1f"}
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.7,
+        "stroke": "#2d3e2d",
+        "strokeWidth": 1.5
+      }
+    }
+  ],
+  "config": {
+    "background": "#FDFBF7",
+    "view": {
+      "stroke": null
+    }
+  }
+}

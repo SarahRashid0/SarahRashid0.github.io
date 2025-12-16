@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Independent School Effect: 71% Reduction",
+    "subtitle": "Coefficient drops from 0.380 to 0.111 when controlling for socioeconomic factors",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d",
+    "subtitleFont": "Baskerville, sans-serif",
+    "subtitleColor": "#5a6b5a",
+    "subtitleFontSize": 14
+  },
+  "width": 400,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/regression/coefficient_comparison.csv"
+  },
+  "mark": {
+    "type": "bar",
+    "opacity": 0.8
+  },
+  "encoding": {
+    "x": {
+      "field": "Variable",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFont": "Baskerville, sans-serif",
+        "labelColor": "#2d3e2d",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "Coefficient",
+      "type": "quantitative",
+      "title": "Coefficient (Effect per Additional School)",
+      "scale": {"domain": [0, 0.4]},
+      "axis": {
+        "labelFont": "Baskerville, sans-serif",
+        "titleFont": "Baskerville, sans-serif",
+        "labelColor": "#2d3e2d",
+        "titleColor": "#2d3e2d"
+      }
+    },
+    "color": {
+      "field": "Variable",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Independent Schools\n(Simple)", "Independent Schools\n(Controlled)"],
+        "range": ["#4a7c7c", "#2d3e2d"]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "Variable", "type": "nominal", "title": "Model"},
+      {"field": "Coefficient", "type": "quantitative", "title": "Coefficient", "format": ".4f"},
+      {"field": "R_squared", "type": "quantitative", "title": "R²", "format": ".3f"}
+    ]
+  },
+  "config": {
+    "background": "#F5F1E8",
+    "view": {"stroke": null}
+  }
+}

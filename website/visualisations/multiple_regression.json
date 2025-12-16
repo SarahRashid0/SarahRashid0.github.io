@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Multiple Regression: Actual vs Predicted Performance",
+    "subtitle": "Controlling for income, education, house prices, and deprivation",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Baskerville, sans-serif",
+    "color": "#2d3e2d",
+    "subtitleFont": "Baskerville, sans-serif",
+    "subtitleColor": "#5a6b5a",
+    "subtitleFontSize": 14
+  },
+  "width": 500,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/website/regression/multiple_regression_predictions.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "gcse_grade5_pct",
+          "type": "quantitative",
+          "title": "Actual GCSE Grade 5+ (%)",
+          "scale": {"domain": [40, 75]},
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "y": {
+          "field": "predicted_gcse",
+          "type": "quantitative",
+          "title": "Predicted GCSE Grade 5+ (%)",
+          "scale": {"domain": [40, 75]},
+          "axis": {
+            "labelFont": "Baskerville, sans-serif",
+            "titleFont": "Baskerville, sans-serif",
+            "labelColor": "#2d3e2d",
+            "titleColor": "#2d3e2d"
+          }
+        },
+        "color": {"value": "#4a7c7c"},
+        "tooltip": [
+          {"field": "Name", "type": "nominal", "title": "Borough"},
+          {"field": "gcse_grade5_pct", "type": "quantitative", "title": "Actual (%)", "format": ".1f"},
+          {"field": "predicted_gcse", "type": "quantitative", "title": "Predicted (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#8b4513",
+        "strokeDash": [5, 5],
+        "strokeWidth": 2
+      },
+      "data": {
+        "values": [
+          {"x": 40, "y": 40},
+          {"x": 75, "y": 75}
+        ]
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 13,
+        "font": "Baskerville, sans-serif",
+        "color": "#5a6b5a"
+      },
+      "data": {
+        "values": [
+          {"labelXYZ": ["R² = 0.504", "Adjusted R² = 0.408"]}  
+        ],
+      },
+       "encoding": {
+            "x": {"value": 10},
+            "y": {"value": 10},
+            "text": {"field": "labelXYZ"}
+        }
+    }
+  ],
+  "config": {
+    "background": "#F5F1E8",
+    "view": {"stroke": null}
+  }
+}
