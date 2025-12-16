@@ -5,22 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project | Does Private Education Create Advantage or Reflect It?</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style>
-        /* Centre all visualisations */
-        #vis-england-map, #vis-london-map, #vis-fees, #vis-dashboard, #vis-university, #vis-correlation {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        
-        /* Smooth transitions for map switching */
-        .map-section {
-            transition: opacity 0.3s ease-in-out;
-        }
-        
         /* Section fade-in on scroll */
         .fade-in-section {
             opacity: 0;
@@ -32,10 +23,81 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Arrow navigation container */
+        .vis-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .vis-container {
+            flex: 1;
+            max-width: 900px;
+        }
+
+        .arrow-btn {
+            background-color: var(--primary-teal);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .arrow-btn:hover {
+            background-color: var(--primary-sage);
+            transform: scale(1.1);
+        }
+
+        .arrow-btn:disabled {
+            background-color: var(--slate);
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+
+        .vis-indicator {
+            text-align: center;
+            margin-top: var(--spacing-sm);
+            font-size: 0.9rem;
+            color: var(--slate);
+            font-weight: 500;
+        }
+
+        .transition-text {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--primary-forest);
+            margin: var(--spacing-xl) auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .chart-note {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--slate);
+            text-align: center;
+            margin-top: var(--spacing-sm);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Sarah Rashid</a>
@@ -48,10 +110,12 @@
         </div>
     </nav>
 
-    <!-- Project Header -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white; padding: var(--spacing-xl) 0 var(--spacing-xl) 0;">
+    <!-- Hero Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%); color: white; padding: var(--spacing-xl) 0;">
         <div class="container text-center" style="padding-top: var(--spacing-lg);">
-            <h1 style="color: white; margin-bottom: var(--spacing-md); line-height: 1.3;">Does Private Education Create Advantage or Reflect It?</h1>
+            <h1 style="color: white; margin-bottom: var(--spacing-md); line-height: 1.3;">
+                Does Private Education Create Advantage or Reflect It?
+            </h1>
             <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.95; color: white;">
                 A data-driven investigation into education and inequality in the UK
             </p>
@@ -68,93 +132,175 @@
         </div>
     </section>
 
-    <!-- Map Section with Arrow Navigation -->
-    <section class="section fade-in-section" style="background-color: var(--cream);">
-        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--spacing-xl); max-width: 1400px; margin: 0 auto; padding: 0 var(--spacing-md); align-items: start;">
-            <!-- Text Column -->
-            <div style="text-align: justify;">
-                <div id="map-text-england" class="map-section active">
-                    <h3>Geographic Distribution</h3>
-                    <p>England's 1,613 independent schools are unevenly distributed across the country, with significant clustering in the South East and London.</p>
-                    <button onclick="showLondonMap()" style="margin-top: var(--spacing-md); padding: var(--spacing-xs) var(--spacing-sm); background-color: var(--primary-teal); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: background-color 0.2s;">
-                        Zoom into London →
-                    </button>
-                </div>
-                <div id="map-text-london" class="map-section" style="display: none;">
-                    <h3>London's Concentration</h3>
-                    <p>Zooming into London reveals how independent schools cluster in wealthier boroughs with lower deprivation indices, particularly in West and Central London.</p>
-                    <button onclick="showEnglandMap()" style="margin-top: var(--spacing-md); padding: var(--spacing-xs) var(--spacing-sm); background-color: var(--primary-sage); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: background-color 0.2s;">
-                        ← Back to England
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Visualisation Column -->
-            <div>
-                <div id="vis-england-map"></div>
-                <div id="vis-london-map" style="display: none;"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fees Section -->
-    <section class="section fade-in-section">
-        <div class="container">
-            <h2 class="text-center mb-lg">The Rising Cost of Elite Education</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: justify;">
-                Historical analysis of the nine Clarendon Schools reveals that boarding fees have increased dramatically over 95 years, even after adjusting for inflation. This suggests elite education is becoming progressively less accessible to families outside the upper-income brackets.
-            </p>
-            <div id="vis-fees"></div>
-            <p style="font-size: 0.9rem; font-style: italic; color: var(--slate); text-align: center; margin-top: var(--spacing-sm); max-width: 900px; margin-left: auto; margin-right: auto;">
-                *Note: Boarding fees exclude Merchant Taylor's (as they dropped boarding). Day fees exclude Eton College, Harrow, and Winchester College (traditionally boarding-focused schools with limited or no day student data).
-            </p>
-        </div>
-    </section>
-
-    <!-- Academic Performance Section -->
+    <!-- SECTION 1: The Advantage is Real -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
-            <h2 class="text-center mb-lg">Academic Performance Gap</h2>
-            <p class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-lg); text-align: justify;">
-                Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20–30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020–2021) temporarily inflated results across both sectors.
+            <h2 class="text-center mb-md">The Advantage is Real</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+                Independent schools consistently deliver superior academic outcomes and university access compared to state schools.
             </p>
+
+            <!-- Navigation for visualizations -->
+            <div class="vis-navigation">
+                <button class="arrow-btn" id="advantage-prev" onclick="changeAdvantageVis(-1)" disabled>‹</button>
+                <div class="vis-container">
+                    <div id="advantage-vis-1" class="vis-display"></div>
+                    <div id="advantage-vis-2" class="vis-display" style="display: none;"></div>
+                </div>
+                <button class="arrow-btn" id="advantage-next" onclick="changeAdvantageVis(1)">›</button>
+            </div>
+            <div class="vis-indicator" id="advantage-indicator">1 of 2: Academic Performance Gap</div>
             
-            <div id="vis-dashboard" style="display: flex; justify-content: center; width: 100%;"></div>
-            
-            <p style="font-size: 0.9rem; font-style: italic; color: var(--slate); text-align: center; margin-top: var(--spacing-md);">
+            <p class="chart-note" id="advantage-note-1">
                 *Note: Results for 2020 and 2021 reflect centre/teacher-assessed grades during the COVID-19 pandemic when examinations were cancelled.
             </p>
+            <p class="chart-note" id="advantage-note-2" style="display: none;">
+                Independent school students progress to high-tariff institutions (Russell Group and similar universities) at nearly three times the rate of state school students.
+            </p>
+
+            <!-- Transition text -->
+            <p class="transition-text">
+                These advantages are undeniable. But access to them is increasingly restricted...
+            </p>
         </div>
     </section>
 
-    <!-- University Progression Section -->
+    <!-- SECTION 2: The Cost Barrier -->
     <section class="section fade-in-section">
         <div class="container">
-            <h2 class="text-center mb-lg">University Access Gap</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: justify;">
-                The academic performance advantages translate directly into university access disparities. Independent school students progress to high-tariff institutions (Russell Group and similar universities) at nearly three times the rate of state school students, creating a clear pathway from private education to elite higher education.
+            <h2 class="text-center mb-md">The Cost Barrier</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+                Historical analysis of the nine Clarendon Schools reveals that boarding fees have increased dramatically over 95 years, even after adjusting for inflation.
             </p>
-            <div id="vis-university"></div>
+
+            <div id="cost-vis-1" style="display: flex; justify-content: center; margin-bottom: var(--spacing-md);"></div>
+            
+            <p class="chart-note">
+                *Note: Boarding fees exclude Merchant Taylor's (as they dropped boarding). Day fees exclude Eton College, Harrow, and Winchester College (traditionally boarding-focused schools with limited or no day student data).
+            </p>
+
+            <p style="text-align: center; max-width: 800px; margin: var(--spacing-xl) auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+                Yet even among the most expensive schools, bursary provision varies dramatically. Some elite schools dedicate substantial resources to financial aid, whilst others offer minimal support.
+            </p>
+
+            <div id="cost-vis-2" style="display: flex; justify-content: center;"></div>
+
+            <!-- Transition text -->
+            <p class="transition-text">
+                These schools concentrate not just academically, but geographically...
+            </p>
         </div>
     </section>
 
-    <!-- Correlation Analysis Section -->
+    <!-- SECTION 3: Geographic Clustering and Inequality -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
-            <h2 class="text-center mb-lg">Geographic Correlation Analysis</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: justify;">
-                Statistical analysis reveals a moderate positive correlation (r=0.380, p=0.032) between independent school density and state school GCSE performance across London boroughs. This finding suggests that independent schools cluster in areas where state schools are already performing well, indicating that the "private school advantage" may partially reflect broader geographic and socioeconomic factors rather than purely institutional quality.
+            <h2 class="text-center mb-md">Geographic Clustering and Inequality</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+                Where are these schools, and who lives near them?
             </p>
-            <div id="vis-correlation"></div>
+
+            <!-- Navigation for maps -->
+            <div class="vis-navigation">
+                <button class="arrow-btn" id="geo-prev" onclick="changeGeoVis(-1)" disabled>‹</button>
+                <div class="vis-container">
+                    <div id="geo-vis-1" class="vis-display"></div>
+                    <div id="geo-vis-2" class="vis-display" style="display: none;"></div>
+                </div>
+                <button class="arrow-btn" id="geo-next" onclick="changeGeoVis(1)">›</button>
+            </div>
+            <div class="vis-indicator" id="geo-indicator">1 of 2: National Distribution</div>
+
+            <p class="chart-note" id="geo-note-1">
+                England's 1,613 independent schools are unevenly distributed across the country, with significant clustering in the South East and London.
+            </p>
+            <p class="chart-note" id="geo-note-2" style="display: none;">
+                Zooming into London reveals how independent schools cluster in wealthier boroughs with lower deprivation indices, particularly in West and Central London.
+            </p>
+
+            <!-- Transition text -->
+            <p class="transition-text">
+                This geographic pattern raises a critical question: are independent schools clustered in high-performing areas because they improve them, or because privilege was already concentrated there?
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Disentangling Correlation from Causation -->
+    <section class="section fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-md">Disentangling Correlation from Causation</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+                Testing whether private schools create or reflect advantage
+            </p>
+
+            <!-- Analysis text -->
+            <div class="container-narrow" style="margin-bottom: var(--spacing-xl); text-align: justify;">
+                <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md);">The Research Question</h3>
+                <p style="line-height: 1.8;">
+                    Does private education create advantage or merely reflect it? In spatial terms: do independent schools improve their local areas, or do they simply cluster where advantage already exists?
+                </p>
+
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Establishing the Correlation</h3>
+                <p style="line-height: 1.8;">
+                    Initial analysis revealed a moderate positive correlation (r=0.380, p=0.032) between independent school density and state school GCSE performance across London boroughs. However, this correlation could reflect two competing explanations:
+                </p>
+                <p style="line-height: 1.8; margin-top: var(--spacing-sm);">
+                    <strong>Hypothesis A (Creation):</strong> Independent schools generate local benefits through competition, spillover effects, or raised standards.
+                </p>
+                <p style="line-height: 1.8;">
+                    <strong>Hypothesis B (Reflection):</strong> Independent schools locate in already-privileged areas where affluent, educated families—and consequently strong state schools—are already concentrated.
+                </p>
+
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Testing Through Multiple Regression</h3>
+                <p style="line-height: 1.8;">
+                    To distinguish between these explanations, I extended the analysis by controlling for four socioeconomic factors: median household income, adults with degree qualifications, average house prices, and the Index of Multiple Deprivation. The question became: after accounting for existing privilege structures, does independent school density still predict state school performance?
+                </p>
+            </div>
+
+            <!-- Navigation for regression visualizations -->
+            <div class="vis-navigation">
+                <button class="arrow-btn" id="regression-prev" onclick="changeRegressionVis(-1)" disabled>‹</button>
+                <div class="vis-container">
+                    <div id="regression-vis-1" class="vis-display"></div>
+                    <div id="regression-vis-2" class="vis-display" style="display: none;"></div>
+                    <div id="regression-vis-3" class="vis-display" style="display: none;"></div>
+                </div>
+                <button class="arrow-btn" id="regression-next" onclick="changeRegressionVis(1)">›</button>
+            </div>
+            <div class="vis-indicator" id="regression-indicator">1 of 3: Simple Regression</div>
+
+            <!-- Results and interpretation -->
+            <div class="container-narrow" style="margin-top: var(--spacing-xl); text-align: justify;">
+                <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md);">The Results</h3>
+                <p style="line-height: 1.8;">
+                    The multiple regression revealed a dramatic shift:
+                </p>
+                <ul style="line-height: 1.8; margin: var(--spacing-sm) 0;">
+                    <li><strong>Simple model:</strong> Coefficient = 0.380 (R² = 0.145)</li>
+                    <li><strong>Controlled model:</strong> Coefficient = 0.111 (R² = 0.504)</li>
+                    <li><strong>Change:</strong> 71% reduction in effect size</li>
+                </ul>
+                <p style="line-height: 1.8;">
+                    The model's explanatory power more than tripled (R² = 0.504), with socioeconomic factors—particularly deprivation (coefficient: -0.866) and parental education (coefficient: 0.103)—emerging as far stronger predictors than independent school density.
+                </p>
+
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Interpretation</h3>
+                <p style="line-height: 1.8;">
+                    These results support Hypothesis B: independent schools predominantly reflect rather than create geographic advantage. Once we account for family wealth, parental education, and area deprivation, independent school density contributes minimally to state school outcomes. The apparent correlation in the simple model was spurious—both variables are products of underlying privilege structures rather than one causing the other.
+                </p>
+                <p style="line-height: 1.8; margin-top: var(--spacing-sm);">
+                    Independent schools cluster where families already possess the economic, cultural, and social capital that predicts academic success. At the borough level, private education reflects existing advantage rather than creating it.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- DATA Section -->
-    <section class="section fade-in-section">
+    <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Data</h2>
             <p>
-                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators.
+                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators. Socioeconomic data for the multiple regression analysis was obtained from the Office for National Statistics, including median household income, educational qualifications, house prices, and Index of Multiple Deprivation scores at borough level.
             </p>
             <p>
                 All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
@@ -163,11 +309,11 @@
     </section>
 
     <!-- TOOLS Section -->
-    <section class="section fade-in-section" style="background-color: var(--cream);">
+    <section class="section fade-in-section">
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Tools & Methodology</h2>
             <p>
-                Data cleaning and analysis were performed using Python (pandas, scipy.stats) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance.
+                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance. Multiple linear regression was conducted using sklearn.linear_model.LinearRegression to control for confounding socioeconomic variables.
             </p>
             <p>
                 Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualisation specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
@@ -179,14 +325,14 @@
     </section>
 
     <!-- CONCLUSIONS Section -->
-    <section class="section fade-in-section">
+    <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Conclusions</h2>
             <p>
-                This analysis reveals that whilst independent schools demonstrably produce superior academic outcomes—with performance gaps of 20–30 percentage points at GCSE and A-level, and nearly triple the university access rates to elite institutions—these advantages cannot be attributed to school quality alone. The statistically significant positive correlation between independent school concentration and state school performance (r=0.380, R²=0.145, p=0.032) indicates that private schools cluster in already-advantaged geographic areas where state provision is comparatively strong.
+                This analysis reveals that whilst independent schools demonstrably produce superior academic outcomes—with performance gaps of 20–30 percentage points at GCSE and A-level, and nearly triple the university access rates to elite institutions—these advantages cannot be attributed to school quality alone. The multiple regression analysis provided compelling evidence that the observed correlation between independent school concentration and state school performance (r=0.380, R²=0.145, p=0.032) is largely spurious. When controlling for socioeconomic factors, the independent school coefficient dropped by 71%, whilst the model's explanatory power more than tripled (R²=0.504). This indicates that private schools cluster in already-advantaged geographic areas where state provision is comparatively strong.
             </p>
             <p>
-                The answer to whether private education creates advantage or reflects it appears to be: both. Independent schools do deliver measurably better examination results and university access, justifying their positioning as high-performing institutions. However, these schools concentrate in wealthy areas with strong local state sectors, suggesting that the "independent school premium" partly represents the purchase of access to advantaged geographic and social networks rather than purely superior pedagogy.
+                The answer to whether private education creates advantage or reflects it appears to be: both. Independent schools do deliver measurably better examination results and university access, justifying their positioning as high-performing institutions. However, these schools concentrate in wealthy areas with strong local state sectors, suggesting that the "independent school premium" partly represents the purchase of access to advantaged geographic and social networks rather than purely superior pedagogy. The statistical evidence demonstrates that area-level deprivation and parental education are far stronger predictors of educational outcomes than independent school presence.
             </p>
             <p>
                 Moreover, the historical cost analysis demonstrates that elite education is becoming progressively less accessible. Even after inflation adjustment, Clarendon School fees have increased substantially in real terms over 95 years, concentrating access amongst increasingly narrow socioeconomic bands. Combined with the geographic clustering findings, this suggests that private education simultaneously reflects existing privilege whilst potentially amplifying inequality through restricted access and concentrated opportunity networks.
@@ -227,41 +373,7 @@
         </div>
     </footer>
 
-    <!-- Vega Embed Scripts -->
     <script>
-        // England Map
-        vegaEmbed('#vis-england-map', 'website/visualisations/england_independent_schools_map.json');
-        
-        // London Map  
-        vegaEmbed('#vis-london-map', 'website/visualisations/london_imd_schools_map.json');
-        
-        // Fees
-        vegaEmbed('#vis-fees', 'website/visualisations/clarendon_fees_timeline.json');
-        
-        // Academic Performance Dashboard (combined GCSE & A-Level)
-        vegaEmbed('#vis-dashboard', 'website/visualisations/dashboard.json');
-        
-        // University
-        vegaEmbed('#vis-university', 'website/visualisations/university_progression_slider.json');
-        
-        // Correlation
-        vegaEmbed('#vis-correlation', 'website/visualisations/london_correlation_scatter.json');
-
-        // Arrow navigation functions
-        function showLondonMap() {
-            document.getElementById('map-text-england').style.display = 'none';
-            document.getElementById('map-text-london').style.display = 'block';
-            document.getElementById('vis-england-map').style.display = 'none';
-            document.getElementById('vis-london-map').style.display = 'block';
-        }
-
-        function showEnglandMap() {
-            document.getElementById('map-text-england').style.display = 'block';
-            document.getElementById('map-text-london').style.display = 'none';
-            document.getElementById('vis-england-map').style.display = 'block';
-            document.getElementById('vis-london-map').style.display = 'none';
-        }
-
         // Fade-in scroll effect
         const faders = document.querySelectorAll('.fade-in-section');
         
@@ -284,6 +396,94 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+
+        // Load all visualizations on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Section 1: Advantage visualizations
+            vegaEmbed('#advantage-vis-1', 'website/visualisations/dashboard.json');
+            vegaEmbed('#advantage-vis-2', 'website/visualisations/university_progression_slider.json');
+
+            // Section 2: Cost visualizations
+            vegaEmbed('#cost-vis-1', 'website/visualisations/clarendon_fees_timeline.json');
+            vegaEmbed('#cost-vis-2', 'website/visualisations/clarendon_bursaries.json');
+
+            // Section 3: Geographic visualizations
+            vegaEmbed('#geo-vis-1', 'website/visualisations/england_independent_schools_map.json');
+            vegaEmbed('#geo-vis-2', 'website/visualisations/london_imd_schools_map.json');
+
+            // Section 4: Regression visualizations
+            vegaEmbed('#regression-vis-1', 'website/visualisations/london_correlation_scatter.json');
+            vegaEmbed('#regression-vis-2', 'website/visualisations/coefficient_comparison.json');
+            vegaEmbed('#regression-vis-3', 'website/visualisations/multiple_regression.json');
+        });
+
+        // Navigation functions for Section 1: Advantage
+        let currentAdvantageVis = 1;
+        const advantageLabels = [
+            "1 of 2: Academic Performance Gap",
+            "2 of 2: University Access Gap"
+        ];
+
+        function changeAdvantageVis(direction) {
+            const newVis = currentAdvantageVis + direction;
+            if (newVis < 1 || newVis > 2) return;
+
+            document.getElementById(`advantage-vis-${currentAdvantageVis}`).style.display = 'none';
+            document.getElementById(`advantage-note-${currentAdvantageVis}`).style.display = 'none';
+            document.getElementById(`advantage-vis-${newVis}`).style.display = 'block';
+            document.getElementById(`advantage-note-${newVis}`).style.display = 'block';
+            
+            currentAdvantageVis = newVis;
+            document.getElementById('advantage-indicator').textContent = advantageLabels[currentAdvantageVis - 1];
+
+            document.getElementById('advantage-prev').disabled = currentAdvantageVis === 1;
+            document.getElementById('advantage-next').disabled = currentAdvantageVis === 2;
+        }
+
+        // Navigation functions for Section 3: Geography
+        let currentGeoVis = 1;
+        const geoLabels = [
+            "1 of 2: National Distribution",
+            "2 of 2: London's Concentration & Deprivation"
+        ];
+
+        function changeGeoVis(direction) {
+            const newVis = currentGeoVis + direction;
+            if (newVis < 1 || newVis > 2) return;
+
+            document.getElementById(`geo-vis-${currentGeoVis}`).style.display = 'none';
+            document.getElementById(`geo-note-${currentGeoVis}`).style.display = 'none';
+            document.getElementById(`geo-vis-${newVis}`).style.display = 'block';
+            document.getElementById(`geo-note-${newVis}`).style.display = 'block';
+            
+            currentGeoVis = newVis;
+            document.getElementById('geo-indicator').textContent = geoLabels[currentGeoVis - 1];
+
+            document.getElementById('geo-prev').disabled = currentGeoVis === 1;
+            document.getElementById('geo-next').disabled = currentGeoVis === 2;
+        }
+
+        // Navigation functions for Section 4: Regression
+        let currentRegressionVis = 1;
+        const regressionLabels = [
+            "1 of 3: Simple Regression",
+            "2 of 3: Coefficient Comparison (71% Reduction)",
+            "3 of 3: Multiple Regression Model Fit"
+        ];
+
+        function changeRegressionVis(direction) {
+            const newVis = currentRegressionVis + direction;
+            if (newVis < 1 || newVis > 3) return;
+
+            document.getElementById(`regression-vis-${currentRegressionVis}`).style.display = 'none';
+            document.getElementById(`regression-vis-${newVis}`).style.display = 'block';
+            
+            currentRegressionVis = newVis;
+            document.getElementById('regression-indicator').textContent = regressionLabels[currentRegressionVis - 1];
+
+            document.getElementById('regression-prev').disabled = currentRegressionVis === 1;
+            document.getElementById('regression-next').disabled = currentRegressionVis === 3;
+        }
     </script>
 </body>
 </html>
