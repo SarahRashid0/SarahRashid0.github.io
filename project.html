@@ -323,13 +323,13 @@
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Tools & Methodology</h2>
             <p>
-                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance. Multiple linear regression was conducted using sklearn.linear_model.LinearRegression to control for confounding socioeconomic variables.
+                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 for web mapping compatibility. Historical fees underwent inflation adjustment to 2025 prices using Bank of England multipliers. Statistical analysis employed Pearson's correlation and multiple linear regression through scipy and sklearn to examine relationships between independent school density, socioeconomic factors, and state school performance.
             </p>
             <p>
-                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualisation specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
+                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all code and datasets publicly accessible for full reproducibility.
             </p>
             <p>
-                Key technical challenges included handling missing historical data (some schools lacked complete fee records across all years), managing data type mismatches during borough-level merges (GSS codes vs. numeric LA codes), and optimising map rendering performance with 1,600+ data points. These were addressed through strategic data filtering, explicit type conversions, and layered visualisation approaches that balance detail with performance.
+                Key technical challenges included handling missing historical data, managing data type mismatches during borough-level merges, and optimising map rendering with 1,600+ data points. These were addressed through strategic filtering, explicit type conversions, and layered visualisation approaches.
             </p>
         </div>
     </section>
