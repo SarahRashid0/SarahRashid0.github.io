@@ -311,13 +311,13 @@
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Tools & Methodology</h2>
             <p>
-                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 for web mapping compatibility. Historical fees underwent inflation adjustment to 2025 prices using Bank of England multipliers. Statistical analysis employed Pearson's correlation and multiple linear regression through scipy and sklearn to examine relationships between independent school density, socioeconomic factors, and state school performance.
+                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 for web mapping compatibility. Historical fees underwent inflation adjustment to 2025 prices using Bank of England multipliers. Statistical analysis employed Pearson's correlation and multiple linear regression through scipy and sklearn.
             </p>
             <p>
-                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all code and datasets publicly accessible for full reproducibility.
+                Visualisations were built using Vega-Lite specifications, chosen for their interactive capabilities. Each chart incorporates interactive elements to enhance data exploration. The website is hosted via GitHub Pages, with all code and datasets publicly accessible for full reproducibility.
             </p>
             <p>
-                Key technical challenges included handling missing historical data, managing data type mismatches during borough-level merges, and optimising map rendering with 1,600+ data points. These were addressed through strategic filtering, explicit type conversions, and layered visualisation approaches.
+                Key technical challenges included missing historical data, data type mismatches (GSS vs numeric codes), map rendering with 1,600+ points. These were addressed through strategic filtering, explicit type conversions, and layered visualisation approaches.
             </p>
         </div>
     </section>
