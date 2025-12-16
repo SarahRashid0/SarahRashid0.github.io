@@ -24,38 +24,43 @@
             transform: translateY(0);
         }
 
-        /* Centre all visualisations */
-        .vis-center {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: var(--spacing-lg) 0;
-        }
-
         /* Smooth transitions for map switching */
         .map-section {
             transition: opacity 0.3s ease-in-out;
         }
 
-        .chart-note {
-            font-size: 0.9rem;
-            font-style: italic;
-            color: var(--slate);
+        /* Lead paragraph styling */
+        .lead-text {
+            font-size: 1.3rem;
             text-align: center;
-            margin-top: var(--spacing-sm);
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+            color: var(--slate);
+            line-height: 1.8;
         }
 
-        .transition-text {
+        /* Explanatory text - bigger than normal paragraphs */
+        .explanatory-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--slate);
+            margin: var(--spacing-md) auto;
+        }
+
+        /* Transition sections - standalone moments */
+        .transition-section {
+            background: linear-gradient(135deg, var(--primary-sage) 0%, var(--primary-teal) 100%);
+            padding: var(--spacing-xl) 0;
             text-align: center;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--primary-forest);
-            margin: var(--spacing-xl) auto;
-            max-width: 800px;
-            line-height: 1.6;
+        }
+
+        .transition-section h3 {
+            color: white;
+            font-size: 2rem;
+            font-style: normal;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -99,7 +104,7 @@
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
             <h2 class="text-center mb-lg">The Advantage is Real</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+            <p class="lead-text">
                 Independent schools consistently deliver superior academic outcomes and university access compared to state schools.
             </p>
 
@@ -107,7 +112,15 @@
             <h3 style="text-align: center; color: var(--primary-forest); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
                 Academic Performance Gap
             </h3>
-            <div id="vis-dashboard" class="vis-center"></div>
+            
+            <p class="explanatory-text" style="text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                Independent schools consistently outperform state-funded schools at both GCSE and A-level, with gaps of approximately 20–30 percentage points across top grade thresholds. This advantage persists across all years examined, though COVID-19 grade inflation (2020–2021) temporarily inflated results across both sectors.
+            </p>
+
+            <div class="vis-center">
+                <div id="vis-dashboard"></div>
+            </div>
+            
             <p class="chart-note">
                 *Note: Results for 2020 and 2021 reflect centre/teacher-assessed grades during the COVID-19 pandemic when examinations were cancelled.
             </p>
@@ -116,42 +129,55 @@
             <h3 style="text-align: center; color: var(--primary-forest); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
                 University Access Gap
             </h3>
-            <div id="vis-university" class="vis-center"></div>
-            <p class="chart-note">
+            
+            <p class="explanatory-text" style="text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
                 Independent school students progress to high-tariff institutions (Russell Group and similar universities) at nearly three times the rate of state school students.
             </p>
 
-            <!-- Transition text -->
-            <p class="transition-text">
-                These advantages are undeniable. But access to them is increasingly restricted...
-            </p>
+            <div class="vis-center">
+                <div id="vis-university"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition Section 1 -->
+    <section class="transition-section fade-in-section">
+        <div class="container">
+            <h3>These advantages are undeniable. But access to them is increasingly restricted...</h3>
         </div>
     </section>
 
     <!-- SECTION 2: The Cost Barrier -->
     <section class="section fade-in-section">
         <div class="container">
-            <h2 class="text-center mb-md">The Cost Barrier</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
-                Historical analysis of the nine Clarendon Schools reveals that boarding fees have increased dramatically over 95 years, even after adjusting for inflation.
-            </p>
-
-            <div id="vis-fees" class="vis-center"></div>
+            <h2 class="text-center mb-lg">The Cost Barrier</h2>
             
-            <p class="chart-note">
+            <h4 style="text-align: center; color: var(--primary-forest); margin-bottom: var(--spacing-md); font-weight: 500;">
+                Historical analysis of the nine Clarendon Schools reveals that boarding fees have increased dramatically over 95 years, even after adjusting for inflation.
+            </h4>
+
+            <div class="vis-center">
+                <div id="vis-fees"></div>
+            </div>
+            
+            <p class="chart-note" style="font-size: 1.05rem;">
                 *Note: Boarding fees exclude Merchant Taylor's (as they dropped boarding). Day fees exclude Eton College, Harrow, and Winchester College (traditionally boarding-focused schools with limited or no day student data).
             </p>
 
-            <p style="text-align: center; max-width: 800px; margin: var(--spacing-xl) auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+            <h4 style="text-align: center; color: var(--primary-forest); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); font-weight: 500;">
                 Yet even among the most expensive schools, bursary provision varies dramatically. Some elite schools dedicate substantial resources to financial aid, whilst others offer minimal support.
-            </p>
+            </h4>
 
-            <div id="vis-bursaries" class="vis-center"></div>
+            <div class="vis-center">
+                <div id="vis-bursaries"></div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Transition text -->
-            <p class="transition-text">
-                These schools concentrate not just academically, but geographically...
-            </p>
+    <!-- Transition Section 2 -->
+    <section class="transition-section fade-in-section">
+        <div class="container">
+            <h3>These schools concentrate not just academically, but geographically...</h3>
         </div>
     </section>
 
@@ -185,11 +211,13 @@
                     <div id="vis-london-map" style="display: none;"></div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Transition text -->
-            <p class="transition-text">
-                This geographic pattern raises a critical question: are independent schools clustered in high-performing areas because they improve them, or because privilege was already concentrated there?
-            </p>
+    <!-- Transition Section 3 -->
+    <section class="transition-section fade-in-section">
+        <div class="container">
+            <h3>This geographic pattern raises a critical question: are independent schools clustered in high-performing areas because they improve them, or because privilege was already concentrated there?</h3>
         </div>
     </section>
 
@@ -197,7 +225,7 @@
     <section class="section fade-in-section">
         <div class="container">
             <h2 class="text-center mb-lg">Disentangling Correlation from Causation</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
+            <p class="lead-text">
                 Testing whether private schools create or reflect advantage
             </p>
 
@@ -205,7 +233,9 @@
             <div class="container-narrow" style="margin-bottom: var(--spacing-xl); text-align: justify;">
                 <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md); text-align: center;">Establishing the Correlation</h3>
                 
-                <div id="vis-simple-regression" class="vis-center"></div>
+                <div class="vis-center">
+                    <div id="vis-simple-regression"></div>
+                </div>
 
                 <p style="line-height: 1.8; margin-top: var(--spacing-lg);">
                     Initial analysis revealed a moderate positive correlation (r=0.380, p=0.032) between independent school density and state school GCSE performance across London boroughs. However, this correlation could reflect two competing explanations:
@@ -222,7 +252,9 @@
                     To distinguish between these explanations, I extended the analysis by controlling for four socioeconomic factors: median household income, adults with degree qualifications, average house prices, and the Index of Multiple Deprivation. The question became: after accounting for existing privilege structures, does independent school density still predict state school performance?
                 </p>
 
-                <div id="vis-multiple-regression" class="vis-center"></div>
+                <div class="vis-center">
+                    <div id="vis-multiple-regression"></div>
+                </div>
 
                 <h3 style="color: var(--primary-forest); margin: var(--spacing-xl) 0 var(--spacing-md); text-align: center;">The Results</h3>
                 <p style="line-height: 1.8;">
@@ -248,36 +280,7 @@
         </div>
     </section>
 
-    <!-- DATA Section -->
-    <section class="section fade-in-section" style="background-color: var(--cream);">
-        <div class="container-narrow" style="text-align: justify;">
-            <h2 style="text-align: center;">Data</h2>
-            <p>
-                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators. Socioeconomic data for the multiple regression analysis was obtained from the Office for National Statistics, including median household income, educational qualifications, house prices, and Index of Multiple Deprivation scores at borough level.
-            </p>
-            <p>
-                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/1GqzBS50zOAXpoO8LH0Ftn2dw0pW-J_BK?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
-            </p>
-        </div>
-    </section>
-
-    <!-- TOOLS Section -->
-    <section class="section fade-in-section">
-        <div class="container-narrow" style="text-align: justify;">
-            <h2 style="text-align: center;">Tools & Methodology</h2>
-            <p>
-                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance. Multiple linear regression was conducted using sklearn.linear_model.LinearRegression to control for confounding socioeconomic variables.
-            </p>
-            <p>
-                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualisation specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
-            </p>
-            <p>
-                Key technical challenges included handling missing historical data (some schools lacked complete fee records across all years), managing data type mismatches during borough-level merges (GSS codes vs. numeric LA codes), and optimising map rendering performance with 1,600+ data points. These were addressed through strategic data filtering, explicit type conversions, and layered visualisation approaches that balance detail with performance.
-            </p>
-        </div>
-    </section>
-
-    <!-- CONCLUSIONS Section -->
+    <!-- CONCLUSIONS Section (moved here after analysis) -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container-narrow" style="text-align: justify;">
             <h2 style="text-align: center;">Conclusions</h2>
@@ -292,6 +295,35 @@
             </p>
             <p>
                 Future research could extend this analysis by examining long-term earnings outcomes, controlling for prior attainment in university access analysis, or investigating whether the geographic correlation holds at finer spatial scales. Additionally, comparative analysis across different types of independent schools (highly selective vs. less selective, day vs. boarding) might reveal whether value-added effects vary by institutional characteristics.
+            </p>
+        </div>
+    </section>
+
+    <!-- DATA Section -->
+    <section class="section fade-in-section">
+        <div class="container-narrow" style="text-align: justify;">
+            <h2 style="text-align: center;">Data</h2>
+            <p>
+                Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators. Socioeconomic data for the multiple regression analysis was obtained from the Office for National Statistics, including median household income, educational qualifications, house prices, and Index of Multiple Deprivation scores at borough level.
+            </p>
+            <p>
+                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/1GqzBS50zOAXpoO8LH0Ftn2dw0pW-J_BK?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
+            </p>
+        </div>
+    </section>
+
+    <!-- TOOLS Section -->
+    <section class="section fade-in-section" style="background-color: var(--cream);">
+        <div class="container-narrow" style="text-align: justify;">
+            <h2 style="text-align: center;">Tools & Methodology</h2>
+            <p>
+                Data cleaning and analysis were performed using Python (pandas, scipy.stats, sklearn) within Google Colab environments. Geographic coordinates required transformation from British National Grid to WGS84 latitude/longitude for web mapping compatibility. Historical fee data underwent inflation adjustment using Bank of England multipliers to convert all values to 2025 prices, enabling meaningful temporal comparisons. Statistical correlation analysis employed Pearson's correlation coefficient and ordinary least squares regression through scipy.stats.linregress to quantify the relationship between independent school density and local state school performance. Multiple linear regression was conducted using sklearn.linear_model.LinearRegression to control for confounding socioeconomic variables.
+            </p>
+            <p>
+                Visualisations were built using Vega-Lite specifications, chosen for their declarative approach and interactive capabilities. Each chart incorporates interactive elements—dropdown menus for metric selection, temporal sliders, and hover tooltips—to enhance data exploration. The project website is hosted via GitHub Pages, with all visualisation specifications, cleaned datasets, and analytical code publicly accessible in the repository, ensuring full reproducibility and transparency.
+            </p>
+            <p>
+                Key technical challenges included handling missing historical data (some schools lacked complete fee records across all years), managing data type mismatches during borough-level merges (GSS codes vs. numeric LA codes), and optimising map rendering performance with 1,600+ data points. These were addressed through strategic data filtering, explicit type conversions, and layered visualisation approaches that balance detail with performance.
             </p>
         </div>
     </section>
