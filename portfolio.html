@@ -596,25 +596,25 @@
         }
 
         // TASK 1 - Hosting
-        vegaEmbed('#chart1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json", {actions: false});
-        vegaEmbed('#chart2', "portfolio_task1/wk1_chart2.json", {actions: false});
-        vegaEmbed('#chart3', "https://rdeconomist.github.io/charts/library/chartScatter3.json", {actions: false});
+        vegaEmbed('#chart1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json", {actions: true});
+        vegaEmbed('#chart2', "portfolio_task1/wk1_chart2.json", {actions: true});
+        vegaEmbed('#chart3', "https://rdeconomist.github.io/charts/library/chartScatter3.json", {actions: true});
 
         // TASK 2 - Building
-        vegaEmbed('#chart4', "portfolio_task2/public_sector_employment.json", {actions: false});
-        vegaEmbed('#chart5', "portfolio_task2/displacement_bangladesh.json", {actions: false});
+        vegaEmbed('#chart4', "portfolio_task2/public_sector_employment.json", {actions: true});
+        vegaEmbed('#chart5', "portfolio_task2/displacement_bangladesh.json", {actions: true});
 
         // TASK 3 - Debate
-        vegaEmbed('#chart6', "portfolio_task3/washdata.json", {actions: false});
-        vegaEmbed('#chart7', "portfolio_task3/washdata_urban_rural.json", {actions: false});
+        vegaEmbed('#chart6', "portfolio_task3/washdata.json", {actions: true});
+        vegaEmbed('#chart7', "portfolio_task3/washdata_urban_rural.json", {actions: true});
 
         // TASK 4 - Replication
-        vegaEmbed('#chart8', "portfolio_task4/recreate_graph.json", {actions: false});
-        vegaEmbed('#chart9', "portfolio_task4/improved_graph.json", {actions: false});
+        vegaEmbed('#chart8', "portfolio_task4/recreate_graph.json", {actions: true});
+        vegaEmbed('#chart9', "portfolio_task4/improved_graph.json", {actions: true});
 
         // TASK 5 - Accessing Data
-        vegaEmbed('#chart10', "portfolio_task5/crime_london.json", {actions: false});
-        vegaEmbed('#chart11', "portfolio_task5/scraper_task.json", {actions: false});
+        vegaEmbed('#chart10', "portfolio_task5/crime_london.json", {actions: true});
+        vegaEmbed('#chart11', "portfolio_task5/scraper_task.json", {actions: true});
 
         // TASK 6 - Loops (Dashboard)
         const foodCharts = [
@@ -655,24 +655,24 @@
                 }
             };
 
-            vegaEmbed(`#dashboard-chart-${index}`, spec, {actions: false});
+            vegaEmbed(`#dashboard-chart-${index}`, spec, {actions: true});
         });
 
         // TASK 7 - Maps
-        vegaEmbed('#chart12', "portfolio_task7/scotland_happiness.json", {actions: false});
-        vegaEmbed('#chart13', "portfolio_task7/coordinate_wales_gp.json", {actions: false});
+        vegaEmbed('#chart12', "portfolio_task7/scotland_happiness.json", {actions: true});
+        vegaEmbed('#chart13', "portfolio_task7/coordinate_wales_gp.json", {actions: true});
 
         // TASK 8 - Big Data
-        vegaEmbed('#chart14', "portfolio_task8/cake_avg.json", {actions: false});
-        vegaEmbed('#chart15', "portfolio_task8/tampon_avg_region.json", {actions: false});
+        vegaEmbed('#chart14', "portfolio_task8/cake_avg.json", {actions: true});
+        vegaEmbed('#chart15', "portfolio_task8/tampon_avg_region.json", {actions: true});
 
         // TASK 9 - Interactive Charts
-        vegaEmbed('#chart16', "portfolio_task9/avg_painkiller_price.json", {actions: false});
-        vegaEmbed('#chart17', "portfolio_task9/suicide_by_socialgroup.json", {actions: false});
+        vegaEmbed('#chart16', "portfolio_task9/avg_painkiller_price.json", {actions: true});
+        vegaEmbed('#chart17', "portfolio_task9/suicide_by_socialgroup.json", {actions: true});
 
         // TASK 10 - Advanced Analysis and Machine Learning
-        vegaEmbed('#chart18', "portfolio_task10/england_weights_comparison.json", {actions: false});
-        vegaEmbed('#chart19', "portfolio_task10/life_expectancy_regression.json", {actions: false});
+        vegaEmbed('#chart18', "portfolio_task10/england_weights_comparison.json", {actions: true});
+        vegaEmbed('#chart19', "portfolio_task10/life_expectancy_regression.json", {actions: true});
 
         // Fade-in scroll effect
         const faders = document.querySelectorAll('.fade-in-section');
