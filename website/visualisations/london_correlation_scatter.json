@@ -86,20 +86,25 @@
       }
     },
     {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "dx": 5,
-        "fontSize": 13,
-        "font": "Baskerville, sans-serif",
-        "color": "#5a6b5a"
-      },
-      "encoding": {
-        "x": {"value": 10},
-        "y": {"value": 10},
-        "text": {"value": ["r=0.380 (p < 0.001)", "R² =0.145"]}
-      }
+        "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "dx": 5,
+            "fontSize": 13,
+            "font": "Baskerville, sans-serif",
+            "color": "#5a6b5a"
+        },
+        "data": {
+            "values": [
+                {"labelXYZ": ["r=0.380 (p < 0.001)", "R² =0.145"]}
+            ]
+        },
+        "encoding": {
+            "x": {"value": 10},
+            "y": {"value": 10},
+            "text": {"field": "labelXYZ"}
+        }
     }
   ],
   "config": {
