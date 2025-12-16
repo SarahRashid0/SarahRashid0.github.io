@@ -106,13 +106,20 @@
         }
 
         #question1 {
-            left: 530px;
+            left: 570px; /* NEW: Centers question mark under secondary photo */
             top: 520px;
         }
 
         #question2 {
-            left: 980px;
+            left: 1020px; /* NEW: Centers question mark under graduation photo */
             top: 520px;
+        }
+        /* ADD these two lines to .question-mark for perfect centering: */
+        .question-mark {
+            /* ... existing styles ... */
+            width: 100px; 
+            margin-left: -50px; 
+            /* ... existing styles ... */
         }
 
         .story-section {
@@ -195,25 +202,25 @@
                 <path
                     id="arrow1"
                     class="arrow-path"
-                    d="M 320 310 L 480 190"
+                    d="M 290 310 L 500 190" 
                     marker-end="url(#arrowhead)" />
                 
                 <path
                     id="arrow2"
                     class="arrow-path"
-                    d="M 760 190 L 920 190"
+                    d="M 740 190 L 950 190"
                     marker-end="url(#arrowhead)" />
                 
                 <path
                     id="arrow3"
                     class="arrow-path"
-                    d="M 320 310 L 480 580"
+                    d="M 290 310 L 500 580" 
                     marker-end="url(#arrowhead)" />
                 
                 <path
                     id="arrow4"
                     class="arrow-path"
-                    d="M 760 580 L 920 580"
+                    d="M 680 580 L 950 580" 
                     marker-end="url(#arrowhead)" />
             </svg>
 
