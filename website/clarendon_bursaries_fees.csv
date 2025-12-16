@@ -2,10 +2,13 @@ School,Size,Pupils_With_Bursaries,Percent_With_Bursaries,Bursary_Spending_Millio
 Eton College,1346,247,18.4,9.54,71,99,63298,,67.04
 Winchester College,734,101,13.8,5.3,72,29,60000,44400,39.3
 Harrow,831,208,25,5.4,,49,63735,,70.81
-Charterhouse,995,,,,5.2,,60048,46773,54.1
+Charterhouse,995,66,6.6,5.2,,13,60048,46773,54.1
 Rugby,869,150,17.3,5.67,,30,58920,37350,49.31
 Shrewsbury,826,204,24.7,4.84,,,54744,37548,40.39
 St Paul's,1517,143,9.4,5.55,,50,53943,35847,49.15
-Westminster,773,,,,2.3,,65976,49950,39.79
+Westminster,773,54,7.0,2.3,,45,65976,49950,39.79
 Merchant Taylor's,959,77,8,0.92,,,,31947,30.72
+
+
+
 
