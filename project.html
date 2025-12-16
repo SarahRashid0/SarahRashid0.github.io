@@ -24,64 +24,17 @@
             transform: translateY(0);
         }
 
-        /* Arrow navigation container */
-        .vis-navigation {
+        /* Centre all visualisations */
+        .vis-center {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-lg);
+            width: 100%;
+            margin: var(--spacing-lg) 0;
         }
 
-        .vis-container {
-            flex: 1;
-            max-width: 900px;
-        }
-
-        .arrow-btn {
-            background-color: var(--primary-teal);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .arrow-btn:hover {
-            background-color: var(--primary-sage);
-            transform: scale(1.1);
-        }
-
-        .arrow-btn:disabled {
-            background-color: var(--slate);
-            opacity: 0.3;
-            cursor: not-allowed;
-            transform: scale(1);
-        }
-
-        .vis-indicator {
-            text-align: center;
-            margin-top: var(--spacing-sm);
-            font-size: 0.9rem;
-            color: var(--slate);
-            font-weight: 500;
-        }
-
-        .transition-text {
-            text-align: center;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--primary-forest);
-            margin: var(--spacing-xl) auto;
-            max-width: 800px;
-            line-height: 1.6;
+        /* Smooth transitions for map switching */
+        .map-section {
+            transition: opacity 0.3s ease-in-out;
         }
 
         .chart-note {
@@ -93,6 +46,16 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .transition-text {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--primary-forest);
+            margin: var(--spacing-xl) auto;
+            max-width: 800px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -135,26 +98,26 @@
     <!-- SECTION 1: The Advantage is Real -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
-            <h2 class="text-center mb-md">The Advantage is Real</h2>
+            <h2 class="text-center mb-lg">The Advantage is Real</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
                 Independent schools consistently deliver superior academic outcomes and university access compared to state schools.
             </p>
 
-            <!-- Navigation for visualizations -->
-            <div class="vis-navigation">
-                <button class="arrow-btn" id="advantage-prev" onclick="changeAdvantageVis(-1)" disabled>‹</button>
-                <div class="vis-container">
-                    <div id="advantage-vis-1" class="vis-display"></div>
-                    <div id="advantage-vis-2" class="vis-display" style="display: none;"></div>
-                </div>
-                <button class="arrow-btn" id="advantage-next" onclick="changeAdvantageVis(1)">›</button>
-            </div>
-            <div class="vis-indicator" id="advantage-indicator">1 of 2: Academic Performance Gap</div>
-            
-            <p class="chart-note" id="advantage-note-1">
+            <!-- Academic Performance Gap -->
+            <h3 style="text-align: center; color: var(--primary-forest); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                Academic Performance Gap
+            </h3>
+            <div id="vis-dashboard" class="vis-center"></div>
+            <p class="chart-note">
                 *Note: Results for 2020 and 2021 reflect centre/teacher-assessed grades during the COVID-19 pandemic when examinations were cancelled.
             </p>
-            <p class="chart-note" id="advantage-note-2" style="display: none;">
+
+            <!-- University Access Gap -->
+            <h3 style="text-align: center; color: var(--primary-forest); margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                University Access Gap
+            </h3>
+            <div id="vis-university" class="vis-center"></div>
+            <p class="chart-note">
                 Independent school students progress to high-tariff institutions (Russell Group and similar universities) at nearly three times the rate of state school students.
             </p>
 
@@ -173,7 +136,7 @@
                 Historical analysis of the nine Clarendon Schools reveals that boarding fees have increased dramatically over 95 years, even after adjusting for inflation.
             </p>
 
-            <div id="cost-vis-1" style="display: flex; justify-content: center; margin-bottom: var(--spacing-md);"></div>
+            <div id="vis-fees" class="vis-center"></div>
             
             <p class="chart-note">
                 *Note: Boarding fees exclude Merchant Taylor's (as they dropped boarding). Day fees exclude Eton College, Harrow, and Winchester College (traditionally boarding-focused schools with limited or no day student data).
@@ -183,7 +146,7 @@
                 Yet even among the most expensive schools, bursary provision varies dramatically. Some elite schools dedicate substantial resources to financial aid, whilst others offer minimal support.
             </p>
 
-            <div id="cost-vis-2" style="display: flex; justify-content: center;"></div>
+            <div id="vis-bursaries" class="vis-center"></div>
 
             <!-- Transition text -->
             <p class="transition-text">
@@ -195,28 +158,33 @@
     <!-- SECTION 3: Geographic Clustering and Inequality -->
     <section class="section fade-in-section" style="background-color: var(--cream);">
         <div class="container">
-            <h2 class="text-center mb-md">Geographic Clustering and Inequality</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
-                Where are these schools, and who lives near them?
-            </p>
-
-            <!-- Navigation for maps -->
-            <div class="vis-navigation">
-                <button class="arrow-btn" id="geo-prev" onclick="changeGeoVis(-1)" disabled>‹</button>
-                <div class="vis-container">
-                    <div id="geo-vis-1" class="vis-display"></div>
-                    <div id="geo-vis-2" class="vis-display" style="display: none;"></div>
+            <h2 class="text-center mb-lg">Geographic Clustering and Inequality</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--spacing-xl); max-width: 1400px; margin: 0 auto; padding: 0 var(--spacing-md); align-items: start;">
+                <!-- Text Column -->
+                <div style="text-align: justify;">
+                    <div id="map-text-england" class="map-section active">
+                        <h3>Geographic Distribution</h3>
+                        <p>England's 1,613 independent schools are unevenly distributed across the country, with significant clustering in the South East and London.</p>
+                        <button onclick="showLondonMap()" style="margin-top: var(--spacing-md); padding: var(--spacing-xs) var(--spacing-sm); background-color: var(--primary-teal); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: background-color 0.2s;">
+                            Zoom into London →
+                        </button>
+                    </div>
+                    <div id="map-text-london" class="map-section" style="display: none;">
+                        <h3>London's Concentration</h3>
+                        <p>Zooming into London reveals how independent schools cluster in wealthier boroughs with lower deprivation indices, particularly in West and Central London.</p>
+                        <button onclick="showEnglandMap()" style="margin-top: var(--spacing-md); padding: var(--spacing-xs) var(--spacing-sm); background-color: var(--primary-sage); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: background-color 0.2s;">
+                            ← Back to England
+                        </button>
+                    </div>
                 </div>
-                <button class="arrow-btn" id="geo-next" onclick="changeGeoVis(1)">›</button>
+                
+                <!-- Visualisation Column -->
+                <div>
+                    <div id="vis-england-map"></div>
+                    <div id="vis-london-map" style="display: none;"></div>
+                </div>
             </div>
-            <div class="vis-indicator" id="geo-indicator">1 of 2: National Distribution</div>
-
-            <p class="chart-note" id="geo-note-1">
-                England's 1,613 independent schools are unevenly distributed across the country, with significant clustering in the South East and London.
-            </p>
-            <p class="chart-note" id="geo-note-2" style="display: none;">
-                Zooming into London reveals how independent schools cluster in wealthier boroughs with lower deprivation indices, particularly in West and Central London.
-            </p>
 
             <!-- Transition text -->
             <p class="transition-text">
@@ -228,20 +196,18 @@
     <!-- SECTION 4: Disentangling Correlation from Causation -->
     <section class="section fade-in-section">
         <div class="container">
-            <h2 class="text-center mb-md">Disentangling Correlation from Causation</h2>
+            <h2 class="text-center mb-lg">Disentangling Correlation from Causation</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-lg); font-size: 1.05rem; color: var(--slate);">
                 Testing whether private schools create or reflect advantage
             </p>
 
-            <!-- Analysis text -->
+            <!-- Establishing the Correlation -->
             <div class="container-narrow" style="margin-bottom: var(--spacing-xl); text-align: justify;">
-                <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md);">The Research Question</h3>
-                <p style="line-height: 1.8;">
-                    Does private education create advantage or merely reflect it? In spatial terms: do independent schools improve their local areas, or do they simply cluster where advantage already exists?
-                </p>
+                <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md); text-align: center;">Establishing the Correlation</h3>
+                
+                <div id="vis-simple-regression" class="vis-center"></div>
 
-                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Establishing the Correlation</h3>
-                <p style="line-height: 1.8;">
+                <p style="line-height: 1.8; margin-top: var(--spacing-lg);">
                     Initial analysis revealed a moderate positive correlation (r=0.380, p=0.032) between independent school density and state school GCSE performance across London boroughs. However, this correlation could reflect two competing explanations:
                 </p>
                 <p style="line-height: 1.8; margin-top: var(--spacing-sm);">
@@ -251,27 +217,14 @@
                     <strong>Hypothesis B (Reflection):</strong> Independent schools locate in already-privileged areas where affluent, educated families—and consequently strong state schools—are already concentrated.
                 </p>
 
-                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Testing Through Multiple Regression</h3>
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-xl) 0 var(--spacing-md); text-align: center;">Testing Through Multiple Regression</h3>
                 <p style="line-height: 1.8;">
                     To distinguish between these explanations, I extended the analysis by controlling for four socioeconomic factors: median household income, adults with degree qualifications, average house prices, and the Index of Multiple Deprivation. The question became: after accounting for existing privilege structures, does independent school density still predict state school performance?
                 </p>
-            </div>
 
-            <!-- Navigation for regression visualizations -->
-            <div class="vis-navigation">
-                <button class="arrow-btn" id="regression-prev" onclick="changeRegressionVis(-1)" disabled>‹</button>
-                <div class="vis-container">
-                    <div id="regression-vis-1" class="vis-display"></div>
-                    <div id="regression-vis-2" class="vis-display" style="display: none;"></div>
-                    <div id="regression-vis-3" class="vis-display" style="display: none;"></div>
-                </div>
-                <button class="arrow-btn" id="regression-next" onclick="changeRegressionVis(1)">›</button>
-            </div>
-            <div class="vis-indicator" id="regression-indicator">1 of 3: Simple Regression</div>
+                <div id="vis-multiple-regression" class="vis-center"></div>
 
-            <!-- Results and interpretation -->
-            <div class="container-narrow" style="margin-top: var(--spacing-xl); text-align: justify;">
-                <h3 style="color: var(--primary-forest); margin-bottom: var(--spacing-md);">The Results</h3>
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-xl) 0 var(--spacing-md); text-align: center;">The Results</h3>
                 <p style="line-height: 1.8;">
                     The multiple regression revealed a dramatic shift:
                 </p>
@@ -284,7 +237,7 @@
                     The model's explanatory power more than tripled (R² = 0.504), with socioeconomic factors—particularly deprivation (coefficient: -0.866) and parental education (coefficient: 0.103)—emerging as far stronger predictors than independent school density.
                 </p>
 
-                <h3 style="color: var(--primary-forest); margin: var(--spacing-lg) 0 var(--spacing-md);">Interpretation</h3>
+                <h3 style="color: var(--primary-forest); margin: var(--spacing-xl) 0 var(--spacing-md); text-align: center;">Interpretation</h3>
                 <p style="line-height: 1.8;">
                     These results support Hypothesis B: independent schools predominantly reflect rather than create geographic advantage. Once we account for family wealth, parental education, and area deprivation, independent school density contributes minimally to state school outcomes. The apparent correlation in the simple model was spurious—both variables are products of underlying privilege structures rather than one causing the other.
                 </p>
@@ -303,7 +256,7 @@
                 Data was sourced from multiple UK government datasets and historical archives. Independent school locations were obtained from the Department for Education's Get Information About Schools (GIAS) service, providing comprehensive establishment data including coordinates, pupil numbers, and institutional characteristics. Academic performance data (GCSE and A-level results by institution type) came from the DfE's Explore Education Statistics platform, covering years 2019–2025. University progression statistics were accessed through the DfE's Higher Education progression database. Geographic boundary data for mapping utilised ONS Geography Portal shapefiles and London Datastore resources. Historical fee data for the Clarendon Schools was manually compiled from archival sources and adjusted for inflation using Bank of England historical inflation calculators. Socioeconomic data for the multiple regression analysis was obtained from the Office for National Statistics, including median household income, educational qualifications, house prices, and Index of Multiple Deprivation scores at borough level.
             </p>
             <p>
-                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
+                All data processing was conducted in Python using Google Colab notebooks (accessible at <a href="https://colab.research.google.com/drive/1GqzBS50zOAXpoO8LH0Ftn2dw0pW-J_BK?usp=sharing" target="_blank" style="color: var(--primary-teal); text-decoration: underline;">this link</a>), with cleaned datasets hosted publicly on GitHub for reproducibility. Whilst initial attempts to automate data collection through the ONS API were explored, direct CSV downloads proved more reliable for this project's scope, ensuring data quality and consistency across multiple years.
             </p>
         </div>
     </section>
@@ -354,7 +307,7 @@
                 <a href="https://github.com/SarahRashid0/SarahRashid0.github.io" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal);">
                     View GitHub Repository
                 </a>
-                <a href="https://colab.research.google.com/drive/13DkU8-WFaqgpJNDRx2WY356Bb0yn3bpX?usp=sharing" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal);">
+                <a href="https://colab.research.google.com/drive/1GqzBS50zOAXpoO8LH0Ftn2dw0pW-J_BK?usp=sharing" target="_blank" class="btn" style="background-color: white; color: var(--primary-teal);">
                     View Colab Notebooks
                 </a>
             </div>
@@ -397,92 +350,29 @@
             appearOnScroll.observe(fader);
         });
 
-        // Load all visualizations on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            // Section 1: Advantage visualizations
-            vegaEmbed('#advantage-vis-1', 'website/visualisations/dashboard.json');
-            vegaEmbed('#advantage-vis-2', 'website/visualisations/university_progression_slider.json');
+        // Load all visualizations
+        vegaEmbed('#vis-dashboard', 'website/visualisations/dashboard.json');
+        vegaEmbed('#vis-university', 'website/visualisations/university_progression_slider.json');
+        vegaEmbed('#vis-fees', 'website/visualisations/clarendon_fees_timeline.json');
+        vegaEmbed('#vis-bursaries', 'website/visualisations/clarendon_bursaries.json');
+        vegaEmbed('#vis-england-map', 'website/visualisations/england_independent_schools_map.json');
+        vegaEmbed('#vis-london-map', 'website/visualisations/london_imd_schools_map.json');
+        vegaEmbed('#vis-simple-regression', 'website/visualisations/london_correlation_scatter.json');
+        vegaEmbed('#vis-multiple-regression', 'website/visualisations/multiple_regression.json');
 
-            // Section 2: Cost visualizations
-            vegaEmbed('#cost-vis-1', 'website/visualisations/clarendon_fees_timeline.json');
-            vegaEmbed('#cost-vis-2', 'website/visualisations/clarendon_bursaries.json');
-
-            // Section 3: Geographic visualizations
-            vegaEmbed('#geo-vis-1', 'website/visualisations/england_independent_schools_map.json');
-            vegaEmbed('#geo-vis-2', 'website/visualisations/london_imd_schools_map.json');
-
-            // Section 4: Regression visualizations
-            vegaEmbed('#regression-vis-1', 'website/visualisations/london_correlation_scatter.json');
-            vegaEmbed('#regression-vis-2', 'website/visualisations/coefficient_comparison.json');
-            vegaEmbed('#regression-vis-3', 'website/visualisations/multiple_regression.json');
-        });
-
-        // Navigation functions for Section 1: Advantage
-        let currentAdvantageVis = 1;
-        const advantageLabels = [
-            "1 of 2: Academic Performance Gap",
-            "2 of 2: University Access Gap"
-        ];
-
-        function changeAdvantageVis(direction) {
-            const newVis = currentAdvantageVis + direction;
-            if (newVis < 1 || newVis > 2) return;
-
-            document.getElementById(`advantage-vis-${currentAdvantageVis}`).style.display = 'none';
-            document.getElementById(`advantage-note-${currentAdvantageVis}`).style.display = 'none';
-            document.getElementById(`advantage-vis-${newVis}`).style.display = 'block';
-            document.getElementById(`advantage-note-${newVis}`).style.display = 'block';
-            
-            currentAdvantageVis = newVis;
-            document.getElementById('advantage-indicator').textContent = advantageLabels[currentAdvantageVis - 1];
-
-            document.getElementById('advantage-prev').disabled = currentAdvantageVis === 1;
-            document.getElementById('advantage-next').disabled = currentAdvantageVis === 2;
+        // Map navigation functions
+        function showLondonMap() {
+            document.getElementById('map-text-england').style.display = 'none';
+            document.getElementById('map-text-london').style.display = 'block';
+            document.getElementById('vis-england-map').style.display = 'none';
+            document.getElementById('vis-london-map').style.display = 'block';
         }
 
-        // Navigation functions for Section 3: Geography
-        let currentGeoVis = 1;
-        const geoLabels = [
-            "1 of 2: National Distribution",
-            "2 of 2: London's Concentration & Deprivation"
-        ];
-
-        function changeGeoVis(direction) {
-            const newVis = currentGeoVis + direction;
-            if (newVis < 1 || newVis > 2) return;
-
-            document.getElementById(`geo-vis-${currentGeoVis}`).style.display = 'none';
-            document.getElementById(`geo-note-${currentGeoVis}`).style.display = 'none';
-            document.getElementById(`geo-vis-${newVis}`).style.display = 'block';
-            document.getElementById(`geo-note-${newVis}`).style.display = 'block';
-            
-            currentGeoVis = newVis;
-            document.getElementById('geo-indicator').textContent = geoLabels[currentGeoVis - 1];
-
-            document.getElementById('geo-prev').disabled = currentGeoVis === 1;
-            document.getElementById('geo-next').disabled = currentGeoVis === 2;
-        }
-
-        // Navigation functions for Section 4: Regression
-        let currentRegressionVis = 1;
-        const regressionLabels = [
-            "1 of 3: Simple Regression",
-            "2 of 3: Coefficient Comparison (71% Reduction)",
-            "3 of 3: Multiple Regression Model Fit"
-        ];
-
-        function changeRegressionVis(direction) {
-            const newVis = currentRegressionVis + direction;
-            if (newVis < 1 || newVis > 3) return;
-
-            document.getElementById(`regression-vis-${currentRegressionVis}`).style.display = 'none';
-            document.getElementById(`regression-vis-${newVis}`).style.display = 'block';
-            
-            currentRegressionVis = newVis;
-            document.getElementById('regression-indicator').textContent = regressionLabels[currentRegressionVis - 1];
-
-            document.getElementById('regression-prev').disabled = currentRegressionVis === 1;
-            document.getElementById('regression-next').disabled = currentRegressionVis === 3;
+        function showEnglandMap() {
+            document.getElementById('map-text-england').style.display = 'block';
+            document.getElementById('map-text-london').style.display = 'none';
+            document.getElementById('vis-england-map').style.display = 'block';
+            document.getElementById('vis-london-map').style.display = 'none';
         }
     </script>
 </body>
