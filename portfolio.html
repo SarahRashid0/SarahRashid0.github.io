@@ -112,11 +112,7 @@
         }
 
         .subsection {
-            background: white;
-            padding: var(--spacing-md);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-subtle);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
         }
 
         .subsection h3 {
@@ -124,31 +120,35 @@
             color: var(--primary-teal);
             font-size: 1.5rem;
             margin-bottom: var(--spacing-sm);
+            text-align: center;
         }
 
         .subsection p {
             color: var(--slate);
             line-height: 1.7;
             margin-bottom: var(--spacing-sm);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .subsection img {
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-medium);
-            margin: var(--spacing-md) 0;
+            margin: var(--spacing-md) auto;
             max-width: 100%;
             height: auto;
+            display: block;
         }
 
-        /* Chart-only subsections - no white box */
-        .subsection.chart-only {
-            padding: 0;
-            background: transparent;
-            box-shadow: none;
-        }
-
-        .subsection.chart-only figure {
-            margin: 0;
+        /* Info boxes for special content */
+        .info-box {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-subtle);
+            margin: var(--spacing-md) auto;
+            max-width: 900px;
         }
 
         #charts-container {
@@ -275,16 +275,12 @@
             <div class="subsection">
                 <h3>A Basic Chart</h3>
                 <p>See below the added chart found in the repository.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart2"></figure>
             </div>
 
             <div class="subsection">
                 <h3>A Chart from the Web</h3>
                 <p>Another portfolio task is to add a chart from the web. Here is a chart that is not stored locally. This chart displays gun deaths and income. Using various US states, it shows median income on the x-axis and firearm deaths per 100,000 on the y-axis.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart3"></figure>
             </div>
         </section>
@@ -305,16 +301,12 @@
             <div class="subsection">
                 <h3>Adding in a Personal Chart</h3>
                 <p>Portfolio Task 2 is to add our own charts. The following chart shows public sector employment in the UK.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart4"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Adding in Another Personal Chart</h3>
                 <p>The second chart shows internal displacement in Bangladesh.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart5"></figure>
             </div>
         </section>
@@ -337,16 +329,12 @@
                 <p><strong>Visualising the "aggregation problem" in global policy data</strong></p>
                 <p>Should global progress on <a href="https://sdgs.un.org/goals/goal6">SDG 6</a> be judged by overall averages, or by improvements amongst the most disadvantaged groups?</p>
                 <p>The first chart shows that global access to safely managed drinking water has improved only marginally, suggesting progress towards SDG 6.1 may be minimal:</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart6"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Disaggregated Analysis</h3>
                 <p>Yet the second chart reveals faster improvement in rural areas, illustrating how disaggregated data exposes hidden progress and the need for targeted policy investment.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart7"></figure>
             </div>
         </section>
@@ -373,16 +361,12 @@
             <div class="subsection">
                 <h3>My Replication</h3>
                 <p>Below is my replication of the above chart.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart8"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Improved Version</h3>
                 <p>And finally, here is an improved version of the chart. The revised graph corrects the inverted y-axis to ensure accurate interpretation and incorporates interactive tooltips to improve data transparency and user comprehension.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart9"></figure>
             </div>
         </section>
@@ -404,7 +388,7 @@
                 <h3>API Task</h3>
                 <p>The following shows data on crime in London, accessed via an API.</p>
                 
-                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin: var(--spacing-md) 0;">
+                <div class="info-box">
                     <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">API Functional Description</h4>
                     <p style="margin-bottom: var(--spacing-xs);"><strong>Base URL:</strong> <code>https://data.police.uk/api/</code></p>
                     <p style="margin-bottom: var(--spacing-xs);"><strong>Endpoint:</strong> <code>crimes-street/all-crime</code></p>
@@ -415,8 +399,7 @@
                     </ul>
                     <p style="margin-bottom: 0;"><strong>Full URL used:</strong> <code style="word-break: break-all;">https://data.police.uk/api/crimes-street/all-crime?lat=51.5074&lng=-0.1278</code></p>
                 </div>
-            </div>
-            <div class="subsection chart-only">
+                
                 <figure id="chart10"></figure>
             </div>
 
@@ -424,12 +407,8 @@
                 <h3>Scraper Task</h3>
                 <p>Data collection and analysis using web scraping techniques. The chart below visualises data extracted through web scraping and processed in Python.</p>
                 <p>I explored the frequency of certain words used on news websites when reporting crime in their headlines. I compared BBC News, The Guardian, Sky News and GB News.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart11"></figure>
-            </div>
-            <div class="subsection">
-                <p style="margin-top: var(--spacing-md);">View the full analysis:</p>
+                <p style="margin-top: var(--spacing-md); text-align: center;">View the full analysis:</p>
                 <a href="https://colab.research.google.com/drive/1PxEOg8qmGpshaw8msP094xXporjWxJMO?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">Scraper Task Notebook</a>
             </div>
         </section>
@@ -472,16 +451,12 @@
             <div class="subsection">
                 <h3>Choropleth Map (Scotland)</h3>
                 <p>The following shows a choropleth map of happiness scores in Scotland by Local Authority Districts, demonstrating geographic data visualisation.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart12"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Coordinates Map (Wales)</h3>
                 <p>Here is a coordinates map of main GP Sites in Wales, plotting point data on a geographic canvas.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart13"></figure>
             </div>
         </section>
@@ -507,24 +482,16 @@
             <div class="subsection">
                 <h3>Making a Cake Over The Years</h3>
                 <p>Analysis of cake pricing trends over time using large-scale retail pricing data.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart14"></figure>
-            </div>
-            <div class="subsection">
-                <p style="margin-top: var(--spacing-md);">View the process:</p>
+                <p style="margin-top: var(--spacing-md); text-align: center;">View the process:</p>
                 <a href="https://colab.research.google.com/drive/1iJYSNl99KBvNkNCKXxuP3zM6dUqCikA0?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">Average Cake Price Notebook</a>
             </div>
 
             <div class="subsection">
                 <h3>Average Tampon Prices by Regions</h3>
                 <p>Regional price analysis for feminine hygiene products, exploring geographic pricing patterns.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart15"></figure>
-            </div>
-            <div class="subsection">
-                <p style="margin-top: var(--spacing-md);">View the process:</p>
+                <p style="margin-top: var(--spacing-md); text-align: center;">View the process:</p>
                 <a href="https://colab.research.google.com/drive/1K9BKjem3GkShxAxiYUK0jnUdqk9hbjfO?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">Average Tampon Price Notebook</a>
             </div>
         </section>
@@ -545,16 +512,12 @@
             <div class="subsection">
                 <h3>Paracetamol Prices Over The Years</h3>
                 <p>Interactive analysis of painkiller pricing trends with dynamic filtering and tooltips.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart16"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Suicide Rates by Social Group in England</h3>
                 <p>Analysis of mental health outcomes across different social demographics, with interactive exploration.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart17"></figure>
             </div>
         </section>
@@ -575,27 +538,23 @@
             <div class="subsection">
                 <h3>Part 1: Comparing Weight Issues in England</h3>
                 <p>Statistical analysis of health data across English regions using advanced analytical techniques.</p>
-            </div>
-            <div class="subsection chart-only">
                 <figure id="chart18"></figure>
             </div>
 
             <div class="subsection">
                 <h3>Part 2: Life Expectancy Regression Analysis</h3>
                 
-                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                <div class="info-box">
                     <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Hypothesis</h4>
                     <p style="font-style: italic; margin-bottom: 0;">Higher income deprivation scores are associated with lower life expectancy, with this relationship being stronger for males than females across English local authorities.</p>
                 </div>
                 
                 <p>Machine learning regression model predicting life expectancy based on socioeconomic and health indicators. This analysis explores the relationships between various factors and population health outcomes.</p>
                 <p>The interactive visualisation below shows the regression results with confidence intervals:</p>
-            </div>
-            <div class="subsection chart-only">
+                
                 <figure id="chart19"></figure>
-            </div>
-            <div class="subsection">
-                <div class="content-box" style="margin-top: var(--spacing-md);">
+                
+                <div class="info-box">
                     <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Regression Results</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
                         <div>
@@ -615,12 +574,12 @@
                     </div>
                 </div>
                 
-                <div style="background: var(--cream); padding: var(--spacing-md); border-radius: var(--radius-md); margin-top: var(--spacing-md);">
+                <div class="info-box">
                     <h4 style="color: var(--primary-teal); margin-bottom: var(--spacing-sm);">Key Findings</h4>
                     <p style="margin-bottom: 0;">The hypothesis is confirmed: income deprivation significantly predicts life expectancy. The male model shows substantially stronger predictive power, suggesting socioeconomic factors affect male mortality more acutely than female.</p>
                 </div>
                 
-                <p style="margin-top: var(--spacing-md);">For detailed methodology, model training, and statistical analysis, view the complete Python notebook:</p>
+                <p style="margin-top: var(--spacing-md); text-align: center;">For detailed methodology, model training, and statistical analysis, view the complete Python notebook:</p>
                 <a href="https://colab.research.google.com/drive/1xBiNUosVI1GWlfxvO7NomXqA5PBL7AH_?usp=sharing" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-sm);">Regression Analysis Notebook</a>
             </div>
         </section>
