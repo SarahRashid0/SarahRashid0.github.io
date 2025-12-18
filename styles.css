@@ -486,7 +486,6 @@ footer a:hover {
         gap: var(--spacing-sm);
     }
 }
-
 /* ===================================
    Portfolio Page Specific Styles
    =================================== */
@@ -510,6 +509,7 @@ footer a:hover {
 }
 
 .portfolio-page .info-box {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
 }
