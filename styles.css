@@ -486,3 +486,30 @@ footer a:hover {
         gap: var(--spacing-sm);
     }
 }
+
+/* ===================================
+   Portfolio Page Specific Styles
+   =================================== */
+
+.portfolio-page figure {
+    margin: var(--spacing-md) auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.portfolio-page figure > div {
+    margin: 0 auto;
+}
+
+.portfolio-page .vega-embed {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-page .info-box {
+    margin-left: auto;
+    margin-right: auto;
+}
