@@ -1,5 +1,6 @@
 {
   "config": {
+    "background": "#F5F1E8",
     "view": {"continuousWidth": 300, "continuousHeight": 300},
     "style": {
       "guide-label": {"font": "Baskerville"},

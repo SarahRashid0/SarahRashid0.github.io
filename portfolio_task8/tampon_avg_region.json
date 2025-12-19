@@ -79,6 +79,7 @@
     ]
   },
   "config": {
+    "background": "#F5F1E8",
     "view": { "stroke": "transparent" },
     "legend": {
       "titleFont": "Baskerville",

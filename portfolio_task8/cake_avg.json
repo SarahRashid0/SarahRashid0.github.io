@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {
+    "background": "#F5F1E8",
     "font": "Baskerville, serif",
     "view": {"stroke": "transparent"},
     "range": {"category": {"scheme": "brownbluegreen"}},
