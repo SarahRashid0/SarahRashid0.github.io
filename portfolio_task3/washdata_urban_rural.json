@@ -57,7 +57,7 @@
   },
 
   "config": {
-    "background": "#F5F1E8",
+    "background": "#FDFBF7",
     "style": {
       "guide-label": {"font": "Baskerville"},
       "guide-title": {"font": "Baskerville"}

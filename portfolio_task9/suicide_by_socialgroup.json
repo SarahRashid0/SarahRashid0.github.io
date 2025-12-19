@@ -149,7 +149,7 @@
     ]
   },
   "config": {
-    "background": "#F5F1E8",
+    "background": "#FDFBF7",
     "view": {"strokeWidth": 0},
     "axis": {"grid": false},
     "style": {
