@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Grouped bar chart comparing rural and urban access to safely managed drinking water (2012–2024).",
+  "description": "Grouped bar chart comparing rural and urban access to safely managed drinking water (from 2012–2024).",
 
   "data": {
     "url": "https://raw.githubusercontent.com/SarahRashid0/SarahRashid0.github.io/refs/heads/main/portfolio_task3/washdata_urban_rural.csv"

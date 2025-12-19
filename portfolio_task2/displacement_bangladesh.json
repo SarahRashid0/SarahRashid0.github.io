@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Displacement",
+    "text": "Displacement in Banglagesh",
     "anchor": "start",
     "font": "Baskerville",
     "subtitle": "Internally Displaced Persons | UNHCR via ECO-API",
