@@ -514,6 +514,9 @@ footer a:hover {
     display: block;
 }
 
+/* ===================================
+   Disclosure Section
+   =================================== */
 
 .ai-disclosure {
     max-width: 600px;
@@ -540,4 +543,5 @@ footer a:hover {
     background-color: #F5F1E8;
     border-radius: 4px;
     line-height: 1.5;
+    font-size: 0.85rem;  
 }
