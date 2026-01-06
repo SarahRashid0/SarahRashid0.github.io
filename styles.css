@@ -518,8 +518,8 @@ footer a:hover {
 .ai-disclosure {
     max-width: 600px;
     margin: 0 auto 20px auto;
-    text-align: left;
-    font-size: 0.85rem;
+    text-align: center;  /* Changed from left */
+    font-size: 0.9rem;
 }
 
 .ai-disclosure summary {
