@@ -513,3 +513,32 @@ footer a:hover {
     margin-right: auto !important;
     display: block;
 }
+
+
+.ai-disclosure {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.ai-disclosure summary {
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    padding: 8px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.ai-disclosure summary:hover {
+    opacity: 1;
+}
+
+.ai-disclosure p {
+    margin: 10px 0 0 0;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    line-height: 1.5;
+}
